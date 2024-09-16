@@ -60,9 +60,9 @@ var services = angular.module('Rma.services', ['ngResource']);
 
 //Local
 //var api = 'http://127.0.0.1:8084/rmaweb/v1';
-//var api = 'http://localhost:8084/vexiadeveloperteam-rmonline-ag-api-v1-8e5c0ec296d7/v1';
+var api = 'http://localhost:8084/vexiadeveloperteam-rmonline-ag-api-v1-8e5c0ec296d7/v1';
 //QA
-var api = 'http://10.1.1.153:8080/rmaweb/v1';
+//var api = 'http://10.1.1.153:8080/rmaweb/v1';
 //PRD
 //var api = 'http://10.1.1.157:8080/rmaweb/v1';
 
