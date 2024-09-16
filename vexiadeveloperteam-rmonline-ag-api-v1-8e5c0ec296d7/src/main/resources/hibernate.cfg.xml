@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!-- SQL SERVER DEV
+        <property name="hibernate.dialect">org.hibernate.dialect.SQLServer2008Dialect</property>
+        <property name="hibernate.connection.driver_class">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
+        <property name="hibernate.connection.url">jdbc:sqlserver://172.20.0.121;databaseName=db_gestao_materiais;</property>
+        <property name="hibernate.connection.username">usr_db_gestao_materiais</property>
+        <property name="hibernate.connection.password">w4*b3fVGnWUmh2$</property>
+		-->
+
+        <!-- SQL SERVER QA -->
+        <property name="hibernate.dialect">org.hibernate.dialect.SQLServer2008Dialect</property>
+        <property name="hibernate.connection.driver_class">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
+        <property name="hibernate.connection.url">jdbc:sqlserver://10.1.10.194;databaseName=RMOnline_teste;</property>
+        <property name="hibernate.connection.username">sisRM</property>
+        <property name="hibernate.connection.password">@cessoAGrm0</property>
+
+
+<!--        TODO - ADRIANO, precisa voltar quando for subir para produção.-->
+        <!-- SQL SERVER PROD
+        <property name="hibernate.dialect">org.hibernate.dialect.SQLServer2008Dialect</property>
+        <property name="hibernate.connection.driver_class">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
+        <property name="hibernate.connection.url">jdbc:sqlserver://SPOAGC-SQL065;databaseName=RMOnline;</property>
+        <property name="hibernate.connection.username">sisRMOnlineApp</property>
+        <property name="hibernate.connection.password">@cessorm0AG</property>
+-->
+
+
+
+        <property name="hibernate.connection.pool_size">500</property>
+
+        <property name="current_session_context_class">thread</property>
+
+        <property name="show_sql">true</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        <property name="javax.persistence.validation.mode">none</property>
+
+        <mapping class="br.com.nextage.rmaweb.entitybean.Usuario"/>
+        <mapping class="br.com.nextage.rmaweb.entitybean.UsuarioCentro"/>
+        <mapping class="br.com.nextage.rmaweb.entitybean.TipoMaterial"/>
+        <mapping class="br.com.nextage.rmaweb.entitybean.Uf"/>
+        <mapping class="br.com.nextage.rmaweb.entitybean.Cidade"/>
+        <mapping class="br.com.nextage.rmaweb.entitybean.Fornecedor"/>
+        <mapping class="br.com.nextage.rmaweb.entitybean.UnidadeMedida"/>
+        <mapping class="br.com.nextage.rmaweb.entitybean.Material"/>
+        <mapping class="br.com.nextage.rmaweb.entitybean.Prioridade"/>
+        <mapping class="br.com.nextage.rmaweb.entitybean.Rm"/>
+        <mapping class="br.com.nextage.rmaweb.entitybean.RmMaterial"/>
+        <mapping class="br.com.nextage.rmaweb.entitybean.Pessoa"/>
+        <mapping class="br.com.nextage.rmaweb.entitybean.Comprador"/>
+        <mapping class="br.com.nextage.rmaweb.entitybean.Tela"/>
+        <mapping class="br.com.nextage.rmaweb.entitybean.UsuarioTela"/>
+        <mapping class="br.com.nextage.rmaweb.entitybean.Setor"/>
+        <mapping class="br.com.nextage.rmaweb.entitybean.Deposito"/>
+        <mapping class="br.com.nextage.rmaweb.entitybean.MaterialDeposito"/>
+        <mapping class="br.com.nextage.rmaweb.entitybean.RmMaterialRetirada"/>
+        <mapping class="br.com.nextage.rmaweb.entitybean.RmMaterialRecebimento"/>
+        <mapping class="br.com.nextage.rmaweb.entitybean.MaterialDepositoEntrada"/>
+        <mapping class="br.com.nextage.rmaweb.entitybean.MaterialDepositoSaida"/>
+        <mapping class="br.com.nextage.rmaweb.entitybean.PedidoSap"/>
+        <mapping class="br.com.nextage.rmaweb.entitybean.Configuracao"/>
+        <mapping class="br.com.nextage.rmaweb.entitybean.Role"/>
+        <mapping class="br.com.nextage.rmaweb.entitybean.RmAprovador"/>
+        <mapping class="br.com.nextage.rmaweb.entitybean.RmDeposito"/>
+        <mapping class="br.com.nextage.rmaweb.entitybean.Status"/>
+        <mapping class="br.com.nextage.rmaweb.entitybean.RmMaterialStatus"/>
+        <mapping class="br.com.nextage.rmaweb.entitybean.RmServicoStatus"/>
+        <mapping class="br.com.nextage.entitybean.ConfigListener"/>
+        <mapping class="br.com.nextage.rmaweb.entitybean.SincRegistro"/>
+        <mapping class="br.com.nextage.rmaweb.entitybean.ConfigAcessoServ"/>
+        <mapping class="br.com.nextage.rmaweb.entitybean.MaterialDepositoSaidaReserva"/>
+        <mapping class="br.com.nextage.rmaweb.entitybean.ConfIntegracao"/>
+        <mapping class="br.com.nextage.rmaweb.entitybean.PessoaDigital"/>
+        <mapping class="br.com.nextage.rmaweb.entitybean.Anexo"/>
+        <mapping class="br.com.nextage.rmaweb.entitybean.AnexoServico"/>
+        <mapping class="br.com.nextage.rmaweb.entitybean.SubArea"/>
+        <mapping class="br.com.nextage.rmaweb.entitybean.HierarquiaComprador"/>
+        <mapping class="br.com.nextage.rmaweb.entitybean.TipoAtuacao"/>
+        <mapping class="br.com.nextage.rmaweb.entitybean.EapMultiEmpresa"/>
+        <mapping class="br.com.nextage.rmaweb.entitybean.UsuarioEapMultiEmpresa"/>
+        <mapping class="br.com.nextage.rmaweb.entitybean.MultiEmpresa"/>
+        <mapping class="br.com.nextage.rmaweb.entitybean.Perfil"/>
+        <mapping class="br.com.nextage.rmaweb.entitybean.PerfilRole"/>
+        <mapping class="br.com.nextage.rmaweb.entitybean.Centro"/>
+        <mapping class="br.com.nextage.rmaweb.entitybean.Area"/>
+        <mapping class="br.com.nextage.rmaweb.entitybean.GrupoMercadoria"/>
+        <mapping class="br.com.nextage.rmaweb.entitybean.GrupoComprador"/>
+        <mapping class="br.com.nextage.rmaweb.entitybean.LogInterface"/>
+        <mapping class="br.com.nextage.rmaweb.entitybean.Rastreabilidade"/>
+        <mapping class="br.com.nextage.rmaweb.entitybean.RequisicaoCompra"/>
+        <mapping class="br.com.nextage.rmaweb.entitybean.RequisicaoRecebimento"/>
+        <mapping class="br.com.nextage.rmaweb.entitybean.TipoRequisicao"/>
+        <mapping class="br.com.nextage.rmaweb.entitybean.RmServico"/>
+        <mapping class="br.com.nextage.rmaweb.entitybean.FornecedorServico"/>
+        <mapping class="br.com.nextage.rmaweb.entitybean.Workflow"/>
+        <mapping class="br.com.nextage.rmaweb.entitybean.WorkflowArea"/>
+        <mapping class="br.com.nextage.rmaweb.entitybean.WorkflowGerenteArea"/>
+        <mapping class="br.com.nextage.rmaweb.entitybean.WorkflowCusto"/>
+        <mapping class="br.com.nextage.rmaweb.entitybean.WorkflowEmergencial"/>
+
+        <!-- View's -->
+        <mapping class="br.com.nextage.rmaweb.entitybean.VwRmMaterial"/>
+        <mapping class="br.com.nextage.rmaweb.entitybean.VwMaterialDepositoSaidaReserva"/>
+        <mapping class="br.com.nextage.rmaweb.entitybean.VwDocumentoResponsabilidade"/>
+        <mapping class="br.com.nextage.rmaweb.entitybean.VwConsultaRma"/>
+        <mapping class="br.com.nextage.rmaweb.entitybean.VwConsultaAlmoxarife"/>
+
+        <mapping class="br.com.nextage.entitybean.ConfiguracaoLdap"/>
+    </session-factory>
+</hibernate-configuration>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" targetNamespace="http://ws.rmaweb.nextage.com.br/" xmlns:tns="http://ws.rmaweb.nextage.com.br/"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="entradaMaterial" type="tns:entradaMaterial"/>
+
+  <xs:element name="entradaMaterialResponse" type="tns:entradaMaterialResponse"/>
+
+  <xs:element name="finalizarRm" type="tns:finalizarRm"/>
+
+  <xs:element name="finalizarRmResponse" type="tns:finalizarRmResponse"/>
+
+  <xs:element name="saidaMaterial" type="tns:saidaMaterial"/>
+
+  <xs:element name="saidaMaterialResponse" type="tns:saidaMaterialResponse"/>
+
+  <xs:complexType name="entradaMaterial">
+    <xs:sequence>
+      <xs:element name="materialDepositoVo" type="tns:materialDepositoVo" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="materialDepositoVo">
+    <xs:sequence>
+      <xs:element name="codigoRequisicao" type="xs:string" minOccurs="0"/>
+      <xs:element name="deposito" type="xs:string" minOccurs="0"/>
+      <xs:element name="identificadorRmMaterial" type="xs:int" minOccurs="0"/>
+      <xs:element name="material" type="xs:string" minOccurs="0"/>
+      <xs:element name="origemMovimentacao" type="xs:string" minOccurs="0"/>
+      <xs:element name="origemSincRegistro" type="xs:string" minOccurs="0"/>
+      <xs:element name="qtdeInserida" type="xs:double" minOccurs="0"/>
+      <xs:element name="reaproveitadosEpi" type="xs:boolean" minOccurs="0"/>
+      <xs:element name="retiradoPor" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="entradaMaterialResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:info" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="info">
+    <xs:sequence>
+      <xs:element name="codigo" type="xs:string" minOccurs="0"/>
+      <xs:element name="erro" type="xs:string" minOccurs="0"/>
+      <xs:element name="idObjetoSalvo" type="xs:int" minOccurs="0"/>
+      <xs:element name="mensagem" type="xs:string" minOccurs="0"/>
+      <xs:element name="objeto" type="xs:anyType" minOccurs="0"/>
+      <xs:element name="tipo" type="xs:string" minOccurs="0"/>
+      <xs:element name="warning" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="finalizarRm">
+    <xs:sequence>
+      <xs:element name="materialDepositoVo" type="tns:materialDepositoVo" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="finalizarRmResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:info" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="saidaMaterial">
+    <xs:sequence>
+      <xs:element name="materialDepositoVo" type="tns:materialDepositoVo" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="saidaMaterialResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:info" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+

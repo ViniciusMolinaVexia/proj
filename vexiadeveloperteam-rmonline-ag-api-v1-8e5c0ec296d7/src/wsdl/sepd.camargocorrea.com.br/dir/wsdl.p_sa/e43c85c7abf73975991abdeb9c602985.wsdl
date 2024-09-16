@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions name="SI_SolicitaReservaSyncOut" targetNamespace="urn:cccc.rmaweb.reservamat" xmlns:p3="urn:cccc.rmaweb.objetoscomuns" xmlns:p2="urn:cccc.reeweb.objetoscomuns" xmlns:p1="urn:cccc.rmaweb.reservamat" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+    <wsdl:documentation/>
+    <wsp:UsingPolicy wsdl:required="true"/>
+    <wsp:Policy wsu:Id="OP_SI_SolicitaReservaSyncOut"/>
+    <wsdl:types>
+        <xsd:schema targetNamespace="urn:cccc.reeweb.objetoscomuns" xmlns="urn:cccc.reeweb.objetoscomuns" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:p7="urn:cccc.rmaweb.objetoscomuns">
+            <xsd:import namespace="urn:cccc.rmaweb.objetoscomuns"/>
+            <xsd:element name="MT_Erro">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="standard" type="p7:ExchangeFaultData"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+        </xsd:schema>
+        <xsd:schema targetNamespace="urn:cccc.rmaweb.reservamat" xmlns="urn:cccc.rmaweb.reservamat" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+            <xsd:element name="MT_SolicitaReserva" type="DT_SolicitaReserva"/>
+            <xsd:element name="MT_SolicitaReserva_response" type="DT_SolicitaReserva_response"/>
+            <xsd:complexType name="DT_SolicitaReserva_response">
+                <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/VersionID">0f3d886b78d811e587e8000000788fde</xsd:appinfo>
+                </xsd:annotation>
+                <xsd:sequence>
+                    <xsd:element name="TipoMensagem" type="xsd:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:appinfo source="http://sap.com/xi/TextID">1046e00d78d811e591c854c892c66e0d</xsd:appinfo>
+                        </xsd:annotation>
+                    </xsd:element>
+                    <xsd:element name="Mensagem" type="xsd:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:appinfo source="http://sap.com/xi/TextID">1046e00e78d811e599f054c892c66e0d</xsd:appinfo>
+                        </xsd:annotation>
+                    </xsd:element>
+                    <xsd:element name="Reserva" type="xsd:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:appinfo source="http://sap.com/xi/TextID">1046e00f78d811e5cf9954c892c66e0d</xsd:appinfo>
+                        </xsd:annotation>
+                    </xsd:element>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="DT_SolicitaReserva">
+                <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/VersionID">8de6c88d78c011e5b971000000788fde</xsd:appinfo>
+                </xsd:annotation>
+                <xsd:sequence>
+                    <xsd:element name="DataReserva" type="xsd:date" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:appinfo source="http://sap.com/xi/TextID">94aeeccc782111e58850a41f72fa9069</xsd:appinfo>
+                        </xsd:annotation>
+                    </xsd:element>
+                    <xsd:element name="CentroReceptor" type="xsd:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:appinfo source="http://sap.com/xi/TextID">94aeeccf782111e5cb2fa41f72fa9069</xsd:appinfo>
+                        </xsd:annotation>
+                    </xsd:element>
+                    <xsd:element name="SolicitanteRma" type="xsd:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:appinfo source="http://sap.com/xi/TextID">94aeecd0782111e581c3a41f72fa9069</xsd:appinfo>
+                        </xsd:annotation>
+                    </xsd:element>
+                    <xsd:element name="AprovadorRma" type="xsd:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:appinfo source="http://sap.com/xi/TextID">94aeecd1782111e58b8aa41f72fa9069</xsd:appinfo>
+                        </xsd:annotation>
+                    </xsd:element>
+                    <xsd:element name="Itens" minOccurs="0" maxOccurs="unbounded">
+                        <xsd:annotation>
+                            <xsd:appinfo source="http://sap.com/xi/TextID">94aeecd2782111e58b31a41f72fa9069</xsd:appinfo>
+                        </xsd:annotation>
+                        <xsd:complexType>
+                            <xsd:sequence>
+                                <xsd:element name="Material" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">94aeecd3782111e5acc7a41f72fa9069</xsd:appinfo>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="Centro" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">94aeecd5782111e5bf77a41f72fa9069</xsd:appinfo>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="Quantidade" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">9a20c6ab782311e58caca41f72fa9069</xsd:appinfo>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="UnMedida" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">94aeecd6782111e5bf28a41f72fa9069</xsd:appinfo>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="Deposito" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">94aeecd7782111e5a103a41f72fa9069</xsd:appinfo>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="DataNecessidade" type="xsd:date" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">7eced75478c011e5c56654c892c66e0d</xsd:appinfo>
+                                    </xsd:annotation>
+                                </xsd:element>
+                            </xsd:sequence>
+                        </xsd:complexType>
+                    </xsd:element>
+                </xsd:sequence>
+            </xsd:complexType>
+        </xsd:schema>
+        <xsd:schema targetNamespace="urn:cccc.rmaweb.objetoscomuns" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:cccc.rmaweb.objetoscomuns">
+            <xsd:complexType name="ExchangeLogData">
+                <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/VersionID">66331529676811e5bae8000000788fde</xsd:appinfo>
+                </xsd:annotation>
+                <xsd:sequence>
+                    <xsd:element name="severity" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="text" type="xsd:string"/>
+                    <xsd:element name="url" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="id" type="xsd:string" minOccurs="0"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="ExchangeFaultData">
+                <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/VersionID">6623ad4b676811e5b743000000788fde</xsd:appinfo>
+                </xsd:annotation>
+                <xsd:sequence>
+                    <xsd:element name="faultText" type="xsd:string">
+                        <xsd:annotation>
+                            <xsd:appinfo source="http://sap.com/xi/TextID">ccfc9431c01a11e39c27fcf8aee30cc8</xsd:appinfo>
+                        </xsd:annotation>
+                    </xsd:element>
+                    <xsd:element name="faultUrl" type="xsd:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:appinfo source="http://sap.com/xi/TextID">ccfcaaf2c01a11e3a773fcf8aee30cc8</xsd:appinfo>
+                        </xsd:annotation>
+                    </xsd:element>
+                    <xsd:element name="faultDetail" type="ExchangeLogData" minOccurs="0" maxOccurs="unbounded">
+                        <xsd:annotation>
+                            <xsd:appinfo source="http://sap.com/xi/TextID">ccfcaaf3c01a11e3a64efcf8aee30cc8</xsd:appinfo>
+                        </xsd:annotation>
+                    </xsd:element>
+                </xsd:sequence>
+            </xsd:complexType>
+        </xsd:schema>
+    </wsdl:types>
+    <wsdl:message name="MT_SolicitaReserva">
+        <wsdl:documentation/>
+        <wsdl:part name="MT_SolicitaReserva" element="p1:MT_SolicitaReserva"/>
+    </wsdl:message>
+    <wsdl:message name="MT_SolicitaReserva_response">
+        <wsdl:documentation/>
+        <wsdl:part name="MT_SolicitaReserva_response" element="p1:MT_SolicitaReserva_response"/>
+    </wsdl:message>
+    <wsdl:message name="p3.MT_Erro">
+        <wsdl:documentation/>
+        <wsdl:part name="MT_Erro" element="p2:MT_Erro"/>
+    </wsdl:message>
+    <wsdl:portType name="SI_SolicitaReservaSyncOut">
+        <wsdl:documentation/>
+        <wsdl:operation name="SI_SolicitaReservaSyncOut">
+            <wsdl:documentation/>
+            <wsp:Policy>
+                <wsp:PolicyReference URI="#OP_SI_SolicitaReservaSyncOut"/>
+            </wsp:Policy>
+            <wsdl:input message="p1:MT_SolicitaReserva"/>
+            <wsdl:output message="p1:MT_SolicitaReserva_response"/>
+            <wsdl:fault name="p3.MT_Erro" message="p1:p3.MT_Erro"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="SI_SolicitaReservaSyncOutBinding" type="p1:SI_SolicitaReservaSyncOut">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+        <wsdl:operation name="SI_SolicitaReservaSyncOut">
+            <soap:operation soapAction="http://sap.com/xi/WebService/soap1.1" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+            <wsdl:input>
+                <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+            </wsdl:output>
+            <wsdl:fault name="p3.MT_Erro">
+                <soap:fault use="literal" name="p3.MT_Erro" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+            </wsdl:fault>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="BS_RMAWEB_SI_SolicitaReservaSyncOut_x_x">
+        <wsdl:port name="HTTP_Port" binding="p1:SI_SolicitaReservaSyncOutBinding">
+            <soap:address location="https://sepd.camargocorrea.com.br/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BS_RMAWEB&amp;receiverParty=&amp;receiverService=&amp;interface=SI_SolicitaReservaSyncOut&amp;interfaceNamespace=urn%3Acccc.rmaweb.reservamat" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+        </wsdl:port>
+        <wsdl:port name="HTTPS_Port" binding="p1:SI_SolicitaReservaSyncOutBinding">
+            <soap:address location="https://sepd.camargocorrea.com.br/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BS_RMAWEB&amp;receiverParty=&amp;receiverService=&amp;interface=SI_SolicitaReservaSyncOut&amp;interfaceNamespace=urn%3Acccc.rmaweb.reservamat" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>

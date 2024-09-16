@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://localhost:8084/rhweb-ws/RmawebWs?wsdl" uri="wsdl/localhost_8084/rhweb-ws/RmawebWs.wsdl"/>
+    <system systemId="http://localhost:8084/rhweb-ws/RmawebWs?xsd=1" uri="wsdl/localhost_8084/rhweb-ws/RmawebWs.xsd_1.xsd"/>
+    <system systemId="https://sepd.camargocorrea.com.br/dir/wsdl?p=sa/e43c85c7abf73975991abdeb9c602985" uri="wsdl/sepd.camargocorrea.com.br/dir/wsdl.p_sa/e43c85c7abf73975991abdeb9c602985.wsdl"/>
+    <system systemId="https://sepd.camargocorrea.com.br/dir/wsdl?p=sa/08f70cf76f0c3fa99dbccb34bb5a979f" uri="wsdl/sepd.camargocorrea.com.br/dir/wsdl.p_sa/08f70cf76f0c3fa99dbccb34bb5a979f.wsdl"/>
+    <system systemId="https://sepd.camargocorrea.com.br/dir/wsdl?p=sa/ba50777f2d28382999616e90cb32b3ee" uri="wsdl/sepd.camargocorrea.com.br/dir/wsdl.p_sa/ba50777f2d28382999616e90cb32b3ee.wsdl"/>
+    <system systemId="http://localhost:8084/cpweb/SincEstoque?wsdl" uri="wsdl/localhost_8084/cpweb/SincEstoque.wsdl"/>
+    <system systemId="http://localhost:8084/cpweb/SincEstoque?xsd=1" uri="wsdl/localhost_8084/cpweb/SincEstoque.xsd_1.xsd"/>
+    <system systemId="http://localhost:8085/cpweb/SincEstoque?wsdl" uri="wsdl/localhost_8085/cpweb/SincEstoque.wsdl"/>
+    <system systemId="http://localhost:8085/cpweb/SincEstoque?xsd=1" uri="wsdl/localhost_8085/cpweb/SincEstoque.xsd_1.xsd"/>
+    <system systemId="http://spoagceccq002.agnet.local:8001/sap/bc/srt/wsdl/flv_10002A111AD1/bndg_url/sap/bc/srt/scs/sap/zgl_rmaweb?sap-client=100?wsdl" uri="main/java/zgl_rmaweb.xml"/>
+</catalog>

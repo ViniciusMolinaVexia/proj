@@ -1,0 +1,110 @@
+pipeline {
+    agent any
+    options {
+        skipStagesAfterUnstable()
+    }
+
+    stages {
+        stage('Build') {
+            steps {
+                script {
+                    bitbucketStatusNotify(buildState: 'INPROGRESS')
+                    try {
+                      bat "mvn clean package -Dmaven.test.skip=true"
+                    } catch (Exception e) {
+                      bitbucketStatusNotify(buildState: 'FAILED')
+                    }
+                    bitbucketStatusNotify(buildState: 'SUCCESSFUL')
+                }
+            }
+        }
+
+        stage('Unit test') {
+            steps {
+                script {
+                    bat "mvn clean test"
+                }
+            }
+        }
+
+
+//         stage('Undeploy DEV') {
+//             when {
+//                 branch 'feature/*'
+//             }
+//             steps {
+//                 script {
+//                     try {
+//                         bat "mvn tomcat7:undeploy -Dport.tomcat7=8081"
+//                     } catch(e) {
+//
+//                     }
+//                 }
+//             }
+//         }
+//
+//         stage('Deploy DEV') {
+//             when {
+//                 branch 'feature/*'
+//             }
+//             steps {
+//                 script {
+//                     bat "mvn tomcat7:deploy -Dmaven.test.skip=true -Dport.tomcat7=8081"
+//                 }
+//             }
+//         }
+
+        stage('Undeploy QA') {
+            when {
+                branch 'master'
+            }
+            steps {
+                script {
+                    try {
+                        bat "mvn tomcat7:undeploy -Dport.tomcat7=8080"
+                    } catch(e) {
+
+                    }
+                }
+            }
+        }
+
+        stage('Deploy QA') {
+            when {
+                branch 'master'
+            }
+            steps {
+                script {
+                    bat "mvn tomcat7:deploy -Dmaven.test.skip=true -Dport.tomcat7=8080"
+                }
+            }
+        }
+
+
+        stage('Undeploy PROD') {
+            when {
+                branch 'release/*'
+            }
+            steps {
+                script {
+                    try {
+                        bat "mvn tomcat7:undeploy -Dhost.tomcat7=10.1.1.157 -Dport.tomcat7=8080"
+                    } catch(e) {
+
+                    }
+                }
+            }
+        }
+
+        stage('Deploy PROD') {
+            when {
+                branch 'release/*'
+            }
+            steps {
+                script {
+                    bat "mvn tomcat7:deploy -Dmaven.test.skip=true -Dhost.tomcat7=10.1.1.157 -Dport.tomcat7=8080"
+                }
+            }
+        }
+    }
+}

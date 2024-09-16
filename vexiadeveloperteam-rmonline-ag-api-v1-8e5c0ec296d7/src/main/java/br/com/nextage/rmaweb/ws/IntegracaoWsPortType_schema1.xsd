@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" targetNamespace="http://rmaweb.ws.rmaweb.nextage.com.br/" xmlns:tns="http://rmaweb.ws.rmaweb.nextage.com.br/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="atualizarEstoque" type="tns:atualizarEstoque"/>
+
+  <xs:element name="atualizarEstoqueResponse" type="tns:atualizarEstoqueResponse"/>
+
+  <xs:element name="cadastroFornecedores" type="tns:cadastroFornecedores"/>
+
+  <xs:element name="cadastroFornecedoresResponse" type="tns:cadastroFornecedoresResponse"/>
+
+  <xs:element name="cadastroMateriais" type="tns:cadastroMateriais"/>
+
+  <xs:element name="cadastroMateriaisResponse" type="tns:cadastroMateriaisResponse"/>
+
+  <xs:element name="criarRma" type="tns:criarRma"/>
+
+  <xs:element name="criarRmaResponse" type="tns:criarRmaResponse"/>
+
+  <xs:element name="estornoRequisicao" type="tns:estornoRequisicao"/>
+
+  <xs:element name="estornoRequisicaoResponse" type="tns:estornoRequisicaoResponse"/>
+
+  <xs:element name="receberCompra" type="tns:receberCompra"/>
+
+  <xs:element name="receberCompraResponse" type="tns:receberCompraResponse"/>
+
+  <xs:complexType name="estornoRequisicao">
+    <xs:sequence>
+      <xs:element name="login" type="xs:string" minOccurs="0"/>
+      <xs:element name="token" type="xs:string" minOccurs="0"/>
+      <xs:element name="estornoVo" type="tns:estornoVo" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="estornoVo">
+    <xs:sequence>
+      <xs:element name="centroCod" type="xs:string" minOccurs="0"/>
+      <xs:element name="codigoMaterial" type="xs:string" minOccurs="0"/>
+      <xs:element name="itemRmSap" type="xs:string" minOccurs="0"/>
+      <xs:element name="numeroRma" type="xs:string" minOccurs="0"/>
+      <xs:element name="rmSap" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="estornoRequisicaoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:mensagemIntegracao" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="mensagemIntegracao">
+    <xs:sequence>
+      <xs:element name="codigo" type="xs:string" minOccurs="0"/>
+      <xs:element name="mensagem" type="xs:string" minOccurs="0"/>
+      <xs:element name="tipoMensagem" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="atualizarEstoque">
+    <xs:sequence>
+      <xs:element name="login" type="xs:string" minOccurs="0"/>
+      <xs:element name="token" type="xs:string" minOccurs="0"/>
+      <xs:element name="estoqueVo" type="tns:estoqueVo" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="estoqueVo">
+    <xs:sequence>
+      <xs:element name="centro" type="xs:string" minOccurs="0"/>
+      <xs:element name="codigoMaterial" type="xs:string" minOccurs="0"/>
+      <xs:element name="dataEmissaoNf" type="xs:dateTime" minOccurs="0"/>
+      <xs:element name="deposito" type="xs:string" minOccurs="0"/>
+      <xs:element name="documentoMaterial" type="xs:string" minOccurs="0"/>
+      <xs:element name="documentoReferencia" type="xs:string" minOccurs="0"/>
+      <xs:element name="estorno" type="xs:string" minOccurs="0"/>
+      <xs:element name="item" type="xs:string" minOccurs="0"/>
+      <xs:element name="itemRmSap" type="xs:string" minOccurs="0"/>
+      <xs:element name="numeroNf" type="xs:string" minOccurs="0"/>
+      <xs:element name="numeroRma" type="xs:string" minOccurs="0"/>
+      <xs:element name="pedidoCompra" type="xs:string" minOccurs="0"/>
+      <xs:element name="quantidade" type="xs:string" minOccurs="0"/>
+      <xs:element name="reservarMaterial" type="xs:string" minOccurs="0"/>
+      <xs:element name="rmSap" type="xs:string" minOccurs="0"/>
+      <xs:element name="unidadeMedida" type="xs:string" minOccurs="0"/>
+      <xs:element name="usuario" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="atualizarEstoqueResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:mensagemIntegracao" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="cadastroMateriais">
+    <xs:sequence>
+      <xs:element name="login" type="xs:string" minOccurs="0"/>
+      <xs:element name="token" type="xs:string" minOccurs="0"/>
+      <xs:element name="listaMateriais" type="tns:materialVo" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="materialVo">
+    <xs:sequence>
+      <xs:element name="cautela" type="xs:string" minOccurs="0"/>
+      <xs:element name="centro" type="xs:string" minOccurs="0"/>
+      <xs:element name="descricaoBreve" type="xs:string" minOccurs="0"/>
+      <xs:element name="descricaoLonga" type="xs:string" minOccurs="0"/>
+      <xs:element name="estoqueSap" type="xs:string" minOccurs="0"/>
+      <xs:element name="grupoMercadoria" type="xs:string" minOccurs="0"/>
+      <xs:element name="hierarquia" type="xs:string" minOccurs="0"/>
+      <xs:element name="material" type="xs:string" minOccurs="0"/>
+      <xs:element name="ncm" type="xs:string" minOccurs="0"/>
+      <xs:element name="patrimoniado" type="xs:string" minOccurs="0"/>
+      <xs:element name="status" type="xs:string" minOccurs="0"/>
+      <xs:element name="ultimaDataAtualizacao" type="xs:string" minOccurs="0"/>
+      <xs:element name="ultimaHoraAtualizacao" type="xs:string" minOccurs="0"/>
+      <xs:element name="unidadeMedida" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="cadastroMateriaisResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:mensagemIntegracao" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="receberCompra">
+    <xs:sequence>
+      <xs:element name="login" type="xs:string" minOccurs="0"/>
+      <xs:element name="token" type="xs:string" minOccurs="0"/>
+      <xs:element name="listaCompra" type="tns:compraVo" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="compraVo">
+    <xs:sequence>
+      <xs:element name="centro" type="xs:string" minOccurs="0"/>
+      <xs:element name="codigoPedido" type="xs:string" minOccurs="0"/>
+      <xs:element name="dataCompra" type="xs:dateTime" minOccurs="0"/>
+      <xs:element name="dataPrevisao" type="xs:dateTime" minOccurs="0"/>
+      <xs:element name="dataUltimaAtualizacao" type="xs:string" minOccurs="0"/>
+      <xs:element name="fornecedor" type="xs:string" minOccurs="0"/>
+      <xs:element name="horaUltimaAtualizacao" type="xs:string" minOccurs="0"/>
+      <xs:element name="itemPedido" type="xs:string" minOccurs="0"/>
+      <xs:element name="itemRmSap" type="xs:string" minOccurs="0"/>
+      <xs:element name="material" type="xs:string" minOccurs="0"/>
+      <xs:element name="numeroRma" type="xs:string" minOccurs="0"/>
+      <xs:element name="precoUnitario" type="xs:string" minOccurs="0"/>
+      <xs:element name="quantidade" type="xs:string" minOccurs="0"/>
+      <xs:element name="rmSap" type="xs:string" minOccurs="0"/>
+      <xs:element name="status" type="xs:string" minOccurs="0"/>
+      <xs:element name="valorTotal" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="receberCompraResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:mensagemIntegracao" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="criarRma">
+    <xs:sequence>
+      <xs:element name="login" type="xs:string" minOccurs="0"/>
+      <xs:element name="token" type="xs:string" minOccurs="0"/>
+      <xs:element name="rmIntegracaoVo" type="tns:rmIntegracaoVo" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="rmIntegracaoVo">
+    <xs:sequence>
+      <xs:element name="dataAplicacao" type="xs:dateTime" minOccurs="0"/>
+      <xs:element name="listaDeposito" type="xs:string" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="listaMaterial" type="tns:rmMaterialIntegracaoVo" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="localEntrega" type="xs:string" minOccurs="0"/>
+      <xs:element name="observacao" type="xs:string" minOccurs="0"/>
+      <xs:element name="primeiroAprovador" type="xs:string" minOccurs="0"/>
+      <xs:element name="requisitante" type="xs:string" minOccurs="0"/>
+      <xs:element name="tipoRequisicao" type="xs:string" minOccurs="0"/>
+      <xs:element name="usuarioCadastrante" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="rmMaterialIntegracaoVo">
+    <xs:sequence>
+      <xs:element name="aplicacao" type="xs:string" minOccurs="0"/>
+      <xs:element name="codigoMaterial" type="xs:string" minOccurs="0"/>
+      <xs:element name="coletorCustosDiagramaRede" type="xs:string" minOccurs="0"/>
+      <xs:element name="coletorCustosElementoPEP" type="xs:string" minOccurs="0"/>
+      <xs:element name="coletorCustosOperacao" type="xs:string" minOccurs="0"/>
+      <xs:element name="compraEstoque" type="xs:boolean" minOccurs="0"/>
+      <xs:element name="itemRequisicaoSap" type="xs:int" minOccurs="0"/>
+      <xs:element name="localEntrega" type="xs:string" minOccurs="0"/>
+      <xs:element name="numeroRequisicaoSap" type="xs:string" minOccurs="0"/>
+      <xs:element name="quantidade" type="xs:double" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="criarRmaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:mensagemIntegracao" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="cadastroFornecedores">
+    <xs:sequence>
+      <xs:element name="login" type="xs:string" minOccurs="0"/>
+      <xs:element name="token" type="xs:string" minOccurs="0"/>
+      <xs:element name="listaFornecedores" type="tns:fornecedorVo" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="fornecedorVo">
+    <xs:sequence>
+      <xs:element name="centro" type="xs:string" minOccurs="0"/>
+      <xs:element name="cidade" type="xs:string" minOccurs="0"/>
+      <xs:element name="cnpj" type="xs:string" minOccurs="0"/>
+      <xs:element name="codigo" type="xs:string" minOccurs="0"/>
+      <xs:element name="estado" type="xs:string" minOccurs="0"/>
+      <xs:element name="nome" type="xs:string" minOccurs="0"/>
+      <xs:element name="status" type="xs:string" minOccurs="0"/>
+      <xs:element name="ultimaDataAtualizacao" type="xs:string" minOccurs="0"/>
+      <xs:element name="ultimaHoraAtualizacao" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="cadastroFornecedoresResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:mensagemIntegracao" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:element name="receberEntrada" type="tns:receberEntrada"></xs:element>
+
+  <xs:complexType name="receberEntrada">
+  	<xs:sequence>
+  		<xs:element name="login" type="xs:string" maxOccurs="1"
+  			minOccurs="0">
+  		</xs:element>
+  		<xs:element name="token" type="xs:string" maxOccurs="1"
+  			minOccurs="0">
+  		</xs:element>
+  		<xs:element name="materiais" type="tns:materiais"
+  			maxOccurs="unbounded" minOccurs="0">
+  		</xs:element>
+  	</xs:sequence>
+  </xs:complexType>
+  
+    <xs:element name="receberEntradaResponse"
+    	type="tns:receberEntradaResponse">
+    </xs:element>
+    
+    <xs:complexType name="receberEntradaResponse"></xs:complexType>
+
+    <xs:complexType name="materiais">
+	   	<xs:sequence>
+	      <xs:element name="centroCod" type="xs:string" minOccurs="0"/>
+	      <xs:element name="codigoMaterial" type="xs:string" minOccurs="0"/>
+	      <xs:element name="itemRmSap" type="xs:string" minOccurs="0"/>
+	      <xs:element name="numeroRma" type="xs:string" minOccurs="0"/>
+	      <xs:element name="rmSap" type="xs:string" minOccurs="0"/>
+	      <xs:element name="documentoEntrada" type="xs:string" minOccurs="0"/>
+	      <xs:element name="quantidade" type="xs:decimal" minOccurs="0"/>
+	      <xs:element name="dataRecebimento" type="xs:dateTime" minOccurs="0"/>
+	    </xs:sequence>
+    </xs:complexType>
+</xs:schema>
+

@@ -1,0 +1,66 @@
+
+
+
+
+
+CREATE VIEW [dbo].[VW_RM_MATERIAL]
+AS
+SELECT        ROW_NUMBER() OVER (ORDER BY RM_MATERIAL_ID) AS ID, RM.RM_MATERIAL_ID AS RM_MATERIAL_ID,
+
+    (SELECT        TOP (1) RMS.ID
+      FROM            TB_RM_MATERIAL_STATUS RMS
+      WHERE        RMS.RM_MATERIAL_ID = RM.RM_MATERIAL_ID AND (RMS.IS_HISTORICO IS NULL OR
+                                RMS.IS_HISTORICO = 0)
+      ORDER BY ID DESC) AS RM_MATERIAL_STATUS_ID,
+
+    (SELECT        DATEDIFF(DAY, GETDATE(), RM.DATA_PREVISAO_CHEGADA)) AS DIAS_PREVISTOS,
+
+    (SELECT        TOP (1) RMS.DATA_HORA_STATUS
+      FROM            TB_RM_MATERIAL_STATUS RMS LEFT JOIN
+                                TB_STATUS S ON RMS.STATUS_ID = S.ID
+      WHERE        RMS.RM_MATERIAL_ID = RM.RM_MATERIAL_ID AND S.CODIGO = 'AprGa'
+      ORDER BY RMS.ID DESC) AS DATA_APROV_GERENTE_AREA,
+
+    (SELECT        TOP (1) RMS.DATA_HORA_STATUS
+      FROM            TB_RM_MATERIAL_STATUS RMS LEFT JOIN
+                                TB_STATUS S ON RMS.STATUS_ID = S.ID
+      WHERE        RMS.RM_MATERIAL_ID = RM.RM_MATERIAL_ID AND S.CODIGO = 'AprGc'
+      ORDER BY RMS.ID DESC) AS DATA_APROV_GERENTE_CUSTOS,
+      
+    (SELECT        TOP (1) RMS.DATA_HORA_STATUS
+      FROM            TB_RM_MATERIAL_STATUS RMS LEFT JOIN
+                                TB_STATUS S ON RMS.STATUS_ID = S.ID
+      WHERE        RMS.RM_MATERIAL_ID = RM.RM_MATERIAL_ID AND S.CODIGO = 'AprCo'
+      ORDER BY RMS.ID DESC) AS DATA_APROV_COORDENADOR,
+          
+    (SELECT        TOP (1) RMS.DATA_HORA_STATUS
+      FROM            TB_RM_MATERIAL_STATUS RMS LEFT JOIN
+                                TB_STATUS S ON RMS.STATUS_ID = S.ID
+      WHERE        RMS.RM_MATERIAL_ID = RM.RM_MATERIAL_ID AND S.CODIGO = 'AprRre'
+      ORDER BY RMS.ID DESC) AS DATA_APROV_RESPONSAVEL_RETIRADA_ESTOQUE,
+      
+    (SELECT        TOP (1) RMS.DATA_HORA_STATUS
+      FROM            TB_RM_MATERIAL_STATUS RMS LEFT JOIN
+                                TB_STATUS S ON RMS.STATUS_ID = S.ID
+      WHERE        RMS.RM_MATERIAL_ID = RM.RM_MATERIAL_ID AND S.CODIGO = 'CompCust'
+      ORDER BY RMS.ID DESC) AS DATA_APROV_COMPLEMENTO_CUSTOS,
+
+    (SELECT        CASE WHEN EXISTS
+                                    (SELECT        RMR.RM_MATERIAL_RETIRADA_ID
+                                      FROM            TB_RM_MATERIAL_RETIRADA RMR
+                                      WHERE        RM.RM_MATERIAL_ID = RMR.RM_MATERIAL_ID AND RMR.PRE_RETIRADA = 0 AND RMR.DATA_AUTENTICACAO IS NULL) AND 
+                                (RM.CONFIRMA_RET_NAO_PRESENCIAL IS NULL OR
+                                RM.CONFIRMA_RET_NAO_PRESENCIAL = 0) AND EXISTS
+                                    (SELECT        RMS.ID
+                                      FROM            TB_RM_MATERIAL_STATUS RMS LEFT JOIN
+                                                                TB_STATUS S ON RMS.STATUS_ID = S.ID
+                                      WHERE        RMS.RM_MATERIAL_ID = RM.RM_MATERIAL_ID AND (RMS.IS_HISTORICO IS NULL OR
+                                                                RMS.IS_HISTORICO = 0) AND S.CODIGO = 'Fim') THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT) END) AS CONFIRMAR_RETIRADA,
+    (SELECT sum([QUANTIDADE]) FROM [TB_RM_MATERIAL_RECEBIMENTO] as rec
+    where rec.[RM_MATERIAL_ID] = RM.[RM_MATERIAL_ID]) as QTDE_RECEBIDA
+FROM            TB_RM_MATERIAL RM
+
+
+
+
+

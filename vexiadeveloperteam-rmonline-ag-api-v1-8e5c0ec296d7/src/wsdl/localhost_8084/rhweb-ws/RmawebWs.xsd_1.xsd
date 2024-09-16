@@ -1,0 +1,1718 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is JAX-WS RI 2.2.7-b24  svn-revision#12986. --><xs:schema xmlns:tns="http://ws.rhweb_ws.nextage.com.br/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://ws.rhweb_ws.nextage.com.br/">
+
+<xs:element name="configuracao" type="tns:configuracao"/>
+
+<xs:element name="listarPessoasRmaweb" type="tns:listarPessoasRmaweb"/>
+
+<xs:element name="listarPessoasRmawebResponse" type="tns:listarPessoasRmawebResponse"/>
+
+<xs:element name="pessoa" type="tns:pessoa"/>
+
+<xs:complexType name="listarPessoasRmaweb">
+<xs:sequence>
+<xs:element name="filtroImportacaoBloco" type="tns:filtroImportacaoBloco" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="filtroImportacaoBloco">
+<xs:sequence>
+<xs:element name="qtdeBloco" type="xs:int"/>
+<xs:element name="ultimoId" type="xs:int" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="listarPessoasRmawebResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:pessoa" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="pessoa">
+<xs:sequence>
+<xs:element name="pessoaId" type="xs:int" minOccurs="0"/>
+<xs:element name="referencia" type="xs:string" minOccurs="0"/>
+<xs:element name="nome" type="xs:string" minOccurs="0"/>
+<xs:element name="telefone" type="xs:string" minOccurs="0"/>
+<xs:element name="tipoMo" type="xs:string" minOccurs="0"/>
+<xs:element name="tipoContrato" type="xs:string" minOccurs="0"/>
+<xs:element name="ramalAtual" type="xs:string" minOccurs="0"/>
+<xs:element name="dataNascimento" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="sexo" type="xs:string" minOccurs="0"/>
+<xs:element name="motivoDemissao" type="xs:string" minOccurs="0"/>
+<xs:element name="anoEndereco" type="xs:string" minOccurs="0"/>
+<xs:element name="endereco" type="xs:string" minOccurs="0"/>
+<xs:element name="bairro" type="xs:string" minOccurs="0"/>
+<xs:element name="numero" type="xs:string" minOccurs="0"/>
+<xs:element name="dataAdmissao" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="desistenteReprovado" type="xs:string" minOccurs="0"/>
+<xs:element name="dataDesistenteReprovado" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="motivo" type="xs:string" minOccurs="0"/>
+<xs:element name="indicadoPor" type="tns:pessoa" minOccurs="0"/>
+<xs:element name="dataRecrutamento" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="localRecrutamento" type="xs:string" minOccurs="0"/>
+<xs:element name="recrutador" type="xs:string" minOccurs="0"/>
+<xs:element name="dataEncaminhadoExame" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="dataRecebimentoAso" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="horaRecebimentoAso" type="xs:string" minOccurs="0"/>
+<xs:element name="dataRecebimentoCtps" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="dataDemissao" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="dataHomologacaoDemissao" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="dataEntregaDocsDp" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="dataChegadaPrevista" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="dataLiberacaoCracha" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="dataEntradaArea" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="emailPessoal" type="xs:string" minOccurs="0"/>
+<xs:element name="emailCcpr" type="xs:string" minOccurs="0"/>
+<xs:element name="dataRetorno" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="tipoSanguineo" type="xs:string" minOccurs="0"/>
+<xs:element name="pcd" type="xs:string" minOccurs="0"/>
+<xs:element name="deficiencia" type="xs:string" minOccurs="0"/>
+<xs:element name="nomePai" type="xs:string" minOccurs="0"/>
+<xs:element name="nomeMae" type="xs:string" minOccurs="0"/>
+<xs:element name="nomeEscola" type="xs:string" minOccurs="0"/>
+<xs:element name="conselho" type="xs:string" minOccurs="0"/>
+<xs:element name="numeroRegistro" type="xs:string" minOccurs="0"/>
+<xs:element name="dataEmissaoRegistro" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="status" type="xs:string" minOccurs="0"/>
+<xs:element name="cpf" type="xs:string" minOccurs="0"/>
+<xs:element name="rg" type="xs:string" minOccurs="0"/>
+<xs:element name="orgaoExpedidorRg" type="xs:string" minOccurs="0"/>
+<xs:element name="nrCarteiraTrabalho" type="xs:string" minOccurs="0"/>
+<xs:element name="serieCarteiraTrabalho" type="xs:string" minOccurs="0"/>
+<xs:element name="ufCarteiraTrabalho" type="tns:uf" minOccurs="0"/>
+<xs:element name="pisPasep" type="xs:string" minOccurs="0"/>
+<xs:element name="fatorPlr" type="xs:double" minOccurs="0"/>
+<xs:element name="horistaMensalista" type="xs:string" minOccurs="0"/>
+<xs:element name="podeRequisitarVaga" type="xs:string" minOccurs="0"/>
+<xs:element name="cidade" type="xs:string" minOccurs="0"/>
+<xs:element name="cep" type="xs:string" minOccurs="0"/>
+<xs:element name="cidadeNascimento" type="xs:string" minOccurs="0"/>
+<xs:element name="cidadeOrigem" type="tns:cidade" minOccurs="0"/>
+<xs:element name="funcao" type="tns:funcao" minOccurs="0"/>
+<xs:element name="funcaoPb" type="tns:funcaoPetrobras" minOccurs="0"/>
+<xs:element name="subArea" type="tns:subArea" minOccurs="0"/>
+<xs:element name="vaga" type="tns:vaga" minOccurs="0"/>
+<xs:element name="uf" type="tns:uf" minOccurs="0"/>
+<xs:element name="ufEscola" type="tns:uf" minOccurs="0"/>
+<xs:element name="ufLocalTrabalho" type="tns:uf" minOccurs="0"/>
+<xs:element name="ufNascimento" type="tns:uf" minOccurs="0"/>
+<xs:element name="ufOrigem" type="tns:uf" minOccurs="0"/>
+<xs:element name="area" type="tns:area" minOccurs="0"/>
+<xs:element name="subordinacao" type="tns:subordinacao" minOccurs="0"/>
+<xs:element name="recados" type="xs:string" minOccurs="0"/>
+<xs:element name="dataCadastro" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="dataInicioTreinCcpr" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="dataFimTreinCcpr" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="dataTreinamentoPB" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="dataExperiencia30Dias" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="dataExperiencia60Dias" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="nacionalidade" type="xs:string" minOccurs="0"/>
+<xs:element name="dataMobilizacaoFamilia" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="dataDesmobilizacaoFamilia" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="dataMudanca" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="dataTransferencia" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="pontoReferencia" type="xs:string" minOccurs="0"/>
+<xs:element name="pai" type="xs:string" minOccurs="0"/>
+<xs:element name="mae" type="xs:string" minOccurs="0"/>
+<xs:element name="dataEmissaoCPF" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="dataEmissaoRG" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="dataEmissaoCTPS" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="dataEmissaoTituloEleitor" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="tituloEleitor" type="xs:string" minOccurs="0"/>
+<xs:element name="zonaEleitoral" type="xs:string" minOccurs="0"/>
+<xs:element name="secaoEleitoral" type="xs:string" minOccurs="0"/>
+<xs:element name="ufEmissaoCPF" type="tns:uf" minOccurs="0"/>
+<xs:element name="ufEmissaoRG" type="tns:uf" minOccurs="0"/>
+<xs:element name="cidadeVotacao" type="tns:cidade" minOccurs="0"/>
+<xs:element name="ufVotacao" type="tns:uf" minOccurs="0"/>
+<xs:element name="ufPisPasep" type="tns:uf" minOccurs="0"/>
+<xs:element name="numeroCNH" type="xs:string" minOccurs="0"/>
+<xs:element name="categoriaCNH" type="xs:string" minOccurs="0"/>
+<xs:element name="dataEmissaoCNH" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="dataValidadeCNH" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="dataSolicitacaoCV" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="dataRecebimentoCV" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="dataEnvioCVparaPB" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="dataRecebimentoCVdaPB" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="observacao" type="xs:string" minOccurs="0"/>
+<xs:element name="dataEntrevistaTecnica" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="aptoEntrevistaTecnica" type="xs:string" minOccurs="0"/>
+<xs:element name="dataExameMedico" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="aptoExameMedico" type="xs:string" minOccurs="0"/>
+<xs:element name="clinica" type="tns:clinica" minOccurs="0"/>
+<xs:element name="alojar" type="xs:string" minOccurs="0"/>
+<xs:element name="numeroIf" type="xs:string" minOccurs="0"/>
+<xs:element name="dataProtocoloIf" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="observacaoAdmissao" type="xs:string" minOccurs="0"/>
+<xs:element name="crachaCcpr" type="xs:string" minOccurs="0"/>
+<xs:element name="dataAssinaturaContrato" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="autorizadoDirigir" type="xs:string" minOccurs="0"/>
+<xs:element name="dataAdmissaoAprovada" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="dataSolicitacaoCracha" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="observacaoIf" type="xs:string" minOccurs="0"/>
+<xs:element name="tipoContratacao" type="xs:string" minOccurs="0"/>
+<xs:element name="diasIntervaloViagem" type="xs:int" minOccurs="0"/>
+<xs:element name="mobilizacao" type="xs:string" minOccurs="0"/>
+<xs:element name="mobilizacaoPaga" type="xs:string" minOccurs="0"/>
+<xs:element name="empresaId" type="tns:empresa" minOccurs="0"/>
+<xs:element name="encarregado" type="tns:pessoa" minOccurs="0"/>
+<xs:element name="centroCusto" type="tns:centroCusto" minOccurs="0"/>
+<xs:element name="isSubcontratado" type="xs:string" minOccurs="0"/>
+<xs:element name="isIndicacao" type="xs:string" minOccurs="0"/>
+<xs:element name="isEncarregado" type="xs:string" minOccurs="0"/>
+<xs:element name="periodoTrabalho" type="xs:string" minOccurs="0"/>
+<xs:element name="dadosBancarios" type="xs:string" minOccurs="0"/>
+<xs:element name="dataInicioProjeto" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="numeroCrachaProvisorio" type="xs:string" minOccurs="0"/>
+<xs:element name="dataRecCrachaProvisorio" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="dataBaixaCrachaProvisorio" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="isRecrutador" type="xs:string" minOccurs="0"/>
+<xs:element name="isReadmissivel" type="xs:string" minOccurs="0"/>
+<xs:element name="dataEnvioDocCrachaDp" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="chaveBandejaEnvio" type="xs:string" minOccurs="0"/>
+<xs:element name="chaveBandejaRetorno" type="xs:string" minOccurs="0"/>
+<xs:element name="planseq" type="xs:string" minOccurs="0"/>
+<xs:element name="dataTransfSaida" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="direitoPlr" type="xs:string" minOccurs="0"/>
+<xs:element name="treinamentoIntegracao" type="xs:int" minOccurs="0"/>
+<xs:element name="foto" type="xs:base64Binary" minOccurs="0"/>
+<xs:element name="nomeCracha" type="xs:string" minOccurs="0"/>
+<xs:element name="viasCracha" type="xs:int" minOccurs="0"/>
+<xs:element name="dataPrevisaoDesmobilizacao" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="possuiContaCorrente" type="xs:string" minOccurs="0"/>
+<xs:element name="nomeConjuge" type="xs:string" minOccurs="0"/>
+<xs:element name="cbo" type="tns:cbo" minOccurs="0"/>
+<xs:element name="dataInicioProcessoDemissao" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="indicado" type="tns:vagaRqsIndicado" minOccurs="0"/>
+<xs:element name="ut" type="xs:string" minOccurs="0"/>
+<xs:element name="nrCracha" type="xs:string" minOccurs="0"/>
+<xs:element name="nomeContato" type="xs:string" minOccurs="0"/>
+<xs:element name="telefoneContato" type="xs:string" minOccurs="0"/>
+<xs:element name="salarioBase" type="xs:double" minOccurs="0"/>
+<xs:element name="salarioMensal" type="xs:double" minOccurs="0"/>
+<xs:element name="salarioContratacao" type="xs:double" minOccurs="0"/>
+<xs:element name="salarioBaseCript" type="xs:string" minOccurs="0"/>
+<xs:element name="salarioMensalCript" type="xs:string" minOccurs="0"/>
+<xs:element name="contribuicaoSindical" type="xs:string" minOccurs="0"/>
+<xs:element name="nrFichaRegistro" type="xs:string" minOccurs="0"/>
+<xs:element name="liberadoServicoMilitar" type="xs:string" minOccurs="0"/>
+<xs:element name="observacaoAlojamento" type="xs:string" minOccurs="0"/>
+<xs:element name="numeroBota" type="xs:string" minOccurs="0"/>
+<xs:element name="numeroCalca" type="xs:string" minOccurs="0"/>
+<xs:element name="tamanhoCamisa" type="xs:string" minOccurs="0"/>
+<xs:element name="primeiroEmprego" type="xs:string" minOccurs="0"/>
+<xs:element name="observacaoEntregaDocs" type="xs:string" minOccurs="0"/>
+<xs:element name="dataEntregaDocs" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="dataSolicPassagemMob" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="eap" type="tns:eap" minOccurs="0"/>
+<xs:element name="dataAux1" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="dataAux2" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="dataAux3" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="dataAux4" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="dataAux5" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="dataAux6" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="dataAux7" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="dataAux8" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="dataAux9" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="dataAux10" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="dataAux11" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="dataAux12" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="dataAux13" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="dataAux14" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="dataAux15" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="textoAux1" type="xs:string" minOccurs="0"/>
+<xs:element name="textoAux2" type="xs:string" minOccurs="0"/>
+<xs:element name="textoAux3" type="xs:string" minOccurs="0"/>
+<xs:element name="textoAux4" type="xs:string" minOccurs="0"/>
+<xs:element name="textoAux5" type="xs:string" minOccurs="0"/>
+<xs:element name="textoAux6" type="xs:string" minOccurs="0"/>
+<xs:element name="textoAux7" type="xs:string" minOccurs="0"/>
+<xs:element name="textoAux8" type="xs:string" minOccurs="0"/>
+<xs:element name="textoAux9" type="xs:string" minOccurs="0"/>
+<xs:element name="textoAux10" type="xs:string" minOccurs="0"/>
+<xs:element name="textoAux11" type="xs:string" minOccurs="0"/>
+<xs:element name="textoAux12" type="xs:string" minOccurs="0"/>
+<xs:element name="textoAux13" type="xs:string" minOccurs="0"/>
+<xs:element name="textoAux14" type="xs:string" minOccurs="0"/>
+<xs:element name="textoAux15" type="xs:string" minOccurs="0"/>
+<xs:element name="textoAux16" type="xs:string" minOccurs="0"/>
+<xs:element name="textoAux17" type="xs:string" minOccurs="0"/>
+<xs:element name="textoAux18" type="xs:string" minOccurs="0"/>
+<xs:element name="textoAux19" type="xs:string" minOccurs="0"/>
+<xs:element name="textoAux20" type="xs:string" minOccurs="0"/>
+<xs:element name="textoAux21" type="xs:string" minOccurs="0"/>
+<xs:element name="textoAux22" type="xs:string" minOccurs="0"/>
+<xs:element name="textoAux23" type="xs:string" minOccurs="0"/>
+<xs:element name="textoAux24" type="xs:string" minOccurs="0"/>
+<xs:element name="textoAux25" type="xs:string" minOccurs="0"/>
+<xs:element name="textAreaAux1" type="xs:string" minOccurs="0"/>
+<xs:element name="textAreaAux2" type="xs:string" minOccurs="0"/>
+<xs:element name="textAreaAux3" type="xs:string" minOccurs="0"/>
+<xs:element name="numeroAux1" type="xs:int" minOccurs="0"/>
+<xs:element name="numeroAux2" type="xs:int" minOccurs="0"/>
+<xs:element name="doubleAux1" type="xs:double" minOccurs="0"/>
+<xs:element name="doubleAux2" type="xs:double" minOccurs="0"/>
+<xs:element name="doubleAux3" type="xs:double" minOccurs="0"/>
+<xs:element name="doubleAux4" type="xs:double" minOccurs="0"/>
+<xs:element name="doubleAux5" type="xs:double" minOccurs="0"/>
+<xs:element name="doubleAux6" type="xs:double" minOccurs="0"/>
+<xs:element name="doubleAux7" type="xs:double" minOccurs="0"/>
+<xs:element name="doubleAux8" type="xs:double" minOccurs="0"/>
+<xs:element name="doubleAux9" type="xs:double" minOccurs="0"/>
+<xs:element name="doubleAux10" type="xs:double" minOccurs="0"/>
+<xs:element name="doubleAux11" type="xs:double" minOccurs="0"/>
+<xs:element name="doubleAux12" type="xs:double" minOccurs="0"/>
+<xs:element name="doubleAux13" type="xs:double" minOccurs="0"/>
+<xs:element name="doubleAux14" type="xs:double" minOccurs="0"/>
+<xs:element name="doubleAux15" type="xs:double" minOccurs="0"/>
+<xs:element name="raca" type="xs:string" minOccurs="0"/>
+<xs:element name="tipoDocumento" type="tns:tipoDocumento" minOccurs="0"/>
+<xs:element name="vwRelPessoa" type="tns:vwRelPessoa" minOccurs="0"/>
+<xs:element name="statusIf" type="xs:string" minOccurs="0"/>
+<xs:element name="horaChegadaAeroporto" type="xs:string" minOccurs="0"/>
+<xs:element name="aeroportoChegada" type="xs:string" minOccurs="0"/>
+<xs:element name="chegouAeroporto" type="xs:string" minOccurs="0"/>
+<xs:element name="responsavelDocDesligamento" type="tns:pessoa" minOccurs="0"/>
+<xs:element name="areaRh" type="tns:areaRh" minOccurs="0"/>
+<xs:element name="planoHorarioTrabalho" type="tns:planoHorarioTrabalho" minOccurs="0"/>
+<xs:element name="motivoAdmissao" type="tns:motivoAdmissao" minOccurs="0"/>
+<xs:element name="unidadeOrganizacional" type="tns:unidadeOrganizacional" minOccurs="0"/>
+<xs:element name="conhecidoComo" type="xs:string" minOccurs="0"/>
+<xs:element name="paisNacionalidade" type="tns:pais" minOccurs="0"/>
+<xs:element name="estadoCivilId" type="tns:estadoCivil" minOccurs="0"/>
+<xs:element name="racaId" type="tns:raca" minOccurs="0"/>
+<xs:element name="pais" type="tns:pais" minOccurs="0"/>
+<xs:element name="complemento" type="xs:string" minOccurs="0"/>
+<xs:element name="ddd" type="xs:string" minOccurs="0"/>
+<xs:element name="dataEmissaoPisPasep" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="nuCertificadoMilitar" type="xs:string" minOccurs="0"/>
+<xs:element name="categoriaCertificadoMilitar" type="xs:string" minOccurs="0"/>
+<xs:element name="especieCertificadoMilitar" type="xs:string" minOccurs="0"/>
+<xs:element name="nuPassaporte" type="xs:string" minOccurs="0"/>
+<xs:element name="dataEmissaoPassaporte" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="paisNaturalizado" type="tns:pais" minOccurs="0"/>
+<xs:element name="dataValidadePassaporte" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="localEmissaoPassaporte" type="xs:string" minOccurs="0"/>
+<xs:element name="nuIdentificacaoTrabalhador" type="xs:string" minOccurs="0"/>
+<xs:element name="nuCartaoNacionalSaude" type="xs:string" minOccurs="0"/>
+<xs:element name="sgConselhoRegional" type="xs:string" minOccurs="0"/>
+<xs:element name="ufConselhoRegional" type="tns:uf" minOccurs="0"/>
+<xs:element name="nuIdentidadeEstrangeiro" type="xs:string" minOccurs="0"/>
+<xs:element name="dataChegadaBrasil" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="conjugueBrasileiro" type="xs:string" minOccurs="0"/>
+<xs:element name="nuVisto" type="xs:string" minOccurs="0"/>
+<xs:element name="tpVisto" type="xs:string" minOccurs="0"/>
+<xs:element name="dataEmissaoVisto" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="enderecoRecrutamento" type="xs:string" minOccurs="0"/>
+<xs:element name="numeroRecrutamento" type="xs:string" minOccurs="0"/>
+<xs:element name="complementoRecrutamento" type="xs:string" minOccurs="0"/>
+<xs:element name="bairroRecrutamento" type="xs:string" minOccurs="0"/>
+<xs:element name="cidadeRecrutamento" type="xs:string" minOccurs="0"/>
+<xs:element name="cepRecrutamento" type="xs:string" minOccurs="0"/>
+<xs:element name="ufRecrutamento" type="tns:uf" minOccurs="0"/>
+<xs:element name="paisRecrutamento" type="tns:pais" minOccurs="0"/>
+<xs:element name="dddRecrutamento" type="xs:string" minOccurs="0"/>
+<xs:element name="telefoneRecrutamento" type="xs:string" minOccurs="0"/>
+<xs:element name="grauInstrucao" type="tns:escolaridade" minOccurs="0"/>
+<xs:element name="tipoEstabEnsino" type="tns:tipoEstabEnsino" minOccurs="0"/>
+<xs:element name="certificadoEscolar" type="tns:certificadoEscolar" minOccurs="0"/>
+<xs:element name="formacao" type="tns:formacao" minOccurs="0"/>
+<xs:element name="duracaoCurso" type="xs:int" minOccurs="0"/>
+<xs:element name="unidadeDuracaoCurso" type="xs:string" minOccurs="0"/>
+<xs:element name="mesConclusaoCurso" type="xs:int" minOccurs="0"/>
+<xs:element name="anoConclusaoCurso" type="xs:int" minOccurs="0"/>
+<xs:element name="instituicaoEnsino" type="tns:instituicaoEnsino" minOccurs="0"/>
+<xs:element name="paisInstituicao" type="tns:pais" minOccurs="0"/>
+<xs:element name="centroCustoEmissor" type="tns:centroCusto" minOccurs="0"/>
+<xs:element name="centroCustoReceptor" type="tns:centroCusto" minOccurs="0"/>
+<xs:element name="elementoPep" type="tns:pep" minOccurs="0"/>
+<xs:element name="nivelSalarial" type="tns:nivelSalarial" minOccurs="0"/>
+<xs:element name="horarioTrabalho" type="xs:string" minOccurs="0"/>
+<xs:element name="periodoExperiencia" type="xs:int" minOccurs="0"/>
+<xs:element name="periodoExperiencia1" type="xs:int" minOccurs="0"/>
+<xs:element name="periodoExperiencia2" type="xs:int" minOccurs="0"/>
+<xs:element name="exposicaoAgenteNocivo" type="tns:exposicaoAgenteNocivo" minOccurs="0"/>
+<xs:element name="vinculoEmpregaticio" type="tns:vinculoEmpregaticio" minOccurs="0"/>
+<xs:element name="aposentado" type="xs:string" minOccurs="0"/>
+<xs:element name="categoriaTrabalhador" type="tns:categoriaTrabalhador" minOccurs="0"/>
+<xs:element name="adicionalInsalubridade" type="xs:string" minOccurs="0"/>
+<xs:element name="porcentagemInsalubridade" type="xs:double" minOccurs="0"/>
+<xs:element name="vinculo" type="tns:vinculo" minOccurs="0"/>
+<xs:element name="adicionalPericulosidade" type="xs:string" minOccurs="0"/>
+<xs:element name="porcentagemPericulosidade" type="xs:double" minOccurs="0"/>
+<xs:element name="sindicato" type="tns:sindicato" minOccurs="0"/>
+<xs:element name="valorMensalidadeSindical" type="xs:double" minOccurs="0"/>
+<xs:element name="codigoMensalidadeSindical" type="xs:double" minOccurs="0"/>
+<xs:element name="contribuicaoAssistencial" type="xs:string" minOccurs="0"/>
+<xs:element name="contribuicaoConfederativa" type="xs:string" minOccurs="0"/>
+<xs:element name="formaPagamento" type="tns:formaPagamento" minOccurs="0"/>
+<xs:element name="banco" type="xs:string" minOccurs="0"/>
+<xs:element name="numeroContaBancaria" type="xs:string" minOccurs="0"/>
+<xs:element name="digitoContaCorrente" type="xs:string" minOccurs="0"/>
+<xs:element name="grupoSanguineo" type="tns:grupoSanguineo" minOccurs="0"/>
+<xs:element name="fatorRh" type="tns:fatorRh" minOccurs="0"/>
+<xs:element name="codigoTomador" type="xs:string" minOccurs="0"/>
+<xs:element name="salaoRefeitorio" type="xs:string" minOccurs="0"/>
+<xs:element name="codigoRefeicao" type="xs:string" minOccurs="0"/>
+<xs:element name="funcionarioRefeitorio" type="xs:string" minOccurs="0"/>
+<xs:element name="postoPagamento" type="xs:string" minOccurs="0"/>
+<xs:element name="gremio" type="xs:string" minOccurs="0"/>
+<xs:element name="superintendencia" type="xs:string" minOccurs="0"/>
+<xs:element name="nivel" type="xs:string" minOccurs="0"/>
+<xs:element name="tipoComunicacao" type="tns:tipoComunicacao" minOccurs="0"/>
+<xs:element name="tipoComunicacaoRecrut" type="tns:tipoComunicacao" minOccurs="0"/>
+<xs:element name="tipoDemissao" type="tns:tipoDemissao" minOccurs="0"/>
+<xs:element name="eapMultiEmpresa" type="tns:eapMultiEmpresa" minOccurs="0"/>
+<xs:element name="subgrupo" type="xs:string" minOccurs="0"/>
+<xs:element name="dataSolicitacaoDocumentacao" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="dataEnvioSap" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="dataAdmSap" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="necessitaTransporte" type="xs:string" minOccurs="0"/>
+<xs:element name="observacaoTransporte" type="xs:string" minOccurs="0"/>
+<xs:element name="somaCargaHorariaHoras" type="xs:int" minOccurs="0"/>
+<xs:element name="somaCargaHorariaMinutos" type="xs:int" minOccurs="0"/>
+<xs:element name="valorTotalTreinamento" type="xs:double" minOccurs="0"/>
+<xs:element name="cboDescricao" type="xs:string" minOccurs="0"/>
+<xs:element name="possuiFoto" type="xs:boolean" minOccurs="0"/>
+<xs:element name="beneficios" type="tns:beneficio" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="direitoTransporte" type="xs:string" minOccurs="0"/>
+<xs:element name="tempoAguarAso" type="xs:int" minOccurs="0"/>
+<xs:element name="dataEntradaUltimaEtapa" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="fcFluxo" type="tns:fcFluxo" minOccurs="0"/>
+<xs:element name="statusContratacao" type="tns:statusContratacao" minOccurs="0"/>
+<xs:element name="nivelEncarregado" type="xs:int" minOccurs="0"/>
+<xs:element name="telefoneCompleto" type="xs:string" minOccurs="0"/>
+<xs:element name="escolaridade" type="xs:string" minOccurs="0"/>
+<xs:element name="estadoCivil" type="xs:string" minOccurs="0"/>
+<xs:element name="stDataAdmissao" type="xs:string" minOccurs="0"/>
+<xs:element name="stDataDemissao" type="xs:string" minOccurs="0"/>
+<xs:element name="stDataRecebimentoAso" type="xs:string" minOccurs="0"/>
+<xs:element name="stDataEncaminhadoExame" type="xs:string" minOccurs="0"/>
+<xs:element name="stDataInicioTreinCcpr" type="xs:string" minOccurs="0"/>
+<xs:element name="stDataFimTreinCcpr" type="xs:string" minOccurs="0"/>
+<xs:element name="stDataTreinamentoPB" type="xs:string" minOccurs="0"/>
+<xs:element name="stDataEntregaDocsDp" type="xs:string" minOccurs="0"/>
+<xs:element name="stDataRecebimentoCtps" type="xs:string" minOccurs="0"/>
+<xs:element name="stDataSolicitacaoCracha" type="xs:string" minOccurs="0"/>
+<xs:element name="stDataLiberacaoCracha" type="xs:string" minOccurs="0"/>
+<xs:element name="stDataTransferencia" type="xs:string" minOccurs="0"/>
+<xs:element name="stDataTransfSaida" type="xs:string" minOccurs="0"/>
+<xs:element name="stDataCadastro" type="xs:string" minOccurs="0"/>
+<xs:element name="stDataNascimento" type="xs:string" minOccurs="0"/>
+<xs:element name="stDataPrevisaoDesmobilizacao" type="xs:string" minOccurs="0"/>
+<xs:element name="stDataRecrutamento" type="xs:string" minOccurs="0"/>
+<xs:element name="stDataEntradaArea" type="xs:string" minOccurs="0"/>
+<xs:element name="stDataDesistenteReprovado" type="xs:string" minOccurs="0"/>
+<xs:element name="stDataChegadaPrevista" type="xs:string" minOccurs="0"/>
+<xs:element name="stDataExameMedico" type="xs:string" minOccurs="0"/>
+<xs:element name="stDataAdmissaoAprovada" type="xs:string" minOccurs="0"/>
+<xs:element name="stDataProtocoloIf" type="xs:string" minOccurs="0"/>
+<xs:element name="stDataEnvioDocCrachaDp" type="xs:string" minOccurs="0"/>
+<xs:element name="stDataEmissaoRG" type="xs:string" minOccurs="0"/>
+<xs:element name="stDataInicioProjeto" type="xs:string" minOccurs="0"/>
+<xs:element name="stDataMobilizacaoFamilia" type="xs:string" minOccurs="0"/>
+<xs:element name="stDataDesmobilizacaoFamilia" type="xs:string" minOccurs="0"/>
+<xs:element name="stDataMudanca" type="xs:string" minOccurs="0"/>
+<xs:element name="stDataEmissaoCTPS" type="xs:string" minOccurs="0"/>
+<xs:element name="stDataEmissaoTituloEleitor" type="xs:string" minOccurs="0"/>
+<xs:element name="stDataEmissaoCNH" type="xs:string" minOccurs="0"/>
+<xs:element name="stDataValidadeCNH" type="xs:string" minOccurs="0"/>
+<xs:element name="stDataEmissaoCPF" type="xs:string" minOccurs="0"/>
+<xs:element name="stDataEmissaoRegistro" type="xs:string" minOccurs="0"/>
+<xs:element name="stDataHomologacaoDemissao" type="xs:string" minOccurs="0"/>
+<xs:element name="stDataExperiencia30Dias" type="xs:string" minOccurs="0"/>
+<xs:element name="stDataExperiencia60Dias" type="xs:string" minOccurs="0"/>
+<xs:element name="stDataEntrevistaTecnica" type="xs:string" minOccurs="0"/>
+<xs:element name="stDataSolicitacaoCV" type="xs:string" minOccurs="0"/>
+<xs:element name="stDataRecebimentoCV" type="xs:string" minOccurs="0"/>
+<xs:element name="stDataEnvioCVparaPB" type="xs:string" minOccurs="0"/>
+<xs:element name="stDataRecebimentoCVdaPB" type="xs:string" minOccurs="0"/>
+<xs:element name="stDataInicioProcessoDemissao" type="xs:string" minOccurs="0"/>
+<xs:element name="stDataAssinaturaContrato" type="xs:string" minOccurs="0"/>
+<xs:element name="stDataBaixaCrachaProvisorio" type="xs:string" minOccurs="0"/>
+<xs:element name="stDataRecCrachaProvisorio" type="xs:string" minOccurs="0"/>
+<xs:element name="stDataSolicPassagemMob" type="xs:string" minOccurs="0"/>
+<xs:element name="stDataEntregaDocs" type="xs:string" minOccurs="0"/>
+<xs:element name="stDataAux1" type="xs:string" minOccurs="0"/>
+<xs:element name="stDataAux2" type="xs:string" minOccurs="0"/>
+<xs:element name="stDataAux3" type="xs:string" minOccurs="0"/>
+<xs:element name="stDataAux4" type="xs:string" minOccurs="0"/>
+<xs:element name="stDataAux5" type="xs:string" minOccurs="0"/>
+<xs:element name="stDataAux6" type="xs:string" minOccurs="0"/>
+<xs:element name="stDataAux7" type="xs:string" minOccurs="0"/>
+<xs:element name="stDataAux8" type="xs:string" minOccurs="0"/>
+<xs:element name="stDataAux9" type="xs:string" minOccurs="0"/>
+<xs:element name="stDataAux10" type="xs:string" minOccurs="0"/>
+<xs:element name="stDataAux11" type="xs:string" minOccurs="0"/>
+<xs:element name="stDataAux12" type="xs:string" minOccurs="0"/>
+<xs:element name="stDataAux13" type="xs:string" minOccurs="0"/>
+<xs:element name="stDataAux14" type="xs:string" minOccurs="0"/>
+<xs:element name="stDataAux15" type="xs:string" minOccurs="0"/>
+<xs:element name="stDataEmissaoPisPasep" type="xs:string" minOccurs="0"/>
+<xs:element name="stDataEmissaoPassaporte" type="xs:string" minOccurs="0"/>
+<xs:element name="stDataValidadePassaporte" type="xs:string" minOccurs="0"/>
+<xs:element name="stDataChegadaBrasil" type="xs:string" minOccurs="0"/>
+<xs:element name="stDataEmissaoVisto" type="xs:string" minOccurs="0"/>
+<xs:element name="stDataSolicitacaoDocumentacao" type="xs:string" minOccurs="0"/>
+<xs:element name="stDataEntradaUltimaEtapa" type="xs:string" minOccurs="0"/>
+<xs:element name="stDataRetorno" type="xs:string" minOccurs="0"/>
+<xs:element name="stDataEnvioSap" type="xs:string" minOccurs="0"/>
+<xs:element name="stDataAdmSap" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="uf">
+<xs:sequence>
+<xs:element name="codigo" type="xs:int" minOccurs="0"/>
+<xs:element name="nacional" type="xs:string" minOccurs="0"/>
+<xs:element name="nome" type="xs:string" minOccurs="0"/>
+<xs:element name="paissigla" type="xs:string" minOccurs="0"/>
+<xs:element name="uf" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="cidade">
+<xs:sequence>
+<xs:element name="cep" type="xs:string" minOccurs="0"/>
+<xs:element name="cidade" type="xs:string" minOccurs="0"/>
+<xs:element name="cidadeEntorno" type="xs:string" minOccurs="0"/>
+<xs:element name="ddd" type="xs:string" minOccurs="0"/>
+<xs:element name="nome" type="xs:string" minOccurs="0"/>
+<xs:element name="oficial" type="xs:int" minOccurs="0"/>
+<xs:element name="pais" type="tns:pais" minOccurs="0"/>
+<xs:element name="uf" type="tns:uf" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="pais">
+<xs:sequence>
+<xs:element name="id" type="xs:int" minOccurs="0"/>
+<xs:element name="nome" type="xs:string" minOccurs="0"/>
+<xs:element name="sgPais" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="funcao">
+<xs:sequence>
+<xs:element name="acordoColetivo" type="xs:string" minOccurs="0"/>
+<xs:element name="ativo" type="xs:string" minOccurs="0"/>
+<xs:element name="classificacao" type="xs:string" minOccurs="0"/>
+<xs:element name="codigo" type="xs:string" minOccurs="0"/>
+<xs:element name="conselhoRegional" type="xs:string" minOccurs="0"/>
+<xs:element name="cursoTreinamento" type="xs:string" minOccurs="0"/>
+<xs:element name="cvObrigatorio" type="xs:string" minOccurs="0"/>
+<xs:element name="descricao" type="xs:string" minOccurs="0"/>
+<xs:element name="descricaoAtividades" type="xs:string" minOccurs="0"/>
+<xs:element name="descricaoCompetencias" type="xs:string" minOccurs="0"/>
+<xs:element name="educacao" type="xs:string" minOccurs="0"/>
+<xs:element name="experiencia" type="xs:string" minOccurs="0"/>
+<xs:element name="funcaoId" type="xs:int" minOccurs="0"/>
+<xs:element name="grupoDeFuncao" type="tns:grupoDeFuncao" minOccurs="0"/>
+<xs:element name="habilidades" type="xs:string" minOccurs="0"/>
+<xs:element name="isEncarregado" type="xs:string" minOccurs="0"/>
+<xs:element name="paginacaoVo" type="tns:paginacaoVo" minOccurs="0"/>
+<xs:element name="salario" type="xs:double" minOccurs="0"/>
+<xs:element name="sgCargo" type="xs:string" minOccurs="0"/>
+<xs:element name="tipoMo" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="grupoDeFuncao">
+<xs:sequence>
+<xs:element name="descricao" type="xs:string" minOccurs="0"/>
+<xs:element name="grupoDeFuncaoId" type="xs:int" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="paginacaoVo">
+<xs:sequence>
+<xs:element name="filtro" type="xs:anyType" minOccurs="0"/>
+<xs:element name="itensConsulta" type="xs:anyType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="itensPagina" type="xs:anyType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="limiteConsulta" type="xs:int"/>
+<xs:element name="listaNxOrder" type="tns:nxOrder" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="novaConsulta" type="xs:boolean"/>
+<xs:element name="pagina" type="xs:int"/>
+<xs:element name="qtdeRegPagina" type="xs:int"/>
+<xs:element name="qtdeRegistros" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="nxOrder">
+<xs:sequence>
+
+<xs:element name="propriedade" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="funcaoPetrobras">
+<xs:sequence>
+<xs:element name="ativo" type="xs:string" minOccurs="0"/>
+<xs:element name="codigo" type="xs:string" minOccurs="0"/>
+<xs:element name="conselhoRegional" type="xs:string" minOccurs="0"/>
+<xs:element name="cursoTreinamento" type="xs:string" minOccurs="0"/>
+<xs:element name="descricao" type="xs:string" minOccurs="0"/>
+<xs:element name="descricaoAtividades" type="xs:string" minOccurs="0"/>
+<xs:element name="descricaoCompetencias" type="xs:string" minOccurs="0"/>
+<xs:element name="educacao" type="xs:string" minOccurs="0"/>
+<xs:element name="experiencia" type="xs:string" minOccurs="0"/>
+<xs:element name="funcaoPbId" type="xs:int" minOccurs="0"/>
+<xs:element name="habilidades" type="xs:string" minOccurs="0"/>
+<xs:element name="normasSeguranca" type="xs:string" minOccurs="0"/>
+<xs:element name="paginacaoVo" type="tns:paginacaoVo" minOccurs="0"/>
+<xs:element name="riscoOperAmbientais" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="subArea">
+<xs:sequence>
+<xs:element name="areaRdo" type="xs:string" minOccurs="0"/>
+<xs:element name="ativo" type="xs:string" minOccurs="0"/>
+<xs:element name="codigo" type="xs:string" minOccurs="0"/>
+<xs:element name="descricao" type="xs:string" minOccurs="0"/>
+<xs:element name="subAreaDescricao" type="xs:string" minOccurs="0"/>
+<xs:element name="subAreaId" type="xs:int" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="vaga">
+<xs:sequence>
+<xs:element name="aprovacaoCurriculo" type="xs:string" minOccurs="0"/>
+<xs:element name="area" type="tns:area" minOccurs="0"/>
+<xs:element name="cancelada" type="xs:string" minOccurs="0"/>
+<xs:element name="codigo" type="xs:string" minOccurs="0"/>
+<xs:element name="conhecimentoTecnico" type="xs:string" minOccurs="0"/>
+<xs:element name="dataAbertura" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="dataCadastro" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="dataFechamento" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="dataPrevisaoEntrega" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="dataRecebimento" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="dataSolicitacao" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="descricaoAtividade" type="xs:string" minOccurs="0"/>
+<xs:element name="eap" type="tns:eap" minOccurs="0"/>
+<xs:element name="eapMultiEmpresa" type="tns:eapMultiEmpresa" minOccurs="0"/>
+<xs:element name="empresa" type="tns:empresa" minOccurs="0"/>
+<xs:element name="encarregado" type="tns:pessoa" minOccurs="0"/>
+<xs:element name="experiencia" type="xs:string" minOccurs="0"/>
+<xs:element name="fechada" type="xs:string" minOccurs="0"/>
+<xs:element name="formatadoAprovacaoCurriculo" type="xs:string" minOccurs="0"/>
+<xs:element name="formatadoFechado" type="xs:string" minOccurs="0"/>
+<xs:element name="formatadoHoristaMensalista" type="xs:string" minOccurs="0"/>
+<xs:element name="formatadoNecesRecursoTi" type="xs:string" minOccurs="0"/>
+<xs:element name="formatadoNivelConfidencial" type="xs:string" minOccurs="0"/>
+<xs:element name="formatadoSexo" type="xs:string" minOccurs="0"/>
+<xs:element name="formatadoTipo" type="xs:string" minOccurs="0"/>
+<xs:element name="formatadoTrabalhoEmAltura" type="xs:string" minOccurs="0"/>
+<xs:element name="formatadoUrgente" type="xs:string" minOccurs="0"/>
+<xs:element name="funcao" type="tns:funcao" minOccurs="0"/>
+<xs:element name="funcaoSalario" type="tns:funcaoSalario" minOccurs="0"/>
+<xs:element name="horistaMensalista" type="xs:string" minOccurs="0"/>
+<xs:element name="listPessoaVagas" type="tns:pessoaVaga" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="localTrabalho" type="tns:localTrabalho" minOccurs="0"/>
+<xs:element name="necessidadeRecursoTi" type="xs:string" minOccurs="0"/>
+<xs:element name="nivelConfidencialidade" type="xs:string" minOccurs="0"/>
+<xs:element name="observacao" type="xs:string" minOccurs="0"/>
+<xs:element name="observacaoRh" type="xs:string" minOccurs="0"/>
+<xs:element name="origemMo" type="tns:origemMo" minOccurs="0"/>
+<xs:element name="pep" type="tns:pep" minOccurs="0"/>
+<xs:element name="perfilCandidato" type="xs:string" minOccurs="0"/>
+<xs:element name="qtdeAguardandoIndicacao" type="xs:int" minOccurs="0"/>
+<xs:element name="qtdeAndamento" type="xs:int" minOccurs="0"/>
+<xs:element name="qtdeIndicacao" type="xs:int" minOccurs="0"/>
+<xs:element name="qtdePreenchida" type="xs:int" minOccurs="0"/>
+<xs:element name="qtdeSolicitada" type="xs:int"/>
+<xs:element name="recrutador" type="tns:pessoa" minOccurs="0"/>
+<xs:element name="requisitante" type="tns:pessoa" minOccurs="0"/>
+<xs:element name="responsabilidades" type="xs:string" minOccurs="0"/>
+<xs:element name="rmo" type="xs:string" minOccurs="0"/>
+<xs:element name="salarioManual" type="xs:boolean" minOccurs="0"/>
+<xs:element name="salarioProposto" type="xs:double" minOccurs="0"/>
+<xs:element name="sexo" type="xs:string" minOccurs="0"/>
+<xs:element name="subArea" type="tns:subArea" minOccurs="0"/>
+<xs:element name="subordinacao" type="tns:subordinacao" minOccurs="0"/>
+<xs:element name="tipo" type="xs:string" minOccurs="0"/>
+<xs:element name="tipoContratacao" type="tns:tipoContratacao" minOccurs="0"/>
+<xs:element name="tipoDivulgacao" type="tns:vagaTipoDivulgacao" minOccurs="0"/>
+<xs:element name="tipoMo" type="xs:string" minOccurs="0"/>
+<xs:element name="trabalhoAltura" type="xs:string" minOccurs="0"/>
+<xs:element name="turno" type="tns:turno" minOccurs="0"/>
+<xs:element name="ua" type="tns:ua" minOccurs="0"/>
+<xs:element name="urgente" type="xs:string" minOccurs="0"/>
+<xs:element name="usuarioIdCancelamento" type="tns:usuario" minOccurs="0"/>
+<xs:element name="vagaDescricao" type="xs:string" minOccurs="0"/>
+<xs:element name="vagaId" type="xs:int" minOccurs="0"/>
+<xs:element name="vagaRequisicao" type="tns:vagaRequisicao" minOccurs="0"/>
+<xs:element name="vagaTipo" type="tns:vagaTipo" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="area">
+<xs:sequence>
+<xs:element name="areaDescricao" type="xs:string" minOccurs="0"/>
+<xs:element name="areaId" type="xs:int" minOccurs="0"/>
+<xs:element name="areaRdo" type="xs:string" minOccurs="0"/>
+<xs:element name="ativo" type="xs:string" minOccurs="0"/>
+<xs:element name="codigo" type="xs:string" minOccurs="0"/>
+<xs:element name="descricao" type="xs:string" minOccurs="0"/>
+<xs:element name="gerente" type="tns:pessoa" minOccurs="0"/>
+<xs:element name="tipoMo" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="eap">
+<xs:sequence>
+<xs:element name="codigo" type="xs:string" minOccurs="0"/>
+<xs:element name="descricao" type="xs:string" minOccurs="0"/>
+<xs:element name="id" type="xs:int" minOccurs="0"/>
+<xs:element name="isGerencia" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="eapMultiEmpresa">
+<xs:complexContent>
+<xs:extension base="tns:eapMultiEmpresaMaster">
+<xs:sequence>
+<xs:element name="multiEmpresa" type="tns:multiEmpresa" minOccurs="0"/>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="eapMultiEmpresaMaster">
+<xs:sequence>
+<xs:element name="codigo" type="xs:string" minOccurs="0"/>
+<xs:element name="descricao" type="xs:string" minOccurs="0"/>
+<xs:element name="id" type="xs:int" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="multiEmpresa">
+<xs:complexContent>
+<xs:extension base="tns:multiEmpresaMaster">
+<xs:sequence/>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="multiEmpresaMaster">
+<xs:sequence>
+<xs:element name="descricao" type="xs:string" minOccurs="0"/>
+<xs:element name="id" type="xs:int" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="empresa">
+<xs:sequence>
+<xs:element name="atividade" type="xs:string" minOccurs="0"/>
+<xs:element name="ativo" type="xs:string" minOccurs="0"/>
+<xs:element name="bairro" type="xs:string" minOccurs="0"/>
+<xs:element name="cep" type="xs:string" minOccurs="0"/>
+<xs:element name="cidade" type="tns:cidade" minOccurs="0"/>
+<xs:element name="cnpj" type="xs:string" minOccurs="0"/>
+<xs:element name="complemento" type="xs:string" minOccurs="0"/>
+<xs:element name="contatos" type="xs:string" minOccurs="0"/>
+<xs:element name="dataFimContrato" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="dataInicioContrato" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="empresaId" type="xs:int" minOccurs="0"/>
+<xs:element name="empresaResponsavel" type="tns:empresa" minOccurs="0"/>
+<xs:element name="endereco" type="xs:string" minOccurs="0"/>
+<xs:element name="nome" type="xs:string" minOccurs="0"/>
+<xs:element name="numero" type="xs:string" minOccurs="0"/>
+<xs:element name="pais" type="tns:pais" minOccurs="0"/>
+<xs:element name="quarteirizada" type="xs:boolean"/>
+<xs:element name="razaoSocial" type="xs:string" minOccurs="0"/>
+<xs:element name="stDataFimContrato" type="xs:string" minOccurs="0"/>
+<xs:element name="stDataInicioContrato" type="xs:string" minOccurs="0"/>
+<xs:element name="subcontratada" type="xs:string" minOccurs="0"/>
+<xs:element name="uf" type="tns:uf" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="funcaoSalario">
+<xs:sequence>
+<xs:element name="contem" type="xs:boolean" minOccurs="0"/>
+<xs:element name="funcao" type="tns:funcao" minOccurs="0"/>
+<xs:element name="historico" type="xs:boolean" minOccurs="0"/>
+<xs:element name="id" type="xs:int" minOccurs="0"/>
+<xs:element name="salario" type="xs:double" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="pessoaVaga">
+<xs:sequence>
+<xs:element name="aprovadoCv" type="xs:string" minOccurs="0"/>
+<xs:element name="cnpj" type="xs:string" minOccurs="0"/>
+<xs:element name="dataAprovacaoCv" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="dataDesistenteReprovado" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="dataEncSetorAcesso" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="dataEncSetorDocumentacao" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="dataEncSetorDp" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="dataEncSetorExame" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="dataEncSetorIntegracao" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="dataEntradaArea" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="dataEnvioCv" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="dataFinalizacao" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="dataLiberacaoCracha" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="dataRecrutamento" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="dataSolicitacaoCracha" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="desistenteReprovado" type="xs:string" minOccurs="0"/>
+<xs:element name="desvinculado" type="xs:string" minOccurs="0"/>
+<xs:element name="etapaAdmissao" type="tns:etapaAdmissao" minOccurs="0"/>
+<xs:element name="folhaPagamento" type="xs:string" minOccurs="0"/>
+<xs:element name="motivo" type="xs:string" minOccurs="0"/>
+<xs:element name="observacaoEncSetorAcesso" type="xs:string" minOccurs="0"/>
+<xs:element name="observacaoEncSetorDoc" type="xs:string" minOccurs="0"/>
+<xs:element name="observacaoEncSetorDp" type="xs:string" minOccurs="0"/>
+<xs:element name="observacaoEncSetorExame" type="xs:string" minOccurs="0"/>
+<xs:element name="observacaoEncSetorIntegracao" type="xs:string" minOccurs="0"/>
+<xs:element name="observacaoRecrutamento" type="xs:string" minOccurs="0"/>
+<xs:element name="passaProximaEtapa" type="xs:boolean" minOccurs="0"/>
+<xs:element ref="tns:pessoa" minOccurs="0"/>
+<xs:element name="pessoaVagaId" type="xs:int" minOccurs="0"/>
+<xs:element name="statusExame" type="tns:statusExame" minOccurs="0"/>
+<xs:element name="tipoContratacao" type="tns:tipoContratacao" minOccurs="0"/>
+<xs:element name="usuarioDesistenteReprovado" type="tns:usuario" minOccurs="0"/>
+<xs:element name="usuarioEncAcesso" type="tns:usuario" minOccurs="0"/>
+<xs:element name="usuarioEncDocumentacao" type="tns:usuario" minOccurs="0"/>
+<xs:element name="usuarioEncDp" type="tns:usuario" minOccurs="0"/>
+<xs:element name="usuarioEncExame" type="tns:usuario" minOccurs="0"/>
+<xs:element name="usuarioEncIntegracao" type="tns:usuario" minOccurs="0"/>
+<xs:element name="usuarioFinalizado" type="tns:usuario" minOccurs="0"/>
+<xs:element name="vaga" type="tns:vaga" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="etapaAdmissao">
+<xs:sequence>
+<xs:element name="descricao" type="xs:string" minOccurs="0"/>
+<xs:element name="etapaAdmissaoId" type="xs:int" minOccurs="0"/>
+<xs:element name="observacao" type="xs:string" minOccurs="0"/>
+<xs:element name="sigla" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="statusExame">
+<xs:sequence>
+<xs:element name="descricao" type="xs:string" minOccurs="0"/>
+<xs:element name="observacao" type="xs:string" minOccurs="0"/>
+<xs:element name="statusExameId" type="xs:int" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="tipoContratacao">
+<xs:sequence>
+<xs:element name="descricao" type="xs:string" minOccurs="0"/>
+<xs:element name="id" type="xs:int" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="usuario">
+<xs:complexContent>
+<xs:extension base="tns:usuarioMaster">
+<xs:sequence>
+<xs:element name="eapsMultiEmpresa" type="tns:eapMultiEmpresa" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="etapas" type="tns:fcEtapa" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="impPess" type="tns:configImpPess" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="modulo" type="tns:modulo" minOccurs="0"/>
+<xs:element ref="tns:pessoa" minOccurs="0"/>
+<xs:element name="relatorioPessoaConfigs" type="tns:relatorioPessoaConfig" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="roles" type="tns:role" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="tiposDocumento" type="tns:tipoDocumento" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="userCopy" type="tns:usuario" minOccurs="0"/>
+<xs:element name="usuarioRoleCollection" type="tns:usuarioRole" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="usuarioMaster">
+<xs:sequence>
+<xs:element name="ativo" type="xs:string" minOccurs="0"/>
+<xs:element name="confirmarSenha" type="xs:string" minOccurs="0"/>
+<xs:element name="email" type="xs:string" minOccurs="0"/>
+<xs:element name="idConfig" type="xs:int" minOccurs="0"/>
+<xs:element name="login" type="xs:string" minOccurs="0"/>
+<xs:element name="nome" type="xs:string" minOccurs="0"/>
+<xs:element name="senha" type="xs:string" minOccurs="0"/>
+<xs:element name="senha2" type="xs:string" minOccurs="0"/>
+<xs:element name="usuarioId" type="xs:int" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="fcEtapa">
+<xs:sequence>
+<xs:element ref="tns:configuracao" minOccurs="0"/>
+<xs:element name="descricao" type="xs:string" minOccurs="0"/>
+<xs:element name="enviaAdmSap" type="xs:string" minOccurs="0"/>
+<xs:element name="enviaEmail" type="xs:boolean" minOccurs="0"/>
+<xs:element name="enviaEmailSolicitanteVaga" type="xs:boolean" minOccurs="0"/>
+<xs:element name="id" type="xs:int" minOccurs="0"/>
+<xs:element name="isSubcontratado" type="xs:boolean" minOccurs="0"/>
+<xs:element name="listarAdmitidos" type="xs:string" minOccurs="0"/>
+<xs:element name="pertenceUsuario" type="xs:boolean" minOccurs="0"/>
+<xs:element name="primeiraEtapa" type="xs:string" minOccurs="0"/>
+<xs:element name="tela" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="configuracao">
+<xs:sequence>
+<xs:element name="configuracaoId" type="xs:int" minOccurs="0"/>
+<xs:element name="cnpj" type="xs:string" minOccurs="0"/>
+<xs:element name="empresa" type="xs:string" minOccurs="0"/>
+<xs:element name="nome" type="xs:string" minOccurs="0"/>
+<xs:element name="nomeCompleto" type="xs:string" minOccurs="0"/>
+<xs:element name="logomarca" type="xs:base64Binary" minOccurs="0"/>
+<xs:element name="cep" type="xs:string" minOccurs="0"/>
+<xs:element name="uf" type="xs:string" minOccurs="0"/>
+<xs:element name="cidade" type="xs:string" minOccurs="0"/>
+<xs:element name="endereco" type="xs:string" minOccurs="0"/>
+<xs:element name="telefone" type="xs:string" minOccurs="0"/>
+<xs:element name="website" type="xs:string" minOccurs="0"/>
+<xs:element name="emailProjeto" type="xs:string" minOccurs="0"/>
+<xs:element name="contrato" type="xs:string" minOccurs="0"/>
+<xs:element name="caixaPostal" type="xs:string" minOccurs="0"/>
+<xs:element name="caminhoJasper" type="xs:string" minOccurs="0"/>
+<xs:element name="metaTreinamento" type="xs:double" minOccurs="0"/>
+<xs:element name="emailHost" type="xs:string" minOccurs="0"/>
+<xs:element name="emailPorta" type="xs:string" minOccurs="0"/>
+<xs:element name="emailOrigem" type="xs:string" minOccurs="0"/>
+<xs:element name="emailUser" type="xs:string" minOccurs="0"/>
+<xs:element name="emailPasswd" type="xs:string" minOccurs="0"/>
+<xs:element name="emailChave" type="xs:string" minOccurs="0"/>
+<xs:element name="sincronizacaoEfetivo" type="xs:string" minOccurs="0"/>
+<xs:element name="codigoFaltaForPonto" type="xs:string" minOccurs="0"/>
+<xs:element name="prevVisitFamiliaFormCalc" type="tns:prevVisitFamiliaFormCalc" minOccurs="0"/>
+<xs:element name="funcoesEquivalentes" type="xs:string" minOccurs="0"/>
+<xs:element name="vagaCodigoFormulaCalc" type="tns:vagaCodigoFormulaCalc" minOccurs="0"/>
+<xs:element name="caminhoRealInstalacao" type="xs:string" minOccurs="0"/>
+<xs:element name="auxMoradiaFormulaCalc" type="tns:auxMoradiaFormulaCalc" minOccurs="0"/>
+<xs:element name="validacao" type="xs:string" minOccurs="0"/>
+<xs:element name="ultimoAcesso" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="caminhoNxLog" type="xs:string" minOccurs="0"/>
+<xs:element name="caminhoNxAuth" type="xs:string" minOccurs="0"/>
+<xs:element name="treinamentoIntegracaoId" type="xs:int" minOccurs="0"/>
+<xs:element name="funcionalidadesHabilitadas" type="xs:string" minOccurs="0"/>
+<xs:element name="importarFotos" type="xs:string" minOccurs="0"/>
+<xs:element name="caminhoFotos" type="xs:string" minOccurs="0"/>
+<xs:element name="caminhoImportacaoEfetivo" type="xs:string" minOccurs="0"/>
+<xs:element name="horaImportacaoEfetivo" type="xs:int" minOccurs="0"/>
+<xs:element name="minutoImportacaoEfetivo" type="xs:int" minOccurs="0"/>
+<xs:element name="viagemRqsCodigoFormCalc" type="tns:viagemRqsCodigoFormCalc" minOccurs="0"/>
+<xs:element name="viagemDiariaCodigoFormCalc" type="tns:viagemDiariaCodigoFormCalc" minOccurs="0"/>
+<xs:element name="configuracaoRefeitorio" type="tns:configuracaoRefeitorio" minOccurs="0"/>
+<xs:element name="configuracaoAlojamento" type="tns:configuracaoAlojamento" minOccurs="0"/>
+<xs:element name="emailRelatorio" type="xs:string" minOccurs="0"/>
+<xs:element name="diaBaseRelatorio" type="xs:int" minOccurs="0"/>
+<xs:element name="caminhoNxManager" type="xs:string" minOccurs="0"/>
+<xs:element name="idConfigImportacaoPessoa" type="xs:int" minOccurs="0"/>
+<xs:element name="configRequisicaoVaga" type="tns:configRequisicaoVaga" minOccurs="0"/>
+<xs:element name="cidadePrincipal" type="xs:string" minOccurs="0"/>
+<xs:element name="cdProjeto" type="xs:string" minOccurs="0"/>
+<xs:element name="datasInativaUsuario" type="xs:string" minOccurs="0"/>
+<xs:element name="enviaAdmSapUrl" type="xs:string" minOccurs="0"/>
+<xs:element name="enviaAdmSapPasswd" type="xs:string" minOccurs="0"/>
+<xs:element name="enviaAdmSapUser" type="xs:string" minOccurs="0"/>
+<xs:element name="urlAvaliacaoEficacia" type="xs:string" minOccurs="0"/>
+<xs:element name="diasNotifAvaliacaoEfic" type="xs:int" minOccurs="0"/>
+<xs:element name="calcDtRetornoVisFamilia" type="xs:int" minOccurs="0"/>
+<xs:element name="configuracaoTreinamento" type="tns:configuracaoTreinamento" minOccurs="0"/>
+<xs:element name="configuracaoGestor" type="tns:configuracaoGestor" minOccurs="0"/>
+<xs:element name="configuracaoViagem" type="tns:configuracaoViagem" minOccurs="0"/>
+<xs:element name="configuracaoSubcontratados" type="tns:configuracaoSubcontratados" minOccurs="0"/>
+<xs:element name="urlConsultaCep" type="xs:string" minOccurs="0"/>
+<xs:element name="tiposIntegracao" type="xs:string" minOccurs="0"/>
+<xs:element name="modoAutenticacao" type="xs:string" minOccurs="0"/>
+<xs:element name="configuracaoPessoa" type="tns:configuracaoPessoa" minOccurs="0"/>
+<xs:element name="urlConexaoBancoRhweb" type="xs:string" minOccurs="0"/>
+<xs:element name="userConexaoBancoRhweb" type="xs:string" minOccurs="0"/>
+<xs:element name="passConexaoBancoRhweb" type="xs:string" minOccurs="0"/>
+<xs:element name="configuracaoHoraExtra" type="tns:configuracaoHoraExtra" minOccurs="0"/>
+<xs:element name="prefUrlExternaSist" type="xs:string" minOccurs="0"/>
+<xs:element name="habCancelReqDesligados" type="xs:boolean" minOccurs="0"/>
+<xs:element name="urlServidor" type="xs:string" minOccurs="0"/>
+<xs:element name="listaFuncionalidadesHabilitadas" type="xs:string" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="logoB64" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="prevVisitFamiliaFormCalc">
+<xs:sequence>
+<xs:element name="bqVisFamDataAnterior" type="xs:string" minOccurs="0"/>
+<xs:element name="chave" type="xs:string" minOccurs="0"/>
+<xs:element name="id" type="xs:int" minOccurs="0"/>
+<xs:element name="nome" type="xs:string" minOccurs="0"/>
+<xs:element name="observacao" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="vagaCodigoFormulaCalc">
+<xs:sequence>
+<xs:element name="chave" type="xs:string" minOccurs="0"/>
+<xs:element name="id" type="xs:int" minOccurs="0"/>
+<xs:element name="nome" type="xs:string" minOccurs="0"/>
+<xs:element name="observacao" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="auxMoradiaFormulaCalc">
+<xs:sequence>
+<xs:element name="chave" type="xs:string" minOccurs="0"/>
+<xs:element name="id" type="xs:int" minOccurs="0"/>
+<xs:element name="nome" type="xs:string" minOccurs="0"/>
+<xs:element name="observacao" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="viagemRqsCodigoFormCalc">
+<xs:sequence>
+<xs:element name="chave" type="xs:string" minOccurs="0"/>
+<xs:element name="id" type="xs:int" minOccurs="0"/>
+<xs:element name="nome" type="xs:string" minOccurs="0"/>
+<xs:element name="observacao" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="viagemDiariaCodigoFormCalc">
+<xs:sequence>
+<xs:element name="chave" type="xs:string" minOccurs="0"/>
+<xs:element name="id" type="xs:int" minOccurs="0"/>
+<xs:element name="nome" type="xs:string" minOccurs="0"/>
+<xs:element name="observacao" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="configuracaoRefeitorio">
+<xs:sequence>
+<xs:element name="id" type="xs:int" minOccurs="0"/>
+<xs:element name="validaCrachaProvisorio" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="configuracaoAlojamento">
+<xs:sequence>
+<xs:element name="alojarTemporario" type="xs:string" minOccurs="0"/>
+<xs:element name="id" type="xs:int" minOccurs="0"/>
+<xs:element name="usarEap" type="xs:string" minOccurs="0"/>
+<xs:element name="validaCrachaProvisorio" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="configRequisicaoVaga">
+<xs:sequence>
+<xs:element name="criarVagaAutomatico" type="xs:string" minOccurs="0"/>
+<xs:element name="id" type="xs:int" minOccurs="0"/>
+<xs:element name="notificarReqDesistenciaVaga" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="configuracaoTreinamento">
+<xs:sequence>
+<xs:element name="bloqueioCapacidadeTurma" type="xs:string" minOccurs="0"/>
+<xs:element name="crachaTreinamentoAprovado" type="xs:string" minOccurs="0"/>
+<xs:element name="emailResponsavel" type="xs:string" minOccurs="0"/>
+<xs:element name="horaMinutoModAvalEfic" type="xs:string" minOccurs="0"/>
+<xs:element name="id" type="xs:int" minOccurs="0"/>
+<xs:element name="statusPessTreinAprovado" type="xs:string" minOccurs="0"/>
+<xs:element name="statusTreinPess" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="configuracaoGestor">
+<xs:sequence>
+<xs:element name="cidadesDetalhar" type="xs:string" minOccurs="0"/>
+<xs:element name="descricaoCidadesEntornos" type="xs:string" minOccurs="0"/>
+<xs:element name="id" type="xs:int" minOccurs="0"/>
+<xs:element name="percentualPdc" type="xs:float" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="configuracaoViagem">
+<xs:sequence>
+<xs:element name="abaItinerarioReqViagem" type="xs:boolean" minOccurs="0"/>
+<xs:element name="beneficioMobilizacaoId" type="xs:int"/>
+<xs:element name="bloqTdsCntrCstVgTp" type="xs:boolean" minOccurs="0"/>
+<xs:element name="desabilitaEmailRespCad" type="xs:boolean" minOccurs="0"/>
+<xs:element name="desabilitarInfoPessoa" type="xs:boolean" minOccurs="0"/>
+<xs:element name="desabilitarInfoVisFam" type="xs:boolean" minOccurs="0"/>
+<xs:element name="exibeDiasAntecedencia" type="xs:string" minOccurs="0"/>
+<xs:element name="id" type="xs:int" minOccurs="0"/>
+<xs:element name="preencherSolicitante" type="xs:string" minOccurs="0"/>
+<xs:element name="respCadViagemAutomatica" type="xs:int" minOccurs="0"/>
+<xs:element name="tipoViagemMobilizacaoId" type="xs:int"/>
+<xs:element name="tipoViagemVisitaFamiliaId" type="xs:int" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="configuracaoSubcontratados">
+<xs:sequence>
+<xs:element name="bloqueiaEntregaDuplicadaDocs" type="xs:string" minOccurs="0"/>
+<xs:element name="docStatusFinalId" type="xs:int" minOccurs="0"/>
+<xs:element name="docStatusInicialId" type="xs:int" minOccurs="0"/>
+<xs:element name="id" type="xs:int" minOccurs="0"/>
+<xs:element name="propTeAuxEntregaDoc" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="configuracaoPessoa">
+<xs:sequence>
+<xs:element name="bloqContratacaoVagaLimite" type="xs:boolean" minOccurs="0"/>
+<xs:element name="bloqDataPrevEntrega" type="xs:boolean" minOccurs="0"/>
+<xs:element name="bloqDtPrevEntregaFim" type="xs:int" minOccurs="0"/>
+<xs:element name="bloqDtPrevEntregaIni" type="xs:int" minOccurs="0"/>
+<xs:element name="bloqReqVagaQtdeIndic" type="xs:boolean" minOccurs="0"/>
+<xs:element name="caminhoServidorExportFotos" type="xs:string" minOccurs="0"/>
+<xs:element name="excluirAbaBeneficiosVaga" type="xs:boolean" minOccurs="0"/>
+<xs:element name="id" type="xs:int" minOccurs="0"/>
+<xs:element name="notificarEapVaga" type="xs:string" minOccurs="0"/>
+<xs:element name="notificarRecrutadorVaga" type="xs:string" minOccurs="0"/>
+<xs:element name="propriedadeEntityRmo" type="xs:string" minOccurs="0"/>
+<xs:element name="qtdeDiasBloqDataPrevEntrega" type="xs:int" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="configuracaoHoraExtra">
+<xs:sequence>
+<xs:element name="bloquearDesligados" type="xs:string" minOccurs="0"/>
+<xs:element name="id" type="xs:int" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="configImpPess">
+<xs:sequence>
+<xs:element name="ativo" type="xs:string" minOccurs="0"/>
+<xs:element name="atulizaTipoMoArea" type="xs:string" minOccurs="0"/>
+<xs:element name="atulizaTipoMoFuncao" type="xs:string" minOccurs="0"/>
+<xs:element name="configImpPessLogicas" type="tns:configImpPessLogica" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element ref="tns:configuracao" minOccurs="0"/>
+<xs:element name="descricao" type="xs:string" minOccurs="0"/>
+<xs:element name="id" type="xs:int" minOccurs="0"/>
+<xs:element name="importacaoEfetivo" type="xs:string" minOccurs="0"/>
+<xs:element name="importacaoSubcontratado" type="xs:string" minOccurs="0"/>
+<xs:element name="naoAtualizarDtPreenchidas" type="xs:string" minOccurs="0"/>
+<xs:element name="pertenceUsuario" type="xs:boolean" minOccurs="0"/>
+<xs:element name="startLine" type="xs:int" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="configImpPessLogica">
+<xs:sequence>
+<xs:element name="campoLogica" type="xs:string" minOccurs="0"/>
+<xs:element name="chavesLogica" type="xs:string" minOccurs="0"/>
+<xs:element name="configImpPess" type="tns:configImpPess" minOccurs="0"/>
+<xs:element name="id" type="xs:int" minOccurs="0"/>
+<xs:element name="propLogica" type="xs:string" minOccurs="0"/>
+<xs:element name="valorLogica" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="modulo">
+<xs:sequence>
+<xs:element name="descricao" type="xs:string" minOccurs="0"/>
+<xs:element name="moduloId" type="xs:int" minOccurs="0"/>
+<xs:element name="sigla" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="relatorioPessoaConfig">
+<xs:sequence>
+<xs:element name="ativo" type="xs:string" minOccurs="0"/>
+<xs:element name="id" type="xs:int" minOccurs="0"/>
+<xs:element name="nome" type="xs:string" minOccurs="0"/>
+<xs:element name="tela" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="role">
+<xs:complexContent>
+<xs:extension base="tns:roleMaster">
+<xs:sequence/>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="roleMaster">
+<xs:sequence>
+<xs:element name="ativo" type="xs:string" minOccurs="0"/>
+<xs:element name="descricao" type="xs:string" minOccurs="0"/>
+<xs:element name="nome" type="xs:string" minOccurs="0"/>
+<xs:element name="pertenceUsuario" type="xs:boolean" minOccurs="0"/>
+<xs:element name="roleId" type="xs:int" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="tipoDocumento">
+<xs:sequence>
+<xs:element name="descricao" type="xs:string" minOccurs="0"/>
+<xs:element name="pertenceUsuario" type="xs:boolean" minOccurs="0"/>
+<xs:element name="tipoDocumentoId" type="xs:int" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="usuarioRole">
+<xs:complexContent>
+<xs:extension base="tns:usuarioRoleMaster">
+<xs:sequence>
+<xs:element name="role" type="tns:role" minOccurs="0"/>
+<xs:element name="usuario" type="tns:usuario" minOccurs="0"/>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="usuarioRoleMaster">
+<xs:sequence>
+<xs:element name="usuarioRoleId" type="xs:int" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="localTrabalho">
+<xs:sequence>
+<xs:element name="id" type="xs:int" minOccurs="0"/>
+<xs:element name="nome" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="origemMo">
+<xs:sequence>
+<xs:element name="id" type="xs:int" minOccurs="0"/>
+<xs:element name="nome" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="pep">
+<xs:sequence>
+<xs:element name="cdDivisao" type="xs:string" minOccurs="0"/>
+<xs:element name="cdPep" type="xs:string" minOccurs="0"/>
+<xs:element name="dsPep" type="xs:string" minOccurs="0"/>
+<xs:element name="id" type="xs:int" minOccurs="0"/>
+<xs:element name="nmEmpresa" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="subordinacao">
+<xs:sequence>
+<xs:element name="areaRdo" type="xs:string" minOccurs="0"/>
+<xs:element name="ativo" type="xs:string" minOccurs="0"/>
+<xs:element name="celulaTrabalho" type="xs:string" minOccurs="0"/>
+<xs:element name="codigo" type="xs:string" minOccurs="0"/>
+<xs:element name="descricao" type="xs:string" minOccurs="0"/>
+<xs:element name="subordinacaoDescricao" type="xs:string" minOccurs="0"/>
+<xs:element name="subordinacaoId" type="xs:int" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="vagaTipoDivulgacao">
+<xs:sequence>
+<xs:element name="exibirTodos" type="xs:boolean" minOccurs="0"/>
+<xs:element name="id" type="xs:int" minOccurs="0"/>
+<xs:element name="nome" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="turno">
+<xs:sequence>
+<xs:element name="codigo" type="xs:string" minOccurs="0"/>
+<xs:element name="descricao" type="xs:string" minOccurs="0"/>
+<xs:element name="id" type="xs:int" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ua">
+<xs:sequence>
+<xs:element name="descricao" type="xs:string" minOccurs="0"/>
+<xs:element name="id" type="xs:int" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="vagaRequisicao">
+<xs:sequence>
+<xs:element name="aprovadorOrdemAtual" type="tns:pessoa" minOccurs="0"/>
+<xs:element name="area" type="tns:area" minOccurs="0"/>
+<xs:element name="cadastrante" type="tns:pessoa" minOccurs="0"/>
+<xs:element name="cancelada" type="xs:string" minOccurs="0"/>
+<xs:element name="cidadeTrabalho" type="tns:cidade" minOccurs="0"/>
+<xs:element name="conhecimentoTecnico" type="xs:string" minOccurs="0"/>
+<xs:element name="dataAprovacao" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="dataEnvioAprovacao" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="dataFechada" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="dataPrevisaoEntrega" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="dataRequisicao" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="descricaoAtividade" type="xs:string" minOccurs="0"/>
+<xs:element name="eap" type="tns:eap" minOccurs="0"/>
+<xs:element name="eapMultiEmpresa" type="tns:eapMultiEmpresa" minOccurs="0"/>
+<xs:element name="encarregado" type="tns:pessoa" minOccurs="0"/>
+<xs:element name="escolaridade" type="tns:escolaridade" minOccurs="0"/>
+<xs:element name="experiencia" type="xs:string" minOccurs="0"/>
+<xs:element name="fechada" type="xs:string" minOccurs="0"/>
+<xs:element name="formatadoCancelado" type="xs:string" minOccurs="0"/>
+<xs:element name="formatadoFechado" type="xs:string" minOccurs="0"/>
+<xs:element name="formatadoHoristaMensalista" type="xs:string" minOccurs="0"/>
+<xs:element name="formatadoNecesRecursoTi" type="xs:string" minOccurs="0"/>
+<xs:element name="formatadoNivelConfidencial" type="xs:string" minOccurs="0"/>
+<xs:element name="formatadoSexo" type="xs:string" minOccurs="0"/>
+<xs:element name="formatadoTipo" type="xs:string" minOccurs="0"/>
+<xs:element name="formatadoTrabalhoEmAltura" type="xs:string" minOccurs="0"/>
+<xs:element name="formatadoUrgente" type="xs:string" minOccurs="0"/>
+<xs:element name="funcao" type="tns:funcao" minOccurs="0"/>
+<xs:element name="funcaoSalario" type="tns:funcaoSalario" minOccurs="0"/>
+<xs:element name="horistaMensalista" type="xs:string" minOccurs="0"/>
+<xs:element name="id" type="xs:int" minOccurs="0"/>
+<xs:element name="localTrabalho" type="tns:localTrabalho" minOccurs="0"/>
+<xs:element name="necessidadeRecursoTi" type="xs:string" minOccurs="0"/>
+<xs:element name="nivelConfidencialidade" type="xs:string" minOccurs="0"/>
+<xs:element name="observacao" type="xs:string" minOccurs="0"/>
+<xs:element name="observacaoRh" type="xs:string" minOccurs="0"/>
+<xs:element name="origemMo" type="tns:origemMo" minOccurs="0"/>
+<xs:element name="qtdeIndicacao" type="xs:int"/>
+<xs:element name="qtdeSolicitada" type="xs:int"/>
+<xs:element name="requisitante" type="tns:pessoa" minOccurs="0"/>
+<xs:element name="responsabilidades" type="xs:string" minOccurs="0"/>
+<xs:element name="salarioManual" type="xs:boolean" minOccurs="0"/>
+<xs:element name="salarioProposto" type="xs:double" minOccurs="0"/>
+<xs:element name="salarioRh" type="xs:double" minOccurs="0"/>
+<xs:element name="sexo" type="xs:string" minOccurs="0"/>
+<xs:element name="status" type="xs:string" minOccurs="0"/>
+<xs:element name="subArea" type="tns:subArea" minOccurs="0"/>
+<xs:element name="subordinacao" type="tns:subordinacao" minOccurs="0"/>
+<xs:element name="tipo" type="xs:string" minOccurs="0"/>
+<xs:element name="tipoContratacao" type="tns:tipoContratacao" minOccurs="0"/>
+<xs:element name="tipoDivulgacao" type="tns:vagaTipoDivulgacao" minOccurs="0"/>
+<xs:element name="trabalhoAltura" type="xs:string" minOccurs="0"/>
+<xs:element name="turno" type="tns:turno" minOccurs="0"/>
+<xs:element name="ua" type="tns:ua" minOccurs="0"/>
+<xs:element name="ufTrabalho" type="tns:uf" minOccurs="0"/>
+<xs:element name="urgente" type="xs:string" minOccurs="0"/>
+<xs:element name="vagaRequisicaoFluxo" type="tns:vagaRequisicaoFluxo" minOccurs="0"/>
+<xs:element name="vagaTipo" type="tns:vagaTipo" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="escolaridade">
+<xs:sequence>
+<xs:element name="cdGrauInstrucao" type="xs:string" minOccurs="0"/>
+<xs:element name="descricao" type="xs:string" minOccurs="0"/>
+<xs:element name="flSelecionavel" type="xs:string" minOccurs="0"/>
+<xs:element name="id" type="xs:int" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="vagaRequisicaoFluxo">
+<xs:sequence>
+<xs:element name="descricao" type="xs:string" minOccurs="0"/>
+<xs:element name="id" type="xs:int" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="vagaTipo">
+<xs:sequence>
+<xs:element name="descricao" type="xs:string" minOccurs="0"/>
+<xs:element name="id" type="xs:int" minOccurs="0"/>
+<xs:element name="isReposicao" type="xs:boolean" minOccurs="0"/>
+<xs:element name="sigla" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="clinica">
+<xs:sequence>
+<xs:element name="clinicaId" type="xs:int" minOccurs="0"/>
+<xs:element name="endereco" type="xs:string" minOccurs="0"/>
+<xs:element name="imgLogo" type="xs:base64Binary" minOccurs="0"/>
+<xs:element name="imgMapa" type="xs:base64Binary" minOccurs="0"/>
+<xs:element name="logo" type="xs:string" minOccurs="0"/>
+<xs:element name="mapa" type="xs:string" minOccurs="0"/>
+<xs:element name="nome" type="xs:string" minOccurs="0"/>
+<xs:element name="telefone" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="centroCusto">
+<xs:sequence>
+<xs:element name="cdAreaContabCustos" type="xs:string" minOccurs="0"/>
+<xs:element name="cdDivisao" type="xs:string" minOccurs="0"/>
+<xs:element name="cdEmpresa" type="xs:string" minOccurs="0"/>
+<xs:element name="codigo" type="xs:string" minOccurs="0"/>
+<xs:element name="descricao" type="xs:string" minOccurs="0"/>
+<xs:element name="id" type="xs:int" minOccurs="0"/>
+<xs:element name="observacao" type="xs:string" minOccurs="0"/>
+<xs:element name="responsavel" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="cbo">
+<xs:sequence>
+<xs:element name="cboId" type="xs:int" minOccurs="0"/>
+<xs:element name="codigo" type="xs:string" minOccurs="0"/>
+<xs:element name="descricao" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="vagaRqsIndicado">
+<xs:sequence>
+<xs:element name="id" type="xs:int" minOccurs="0"/>
+<xs:element name="nome" type="xs:string" minOccurs="0"/>
+<xs:element name="telefone" type="xs:string" minOccurs="0"/>
+<xs:element name="observacao" type="xs:string" minOccurs="0"/>
+<xs:element name="indicadorPessoa" type="tns:pessoa" minOccurs="0"/>
+<xs:element name="vagaRequisicao" type="tns:vagaRequisicao" minOccurs="0"/>
+<xs:element name="vaga" type="tns:vaga" minOccurs="0"/>
+<xs:element name="contatoData" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="contatoObservacao" type="xs:string" minOccurs="0"/>
+<xs:element name="contatoAceitou" type="xs:string" minOccurs="0"/>
+<xs:element name="cpf" type="xs:string" minOccurs="0"/>
+<xs:element name="dataNascimento" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="dataMobilizacao" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="dataIndicado" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="indicadoRh" type="xs:string" minOccurs="0"/>
+<xs:element name="usuarioCadastro" type="xs:string" minOccurs="0"/>
+<xs:element name="dataCadastro" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="dataPrevistaChegada" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="curriculo" type="xs:base64Binary" minOccurs="0"/>
+<xs:element name="curriculoNome" type="xs:string" minOccurs="0"/>
+<xs:element name="ufOrigem" type="tns:uf" minOccurs="0"/>
+<xs:element name="cidadeOrigem" type="tns:cidade" minOccurs="0"/>
+<xs:element name="ultimoSalario" type="xs:double" minOccurs="0"/>
+<xs:element name="salarioAcertado" type="xs:double" minOccurs="0"/>
+<xs:element name="jaTrabalhouEmpresa" type="xs:string" minOccurs="0"/>
+<xs:element name="email" type="xs:string" minOccurs="0"/>
+<xs:element name="pis" type="xs:string" minOccurs="0"/>
+<xs:element name="rg" type="xs:string" minOccurs="0"/>
+<xs:element name="dataEnvioAtendimento" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="dataEnvioContratacao" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="tipoDocumento" type="tns:tipoDocumento" minOccurs="0"/>
+<xs:element name="projeto" type="xs:string" minOccurs="0"/>
+<xs:element name="lider" type="tns:pessoa" minOccurs="0"/>
+<xs:element name="stContatoData" type="xs:string" minOccurs="0"/>
+<xs:element name="stDataNascimento" type="xs:string" minOccurs="0"/>
+<xs:element name="stDataMobilizacao" type="xs:string" minOccurs="0"/>
+<xs:element name="stDataIndicado" type="xs:string" minOccurs="0"/>
+<xs:element name="stDataCadastro" type="xs:string" minOccurs="0"/>
+<xs:element name="stDataPrevistaChegada" type="xs:string" minOccurs="0"/>
+<xs:element name="stDataEnvioAtendimento" type="xs:string" minOccurs="0"/>
+<xs:element name="stDataEnvioContratacao" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="vwRelPessoa">
+<xs:sequence>
+<xs:element name="alojamento" type="xs:string" minOccurs="0"/>
+<xs:element name="alojamentoReserva" type="xs:string" minOccurs="0"/>
+<xs:element name="calcAdd1DataAssinaturaContrato" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="calcAdd1DataLiberacaoCracha" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="calcAdd2DiasLiberacaoCracha" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="calcAdd4DiasDataAssinaturaContrato" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="calcAdd4DiasDataAux3" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="calcDifDataAdmissaoDataAux3" type="xs:int" minOccurs="0"/>
+<xs:element name="calcDifDataAdmissaoDataAux6" type="xs:int" minOccurs="0"/>
+<xs:element name="calcDifDataAssinaturaContratoDataEntradaArea" type="xs:int" minOccurs="0"/>
+<xs:element name="calcDifDataAux1DataAux3" type="xs:int" minOccurs="0"/>
+<xs:element name="calcDifDataAux3DataLiberacaoCracha" type="xs:int" minOccurs="0"/>
+<xs:element name="calcDifDataCadastroDataChegadaPrevista" type="xs:int" minOccurs="0"/>
+<xs:element name="calcDifDataCadastroVagaDataCadastroPessoa" type="xs:int" minOccurs="0"/>
+<xs:element name="calcDifDataEncaminhadoExameDataEntregaDocs" type="xs:int" minOccurs="0"/>
+<xs:element name="calcDifDataEncaminhadoExameDataExameMedico" type="xs:int" minOccurs="0"/>
+<xs:element name="calcDifDataEncaminhadoExameDataRecebimentoAso" type="xs:int" minOccurs="0"/>
+<xs:element name="calcDifDataEntregaDocsDpDataAdmissao" type="xs:int" minOccurs="0"/>
+<xs:element name="calcDifDataEntregaDocsDpDataAux1" type="xs:int" minOccurs="0"/>
+<xs:element name="calcDifDataExameMedicoDataRecebimentoAso" type="xs:int" minOccurs="0"/>
+<xs:element name="calcDifDataInicioTreinDataFimTrein" type="xs:int" minOccurs="0"/>
+<xs:element name="calcDifDataLiberacaoCrachaDataAssinaturaContrato" type="xs:int" minOccurs="0"/>
+<xs:element name="calcDifDataRecebimentoDataEntradaArea" type="xs:int" minOccurs="0"/>
+<xs:element name="calcDifTbAlojamentoQuartoPessoaDataEntradaTbAlojamentoQuartoPessoaDataSaida" type="xs:int" minOccurs="0"/>
+<xs:element name="calcDifTbVagaDataAberturaTbVagaDataRecebimento" type="xs:int" minOccurs="0"/>
+<xs:element name="calcDifTbVagaDataCadastroTbVagaDataAbertura" type="xs:int" minOccurs="0"/>
+<xs:element name="calcDifTbVagaDataRecebimentoDataAdmissao" type="xs:int" minOccurs="0"/>
+<xs:element name="calcDifTbVagaDataRecebimentoDataAux6" type="xs:int" minOccurs="0"/>
+<xs:element name="calcDifTbVagaDataSolicitacaoTbVagaDataAbertura" type="xs:int" minOccurs="0"/>
+<xs:element name="calcDifTbVagasDataRecebimentoDataEntregaDocsDp" type="xs:int" minOccurs="0"/>
+<xs:element name="dataEntradaAlojamento" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="dataSaidaAlojamento" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="enderecoAlojamento" type="xs:string" minOccurs="0"/>
+<xs:element name="gerenteArea" type="xs:string" minOccurs="0"/>
+<xs:element name="id" type="xs:int" minOccurs="0"/>
+<xs:element name="nome" type="xs:string" minOccurs="0"/>
+<xs:element ref="tns:pessoa" minOccurs="0"/>
+<xs:element name="statusPrazo" type="xs:string" minOccurs="0"/>
+<xs:element name="tipoAlojamento" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="areaRh">
+<xs:sequence>
+<xs:element name="acordoColetivo" type="xs:string" minOccurs="0"/>
+<xs:element name="calendarioFeriado" type="xs:string" minOccurs="0"/>
+<xs:element name="cdAgrupSubArRhPht" type="xs:string" minOccurs="0"/>
+<xs:element name="cdAreaRH" type="xs:string" minOccurs="0"/>
+<xs:element name="cdDivisaoRh" type="xs:string" minOccurs="0"/>
+<xs:element name="cdSubAreaRh" type="xs:string" minOccurs="0"/>
+<xs:element name="dsAreaRh" type="xs:string" minOccurs="0"/>
+<xs:element name="id" type="xs:int" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="planoHorarioTrabalho">
+<xs:sequence>
+<xs:element name="calendarioFeriados" type="xs:string" minOccurs="0"/>
+<xs:element name="cdAgrupSubArRhPht" type="xs:string" minOccurs="0"/>
+<xs:element name="cdAgrupSubEmpregPht" type="xs:string" minOccurs="0"/>
+<xs:element name="dsPlanoHorario" type="xs:string" minOccurs="0"/>
+<xs:element name="id" type="xs:int" minOccurs="0"/>
+<xs:element name="planoHorario" type="xs:string" minOccurs="0"/>
+<xs:element name="regraPht" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="motivoAdmissao">
+<xs:sequence>
+<xs:element name="cdMotivoAdmissao" type="xs:string" minOccurs="0"/>
+<xs:element name="dsMotivoAdmissao" type="xs:string" minOccurs="0"/>
+<xs:element name="id" type="xs:int" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="unidadeOrganizacional">
+<xs:sequence>
+<xs:element name="areaRh" type="xs:string" minOccurs="0"/>
+<xs:element name="cdUnidadeOrganizacional" type="xs:string" minOccurs="0"/>
+<xs:element name="dsDenominacao" type="xs:string" minOccurs="0"/>
+<xs:element name="id" type="xs:int" minOccurs="0"/>
+<xs:element name="sgUnidadeOrganizacional" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="estadoCivil">
+<xs:sequence>
+<xs:element name="descricao" type="xs:string" minOccurs="0"/>
+<xs:element name="id" type="xs:int" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="raca">
+<xs:sequence>
+<xs:element name="cdRaca" type="xs:string" minOccurs="0"/>
+<xs:element name="dsRaca" type="xs:string" minOccurs="0"/>
+<xs:element name="id" type="xs:int" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="tipoEstabEnsino">
+<xs:sequence>
+<xs:element name="dsTipoEstabEnsino" type="xs:string" minOccurs="0"/>
+<xs:element name="id" type="xs:int" minOccurs="0"/>
+<xs:element name="tpEstabEnsino" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="certificadoEscolar">
+<xs:sequence>
+<xs:element name="cdCertificadoEscolar" type="xs:string" minOccurs="0"/>
+<xs:element name="dsCertificadoEscolar" type="xs:string" minOccurs="0"/>
+<xs:element name="id" type="xs:int" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="formacao">
+<xs:sequence>
+<xs:element name="cdFormacao" type="xs:string" minOccurs="0"/>
+<xs:element name="dsFormacao" type="xs:string" minOccurs="0"/>
+<xs:element name="id" type="xs:int" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="instituicaoEnsino">
+<xs:sequence>
+<xs:element name="cdUniversidade" type="xs:string" minOccurs="0"/>
+<xs:element name="dsUnivCompleta" type="xs:string" minOccurs="0"/>
+<xs:element name="dsUnivResumida" type="xs:string" minOccurs="0"/>
+<xs:element name="id" type="xs:int" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="nivelSalarial">
+<xs:sequence>
+<xs:element name="agrupSubEmprAcorCol" type="xs:string" minOccurs="0"/>
+<xs:element name="agrupamentoPaises" type="xs:string" minOccurs="0"/>
+<xs:element name="cdNivel" type="xs:string" minOccurs="0"/>
+<xs:element name="faixaSalarial" type="xs:string" minOccurs="0"/>
+<xs:element name="id" type="xs:int" minOccurs="0"/>
+<xs:element name="montante" type="xs:string" minOccurs="0"/>
+<xs:element name="regiaoAcordoColetivo" type="xs:string" minOccurs="0"/>
+<xs:element name="tpTarifa" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="exposicaoAgenteNocivo">
+<xs:sequence>
+<xs:element name="cdExpoAgenteNocivo" type="xs:string" minOccurs="0"/>
+<xs:element name="dsExpoAgenteNocivo" type="xs:string" minOccurs="0"/>
+<xs:element name="id" type="xs:int" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="vinculoEmpregaticio">
+<xs:sequence>
+<xs:element name="cdVinculoEmpregaticio" type="xs:string" minOccurs="0"/>
+<xs:element name="dsTpContrato" type="xs:string" minOccurs="0"/>
+<xs:element name="id" type="xs:int" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="categoriaTrabalhador">
+<xs:sequence>
+<xs:element name="cdCategoriaTrabalhador" type="xs:string" minOccurs="0"/>
+<xs:element name="dsCategoriaTrabalhador" type="xs:string" minOccurs="0"/>
+<xs:element name="id" type="xs:int" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="vinculo">
+<xs:sequence>
+<xs:element name="cdVinculo" type="xs:string" minOccurs="0"/>
+<xs:element name="dsVinculo" type="xs:string" minOccurs="0"/>
+<xs:element name="id" type="xs:int" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="sindicato">
+<xs:sequence>
+<xs:element name="cdChaveSindicato" type="xs:string" minOccurs="0"/>
+<xs:element name="cdPostalSindicato" type="xs:string" minOccurs="0"/>
+<xs:element name="id" type="xs:int" minOccurs="0"/>
+<xs:element name="localSindicato" type="xs:string" minOccurs="0"/>
+<xs:element name="nmSindicato" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="formaPagamento">
+<xs:sequence>
+<xs:element name="cdChavePais" type="xs:string" minOccurs="0"/>
+<xs:element name="dsFormaPagamento" type="xs:string" minOccurs="0"/>
+<xs:element name="formaPagamento" type="xs:string" minOccurs="0"/>
+<xs:element name="id" type="xs:int" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="grupoSanguineo">
+<xs:sequence>
+<xs:element name="id" type="xs:int" minOccurs="0"/>
+<xs:element name="tpSangue" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="fatorRh">
+<xs:sequence>
+<xs:element name="cdFatorRh" type="xs:string" minOccurs="0"/>
+<xs:element name="id" type="xs:int" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="tipoComunicacao">
+<xs:sequence>
+<xs:element name="descicao" type="xs:string" minOccurs="0"/>
+<xs:element name="id" type="xs:int" minOccurs="0"/>
+<xs:element name="tipo" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="tipoDemissao">
+<xs:sequence>
+<xs:element name="descricao" type="xs:string" minOccurs="0"/>
+<xs:element name="id" type="xs:int" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="beneficio">
+<xs:sequence>
+<xs:element name="beneficioId" type="xs:int" minOccurs="0"/>
+<xs:element name="cidadeDestino" type="tns:cidade" minOccurs="0"/>
+<xs:element name="cidadeOrigem" type="tns:cidade" minOccurs="0"/>
+<xs:element name="dataChegadaPrevista" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="descricao" type="xs:string" minOccurs="0"/>
+<xs:element name="exibirContratacao" type="xs:string" minOccurs="0"/>
+<xs:element name="observacao" type="xs:string" minOccurs="0"/>
+<xs:element name="possuiBeneficio" type="xs:boolean"/>
+<xs:element name="protegido" type="xs:string" minOccurs="0"/>
+<xs:element name="sigla" type="xs:string" minOccurs="0"/>
+<xs:element name="tipo" type="xs:int" minOccurs="0"/>
+<xs:element name="valor" type="xs:double" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="fcFluxo">
+<xs:sequence>
+<xs:element ref="tns:configuracao" minOccurs="0"/>
+<xs:element name="descricao" type="xs:string" minOccurs="0"/>
+<xs:element name="id" type="xs:int" minOccurs="0"/>
+<xs:element name="inativo" type="xs:string" minOccurs="0"/>
+<xs:element name="isPadrao" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="statusContratacao">
+<xs:sequence>
+<xs:element name="campoDataFim" type="tns:campo" minOccurs="0"/>
+<xs:element name="campoDataInicio" type="tns:campo" minOccurs="0"/>
+<xs:element name="codigoAgrup" type="xs:int" minOccurs="0"/>
+<xs:element name="descricao" type="xs:string" minOccurs="0"/>
+<xs:element name="diasContrato" type="xs:int" minOccurs="0"/>
+<xs:element name="fcFluxo" type="tns:fcFluxo" minOccurs="0"/>
+<xs:element name="id" type="xs:int" minOccurs="0"/>
+<xs:element name="isFase" type="xs:string" minOccurs="0"/>
+<xs:element name="isRelatorioVaga" type="xs:string" minOccurs="0"/>
+<xs:element name="observacao" type="xs:string" minOccurs="0"/>
+<xs:element name="ordem" type="xs:int" minOccurs="0"/>
+<xs:element name="tipo" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="campo">
+<xs:complexContent>
+<xs:extension base="tns:campoMaster">
+<xs:sequence>
+<xs:element name="tipoCampo" type="tns:tipoCampo" minOccurs="0"/>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="campoMaster">
+<xs:sequence>
+<xs:element name="allowNegative" type="xs:string" minOccurs="0"/>
+<xs:element name="chaveLabel" type="xs:string" minOccurs="0"/>
+<xs:element name="classePai" type="xs:string" minOccurs="0"/>
+<xs:element name="descricao" type="xs:string" minOccurs="0"/>
+<xs:element name="escopoCampo" type="xs:string" minOccurs="0"/>
+<xs:element name="exibirNoHistorico" type="xs:string" minOccurs="0"/>
+<xs:element name="id" type="xs:int" minOccurs="0"/>
+<xs:element name="idField" type="xs:string" minOccurs="0"/>
+<xs:element name="isFiltro" type="xs:string" minOccurs="0"/>
+<xs:element name="maxChar" type="xs:int" minOccurs="0"/>
+<xs:element name="modoExibicao" type="xs:string" minOccurs="0"/>
+<xs:element name="nivelConsulta" type="xs:int" minOccurs="0"/>
+<xs:element name="pertenceUsuario" type="xs:boolean" minOccurs="0"/>
+<xs:element name="propriedadeComboAux" type="xs:string" minOccurs="0"/>
+<xs:element name="propriedadeEntity" type="xs:string" minOccurs="0"/>
+<xs:element name="propriedadeExibicao" type="xs:string" minOccurs="0"/>
+<xs:element name="propriedadeId" type="xs:string" minOccurs="0"/>
+<xs:element name="reinicializarContratacao" type="xs:string" minOccurs="0"/>
+<xs:element name="tamanhoCampo" type="xs:int" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="tipoCampo">
+<xs:complexContent>
+<xs:extension base="tns:tipoCampoMaster">
+<xs:sequence/>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="tipoCampoMaster">
+<xs:sequence>
+<xs:element name="descricao" type="xs:string" minOccurs="0"/>
+<xs:element name="nome" type="xs:string" minOccurs="0"/>
+<xs:element name="tipoCampoId" type="xs:int" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+</xs:schema>

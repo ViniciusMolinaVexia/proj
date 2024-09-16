@@ -1,0 +1,208 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<definitions xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://ws.rmaweb.nextage.com.br/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://ws.rmaweb.nextage.com.br/" name="IntegracaoWs">
+<types>
+<xsd:schema>
+<xsd:import namespace="http://ws.rmaweb.nextage.com.br/" schemaLocation="http://localhost:8080/rmaweb/IntegracaoWs?xsd=1"/>
+</xsd:schema>
+</types>
+<message name="atualizarCentroDeposito">
+<part name="parameters" element="tns:atualizarCentroDeposito"/>
+</message>
+<message name="atualizarCentroDepositoResponse">
+<part name="parameters" element="tns:atualizarCentroDepositoResponse"/>
+</message>
+<message name="atualizarArea">
+<part name="parameters" element="tns:atualizarArea"/>
+</message>
+<message name="atualizarAreaResponse">
+<part name="parameters" element="tns:atualizarAreaResponse"/>
+</message>
+<message name="estornoRequisicao">
+<part name="parameters" element="tns:estornoRequisicao"/>
+</message>
+<message name="estornoRequisicaoResponse">
+<part name="parameters" element="tns:estornoRequisicaoResponse"/>
+</message>
+<message name="criarRma">
+<part name="parameters" element="tns:criarRma"/>
+</message>
+<message name="criarRmaResponse">
+<part name="parameters" element="tns:criarRmaResponse"/>
+</message>
+<message name="atualizarEstoque">
+<part name="parameters" element="tns:atualizarEstoque"/>
+</message>
+<message name="atualizarEstoqueResponse">
+<part name="parameters" element="tns:atualizarEstoqueResponse"/>
+</message>
+<message name="receberCompra">
+<part name="parameters" element="tns:receberCompra"/>
+</message>
+<message name="receberCompraResponse">
+<part name="parameters" element="tns:receberCompraResponse"/>
+</message>
+<message name="cadastroFornecedores">
+<part name="parameters" element="tns:cadastroFornecedores"/>
+</message>
+<message name="cadastroFornecedoresResponse">
+<part name="parameters" element="tns:cadastroFornecedoresResponse"/>
+</message>
+<message name="cadastroMateriais">
+<part name="parameters" element="tns:cadastroMateriais"/>
+</message>
+<message name="cadastroMateriaisResponse">
+<part name="parameters" element="tns:cadastroMateriaisResponse"/>
+</message>
+<message name="atualizarGrupoComprador">
+<part name="parameters" element="tns:atualizarGrupoComprador"/>
+</message>
+<message name="atualizarGrupoCompradorResponse">
+<part name="parameters" element="tns:atualizarGrupoCompradorResponse"/>
+</message>
+<message name="atualizarGrupoMercadoria">
+<part name="parameters" element="tns:atualizarGrupoMercadoria"/>
+</message>
+<message name="atualizarGrupoMercadoriaResponse">
+<part name="parameters" element="tns:atualizarGrupoMercadoriaResponse"/>
+</message>
+<portType name="IntegracaoWs">
+<operation name="atualizarCentroDeposito">
+<input wsam:Action="http://ws.rmaweb.nextage.com.br/IntegracaoWs/atualizarCentroDepositoRequest" message="tns:atualizarCentroDeposito"/>
+<output wsam:Action="http://ws.rmaweb.nextage.com.br/IntegracaoWs/atualizarCentroDepositoResponse" message="tns:atualizarCentroDepositoResponse"/>
+</operation>
+<operation name="atualizarArea">
+<input wsam:Action="http://ws.rmaweb.nextage.com.br/IntegracaoWs/atualizarAreaRequest" message="tns:atualizarArea"/>
+<output wsam:Action="http://ws.rmaweb.nextage.com.br/IntegracaoWs/atualizarAreaResponse" message="tns:atualizarAreaResponse"/>
+</operation>
+<operation name="estornoRequisicao">
+<input wsam:Action="http://ws.rmaweb.nextage.com.br/IntegracaoWs/estornoRequisicaoRequest" message="tns:estornoRequisicao"/>
+<output wsam:Action="http://ws.rmaweb.nextage.com.br/IntegracaoWs/estornoRequisicaoResponse" message="tns:estornoRequisicaoResponse"/>
+</operation>
+<operation name="criarRma">
+<input wsam:Action="http://ws.rmaweb.nextage.com.br/IntegracaoWs/criarRmaRequest" message="tns:criarRma"/>
+<output wsam:Action="http://ws.rmaweb.nextage.com.br/IntegracaoWs/criarRmaResponse" message="tns:criarRmaResponse"/>
+</operation>
+<operation name="atualizarEstoque">
+<input wsam:Action="http://ws.rmaweb.nextage.com.br/IntegracaoWs/atualizarEstoqueRequest" message="tns:atualizarEstoque"/>
+<output wsam:Action="http://ws.rmaweb.nextage.com.br/IntegracaoWs/atualizarEstoqueResponse" message="tns:atualizarEstoqueResponse"/>
+</operation>
+<operation name="receberCompra">
+<input wsam:Action="http://ws.rmaweb.nextage.com.br/IntegracaoWs/receberCompraRequest" message="tns:receberCompra"/>
+<output wsam:Action="http://ws.rmaweb.nextage.com.br/IntegracaoWs/receberCompraResponse" message="tns:receberCompraResponse"/>
+</operation>
+<operation name="cadastroFornecedores">
+<input wsam:Action="http://ws.rmaweb.nextage.com.br/IntegracaoWs/cadastroFornecedoresRequest" message="tns:cadastroFornecedores"/>
+<output wsam:Action="http://ws.rmaweb.nextage.com.br/IntegracaoWs/cadastroFornecedoresResponse" message="tns:cadastroFornecedoresResponse"/>
+</operation>
+<operation name="cadastroMateriais">
+<input wsam:Action="http://ws.rmaweb.nextage.com.br/IntegracaoWs/cadastroMateriaisRequest" message="tns:cadastroMateriais"/>
+<output wsam:Action="http://ws.rmaweb.nextage.com.br/IntegracaoWs/cadastroMateriaisResponse" message="tns:cadastroMateriaisResponse"/>
+</operation>
+<operation name="atualizarGrupoComprador">
+<input wsam:Action="http://ws.rmaweb.nextage.com.br/IntegracaoWs/atualizarGrupoCompradorRequest" message="tns:atualizarGrupoComprador"/>
+<output wsam:Action="http://ws.rmaweb.nextage.com.br/IntegracaoWs/atualizarGrupoCompradorResponse" message="tns:atualizarGrupoCompradorResponse"/>
+</operation>
+<operation name="atualizarGrupoMercadoria">
+<input wsam:Action="http://ws.rmaweb.nextage.com.br/IntegracaoWs/atualizarGrupoMercadoriaRequest" message="tns:atualizarGrupoMercadoria"/>
+<output wsam:Action="http://ws.rmaweb.nextage.com.br/IntegracaoWs/atualizarGrupoMercadoriaResponse" message="tns:atualizarGrupoMercadoriaResponse"/>
+</operation>
+</portType>
+<binding name="IntegracaoWsPortBinding" type="tns:IntegracaoWs">
+<soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+<operation name="atualizarCentroDeposito">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="atualizarArea">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="estornoRequisicao">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="criarRma">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="atualizarEstoque">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="receberCompra">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="cadastroFornecedores">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="cadastroMateriais">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="atualizarGrupoComprador">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="atualizarGrupoMercadoria">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+</binding>
+<service name="IntegracaoWs">
+<port name="IntegracaoWsPort" binding="tns:IntegracaoWsPortBinding">
+<soap:address location="http://localhost:8080/rmaweb/IntegracaoWs"/>
+</port>
+</service>
+</definitions>

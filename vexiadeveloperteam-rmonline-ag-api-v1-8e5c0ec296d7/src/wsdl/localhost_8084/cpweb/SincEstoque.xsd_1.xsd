@@ -1,0 +1,204 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is Metro/2.3 (tags/2.3-7528; 2013-04-29T19:34:10+0000) JAXWS-RI/2.2.8 JAXWS/2.2 svn-revision#unknown. --><xs:schema xmlns:tns="http://ws.cpweb.nextage.com.br/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://ws.cpweb.nextage.com.br/">
+
+<xs:element name="enviaEquipamento" type="tns:enviaEquipamento"/>
+
+<xs:element name="enviaEquipamentoResponse" type="tns:enviaEquipamentoResponse"/>
+
+<xs:element name="enviaReserva" type="tns:enviaReserva"/>
+
+<xs:element name="enviaReservaResponse" type="tns:enviaReservaResponse"/>
+
+<xs:complexType name="enviaReserva">
+<xs:sequence>
+<xs:element name="sincEquipamentoVo" type="tns:sincEquipamentoVo" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="sincEquipamentoVo">
+<xs:sequence>
+<xs:element name="codigoRequisicao" type="xs:string" minOccurs="0"/>
+<xs:element name="equipamento" type="tns:equipamento" minOccurs="0"/>
+<xs:element name="localEstoque" type="tns:localEstoque" minOccurs="0"/>
+<xs:element name="naoEnviarMovimentacao" type="xs:boolean" minOccurs="0"/>
+<xs:element name="patrimoniado" type="xs:string" minOccurs="0"/>
+<xs:element name="quantidade" type="xs:double" minOccurs="0"/>
+<xs:element name="referenciaPessoa" type="xs:string" minOccurs="0"/>
+<xs:element name="tipoEquipamento" type="tns:tipoEquipamento" minOccurs="0"/>
+<xs:element name="unidadeMedida" type="tns:unidadeMedida" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="equipamento">
+<xs:sequence>
+<xs:element name="ca" type="xs:string" minOccurs="0"/>
+<xs:element name="codigoRequisicao" type="xs:string" minOccurs="0"/>
+<xs:element name="dataFabricacao" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="equipamentoId" type="xs:int" minOccurs="0"/>
+<xs:element name="excluido" type="xs:string" minOccurs="0"/>
+<xs:element name="fornecedor" type="tns:fornecedor" minOccurs="0"/>
+<xs:element name="funcionarioEmUso" type="tns:funcionario" minOccurs="0"/>
+<xs:element name="gerarAutomaticamente" type="xs:boolean" minOccurs="0"/>
+<xs:element name="numPatrimonio" type="xs:string" minOccurs="0"/>
+<xs:element name="numeroSerie" type="xs:string" minOccurs="0"/>
+<xs:element name="reservadoPara" type="tns:funcionario" minOccurs="0"/>
+<xs:element name="status" type="tns:status" minOccurs="0"/>
+<xs:element name="subNumero" type="xs:string" minOccurs="0"/>
+<xs:element name="tag" type="xs:string" minOccurs="0"/>
+<xs:element name="tipoEquipamento" type="tns:tipoEquipamento" minOccurs="0"/>
+<xs:element name="tipoPropriedade" type="tns:tipoPropriedade" minOccurs="0"/>
+<xs:element name="valorEstimado" type="xs:double" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="fornecedor">
+<xs:sequence>
+<xs:element name="ativo" type="xs:string" minOccurs="0"/>
+<xs:element name="fornecedorId" type="xs:int" minOccurs="0"/>
+<xs:element name="nome" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="funcionario">
+<xs:sequence>
+<xs:element name="codigoArea" type="xs:string" minOccurs="0"/>
+<xs:element name="codigoSubArea" type="xs:string" minOccurs="0"/>
+<xs:element name="codigoSubordinacao" type="xs:string" minOccurs="0"/>
+<xs:element name="cpf" type="xs:string" minOccurs="0"/>
+<xs:element name="descricaoArea" type="xs:string" minOccurs="0"/>
+<xs:element name="descricaoSubArea" type="xs:string" minOccurs="0"/>
+<xs:element name="descricaoSubordinacao" type="xs:string" minOccurs="0"/>
+<xs:element name="dtAdmissao" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="dtDemissao" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="encarregado" type="tns:funcionario" minOccurs="0"/>
+<xs:element name="foto" type="xs:base64Binary" minOccurs="0"/>
+<xs:element name="funcao" type="tns:funcao" minOccurs="0"/>
+<xs:element name="funcionarioId" type="xs:int" minOccurs="0"/>
+<xs:element name="isEncarregado" type="xs:string" minOccurs="0"/>
+<xs:element name="nome" type="xs:string" minOccurs="0"/>
+<xs:element name="referencia" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="funcao">
+<xs:sequence>
+<xs:element name="codigo" type="xs:string" minOccurs="0"/>
+<xs:element name="descricao" type="xs:string" minOccurs="0"/>
+<xs:element name="funcaoId" type="xs:int" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="status">
+<xs:sequence>
+<xs:element name="ativoMovimentacao" type="xs:string" minOccurs="0"/>
+<xs:element name="descricao" type="xs:string" minOccurs="0"/>
+<xs:element name="operacao" type="xs:string" minOccurs="0"/>
+<xs:element name="presenteEstoque" type="xs:string" minOccurs="0"/>
+<xs:element name="statusId" type="xs:int" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="tipoEquipamento">
+<xs:sequence>
+<xs:element name="classificacaoEquip" type="tns:classificacaoEquip" minOccurs="0"/>
+<xs:element name="codigo" type="xs:string" minOccurs="0"/>
+<xs:element name="descricao" type="xs:string" minOccurs="0"/>
+<xs:element name="fatorDepreciacao" type="xs:double" minOccurs="0"/>
+<xs:element name="horasTrabalhadasPadrao" type="xs:int" minOccurs="0"/>
+<xs:element name="nomeCliente" type="xs:string" minOccurs="0"/>
+<xs:element name="observacao" type="xs:string" minOccurs="0"/>
+<xs:element name="periodicidadeManutencao" type="xs:int" minOccurs="0"/>
+<xs:element name="qtdeLimiteEmprestimo" type="xs:int" minOccurs="0"/>
+<xs:element name="quantidadeMinima" type="xs:double"/>
+<xs:element name="subGrupo" type="tns:subGrupo" minOccurs="0"/>
+<xs:element name="tipoEquipFuncoes" type="tns:tipoEquipFuncao" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="tipoEquipamentoId" type="xs:int" minOccurs="0"/>
+<xs:element name="unidadeMedida" type="tns:unidadeMedida" minOccurs="0"/>
+<xs:element name="validadeEmprestimo" type="xs:int" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="classificacaoEquip">
+<xs:sequence>
+<xs:element name="classificacaoEquipId" type="xs:string" minOccurs="0"/>
+<xs:element name="descricao" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="subGrupo">
+<xs:sequence>
+<xs:element name="codigo" type="xs:string" minOccurs="0"/>
+<xs:element name="descricao" type="xs:string" minOccurs="0"/>
+<xs:element name="grupo" type="tns:grupo" minOccurs="0"/>
+<xs:element name="subGrupoId" type="xs:int" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="grupo">
+<xs:sequence>
+<xs:element name="codigo" type="xs:string" minOccurs="0"/>
+<xs:element name="descricao" type="xs:string" minOccurs="0"/>
+<xs:element name="grupoId" type="xs:int" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="tipoEquipFuncao">
+<xs:sequence>
+<xs:element name="funcao" type="tns:funcao" minOccurs="0"/>
+<xs:element name="id" type="xs:int" minOccurs="0"/>
+<xs:element name="tipoEquipamento" type="tns:tipoEquipamento" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="unidadeMedida">
+<xs:sequence>
+<xs:element name="descricao" type="xs:string" minOccurs="0"/>
+<xs:element name="id" type="xs:int" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="tipoPropriedade">
+<xs:sequence>
+<xs:element name="id" type="xs:int" minOccurs="0"/>
+<xs:element name="nome" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="localEstoque">
+<xs:sequence>
+<xs:element name="codigo" type="xs:string" minOccurs="0"/>
+<xs:element name="descricao" type="xs:string" minOccurs="0"/>
+<xs:element name="localEstoqueId" type="xs:int" minOccurs="0"/>
+<xs:element name="pertenceUsuario" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="enviaReservaResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:info" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="info">
+<xs:sequence>
+<xs:element name="codigo" type="xs:string" minOccurs="0"/>
+<xs:element name="erro" type="xs:string" minOccurs="0"/>
+<xs:element name="idObjetoSalvo" type="xs:int" minOccurs="0"/>
+<xs:element name="mensagem" type="xs:string" minOccurs="0"/>
+<xs:element name="objeto" type="xs:anyType" minOccurs="0"/>
+<xs:element name="tipo" type="xs:string" minOccurs="0"/>
+<xs:element name="warning" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="enviaEquipamento">
+<xs:sequence>
+<xs:element name="sincEquipamentoVo" type="tns:sincEquipamentoVo" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="enviaEquipamentoResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:info" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

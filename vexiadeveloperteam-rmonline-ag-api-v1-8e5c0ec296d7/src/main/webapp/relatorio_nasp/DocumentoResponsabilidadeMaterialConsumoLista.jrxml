@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd"
+              name="DocumentoResponsabilidadeMaterial" printOrder="Horizontal" pageWidth="613" pageHeight="800"
+              whenNoDataType="AllSectionsNoDetail" columnWidth="613" leftMargin="0" rightMargin="0" topMargin="0"
+              bottomMargin="0" uuid="6393597d-a010-4371-a4a2-e21095d74ef5">
+    <property name="ireport.zoom" value="2.1961500000000145"/>
+    <property name="ireport.x" value="266"/>
+    <property name="ireport.y" value="0"/>
+    <style name="table">
+        <box>
+            <pen lineWidth="1.0" lineColor="#000000"/>
+        </box>
+    </style>
+    <style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+        <box>
+            <pen lineWidth="0.5" lineColor="#000000"/>
+        </box>
+    </style>
+    <style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+        <box>
+            <pen lineWidth="0.5" lineColor="#000000"/>
+        </box>
+    </style>
+    <style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+        <box>
+            <pen lineWidth="0.5" lineColor="#000000"/>
+        </box>
+    </style>
+    <subDataset name="Table Dataset 1" uuid="5befd14d-4d0d-402f-9b60-252c70a3a0b1"/>
+    <parameter name="SUBREPORT_DIR" class="java.lang.String"/>
+    <queryString>
+        <![CDATA[]]>
+    </queryString>
+    <field name="material.nome" class="java.lang.String"/>
+    <field name="material.unidadeMedida.sigla" class="java.lang.String"/>
+    <field name="quantidade" class="java.lang.Double"/>
+    <field name="rm.dataEmissao" class="java.util.Date"/>
+    <field name="rm.dataAplicacao" class="java.util.Date"/>
+    <field name="material.codigo" class="java.lang.String"/>
+    <field name="rm.numeroRm" class="java.lang.String"/>
+    <background>
+        <band splitType="Stretch"/>
+    </background>
+    <columnHeader>
+        <band height="22">
+            <staticText>
+                <reportElement x="50" y="0" width="41" height="22" uuid="cdfad981-7742-418f-a463-5dfa9ec16c17"/>
+                <box>
+                    <topPen lineWidth="1.0"/>
+                    <leftPen lineWidth="1.0"/>
+                    <bottomPen lineWidth="1.0"/>
+                    <rightPen lineWidth="1.0"/>
+                </box>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font isBold="true" pdfFontName="Helvetica-Bold"/>
+                </textElement>
+                <text><![CDATA[Quant.]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="132" y="0" width="354" height="22" uuid="528480c3-d978-4fc4-b657-6a7a4e84c50c"/>
+                <box>
+                    <topPen lineWidth="1.0"/>
+                    <leftPen lineWidth="1.0"/>
+                    <bottomPen lineWidth="1.0"/>
+                    <rightPen lineWidth="1.0"/>
+                </box>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font isBold="true" pdfFontName="Helvetica-Bold"/>
+                </textElement>
+                <text><![CDATA[Descrição]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="91" y="0" width="41" height="22" uuid="3d6da6e7-d66d-4055-8055-ad370aeccefe"/>
+                <box>
+                    <topPen lineWidth="1.0"/>
+                    <leftPen lineWidth="1.0"/>
+                    <bottomPen lineWidth="1.0"/>
+                    <rightPen lineWidth="1.0"/>
+                </box>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font isBold="true" isStrikeThrough="false" pdfFontName="Helvetica-Bold"/>
+                </textElement>
+                <text><![CDATA[Unid.]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="486" y="0" width="63" height="22" uuid="ee78118b-42f8-4e0e-af23-ba8485e6e104"/>
+                <box>
+                    <topPen lineWidth="1.0"/>
+                    <leftPen lineWidth="1.0"/>
+                    <bottomPen lineWidth="1.0"/>
+                    <rightPen lineWidth="1.0"/>
+                </box>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font isBold="true" pdfFontName="Helvetica-Bold"/>
+                </textElement>
+                <text><![CDATA[Emissão]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="549" y="0" width="64" height="22" uuid="e3ace2be-7d22-425c-973d-1424559bbcfa"/>
+                <box>
+                    <topPen lineWidth="1.0"/>
+                    <leftPen lineWidth="1.0"/>
+                    <bottomPen lineWidth="1.0"/>
+                    <rightPen lineWidth="1.0"/>
+                </box>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font isBold="true" pdfFontName="Helvetica-Bold"/>
+                </textElement>
+                <text><![CDATA[Aplicação]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="0" y="0" width="50" height="22" uuid="ea99a5b4-8e4a-496b-9a19-41cd2dc6a2f6"/>
+                <box>
+                    <topPen lineWidth="1.0"/>
+                    <leftPen lineWidth="1.0"/>
+                    <bottomPen lineWidth="1.0"/>
+                    <rightPen lineWidth="1.0"/>
+                </box>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font isBold="true" pdfFontName="Helvetica-Bold"/>
+                </textElement>
+                <text><![CDATA[RMA]]></text>
+            </staticText>
+        </band>
+    </columnHeader>
+    <detail>
+        <band height="29" splitType="Prevent">
+            <textField pattern="###0.00;-###0.00">
+                <reportElement x="50" y="0" width="41" height="29" uuid="f678cb0d-cf69-4b62-8608-b078bbf4b717"/>
+                <box>
+                    <leftPen lineWidth="1.0"/>
+                    <bottomPen lineWidth="1.0"/>
+                    <rightPen lineWidth="1.0"/>
+                </box>
+                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                <textFieldExpression><![CDATA[$F{quantidade}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="91" y="0" width="41" height="29" uuid="08350266-cd8d-44ac-a72b-79ba64ce150b"/>
+                <box>
+                    <leftPen lineWidth="1.0"/>
+                    <bottomPen lineWidth="1.0"/>
+                    <rightPen lineWidth="1.0"/>
+                </box>
+                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                <textFieldExpression><![CDATA[$F{material.unidadeMedida.sigla}]]></textFieldExpression>
+            </textField>
+            <textField pattern="dd/MM/yyyy">
+                <reportElement x="549" y="0" width="64" height="29" uuid="d8c7330b-fff5-4c69-b837-67466f5b62db"/>
+                <box>
+                    <leftPen lineWidth="1.0"/>
+                    <bottomPen lineWidth="1.0"/>
+                    <rightPen lineWidth="1.0"/>
+                </box>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font size="9"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{rm.dataAplicacao}]]></textFieldExpression>
+            </textField>
+            <textField pattern="dd/MM/yyyy">
+                <reportElement x="486" y="0" width="63" height="29" uuid="0b870cf5-3f1d-4c0f-a41b-6317ff6acdf9"/>
+                <box>
+                    <leftPen lineWidth="1.0"/>
+                    <bottomPen lineWidth="1.0"/>
+                    <rightPen lineWidth="1.0"/>
+                </box>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font size="9"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{rm.dataEmissao}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="132" y="0" width="354" height="29" uuid="80e683c8-9dbf-4361-8fa8-0c0cb7769af0"/>
+                <box>
+                    <leftPen lineWidth="1.0"/>
+                    <bottomPen lineWidth="1.0"/>
+                    <rightPen lineWidth="1.0"/>
+                </box>
+                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                <textFieldExpression>
+                    <![CDATA[$F{material.codigo} != null ? (Integer.parseInt($F{material.codigo}) + " - " + $F{material.nome}) : $F{material.nome}]]></textFieldExpression>
+            </textField>
+            <textField isStretchWithOverflow="true" pattern="" isBlankWhenNull="true">
+                <reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="50" height="29"
+                               isPrintWhenDetailOverflows="true" uuid="58691ba0-0544-45b6-8698-30ffcd894e45"/>
+                <box bottomPadding="0">
+                    <topPen lineWidth="0.0"/>
+                    <leftPen lineWidth="1.0"/>
+                    <bottomPen lineWidth="1.0"/>
+                    <rightPen lineWidth="1.0"/>
+                </box>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font isBold="false"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{rm.numeroRm}]]></textFieldExpression>
+            </textField>
+        </band>
+    </detail>
+</jasperReport>

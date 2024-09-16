@@ -1,0 +1,261 @@
+{
+    "attributes": {
+        "aba": {
+            "context": "a"
+        },
+        "ng-click": {},
+        "parametro": {
+            "context": "a"
+        },
+        "not-fix": {
+            "context": "table"
+        },
+        "ng-class": {},
+        "ng-required": {},
+        "close-menu-on-click": {
+            "context": "li"
+        },
+        "ng-view": {},
+        "ng-if": {},
+        "ng-show": {}
+    },
+    "elements": {
+        "filtro-cadastro-rma": {},
+        "manut-administrador": {
+            "attributes": {
+                "btns-padrao-disable": {}
+            }
+        },
+        "nx-tela-padrao": {
+            "attributes": {
+                "id": {}
+            }
+        },
+        "manut-comprador": {
+            "attributes": {
+                "btns-padrao-disable": {}
+            }
+        },
+        "nx-botoes-padrao": {
+            "attributes": {
+                "btns-padrao-disable": {}
+            }
+        },
+        "filtro-administrador": {},
+        "nx-titulo": {
+            "attributes": {
+                "titulo": {}
+            }
+        },
+        "lista-painel-estoquista": {},
+        "nx-tab-content": {},
+        "manut-materiais-sem-codigo-sap": {
+            "attributes": {
+                "btns-padrao-disable": {}
+            }
+        },
+        "campos-manut-rm-aprovacao": {},
+        "nx-alert": {},
+        "nx-date-field": {
+            "attributes": {
+                "ng-disabled": {},
+                "id": {},
+                "ng-change": {},
+                "placeholder": {},
+                "ng-model": {},
+                "nome-dinamico": {},
+                "required": {}
+            }
+        },
+        "filtro-previsao-pendencia-recebimento": {},
+        "option": {
+            "attributes": {
+                "value": {}
+            }
+        },
+        "nx-manut": {
+            "attributes": {
+                "id": {},
+                "btns-padrao-disable": {}
+            }
+        },
+        "nx-tab-item": {
+            "attributes": {
+                "id": {},
+                "item-value": {},
+                "tab-template": {},
+                "page-content": {},
+                "active": {},
+                "btn-close": {},
+                "tab-pane": {},
+                "controller": {}
+            }
+        },
+        "multi-select": {
+            "attributes": {
+                "id": {},
+                "max-labels": {},
+                "tick-property": {},
+                "disable-property": {},
+                "helper-elements": {},
+                "button-label": {},
+                "input-model": {},
+                "output-model": {},
+                "default-label": {},
+                "item-label": {},
+                "is-disabled": {}
+            }
+        },
+        "nx-float-group": {
+            "attributes": {
+                "cols": {},
+                "class": {}
+            }
+        },
+        "lista-cadastro-rma": {},
+        "manut-rm-aprovacao": {
+            "attributes": {
+                "btns-padrao-disable": {}
+            }
+        },
+        "manut-painel-estoquista": {
+            "attributes": {
+                "btns-padrao-disable": {}
+            }
+        },
+        "lista-relatorio-desempenho-fornecedor": {},
+        "filtro-comprador": {},
+        "manut-documento-responsabilidade": {
+            "attributes": {
+                "btns-padrao-disable": {}
+            }
+        },
+        "modal-receber-material-painel-estoquista": {},
+        "nx-combo": {
+            "attributes": {
+                "id": {},
+                "ng-disabled": {},
+                "ng-change": {},
+                "ng-options": {},
+                "name": {},
+                "ng-model": {},
+                "class": {},
+                "ng-if": {},
+                "required": {}
+            }
+        },
+        "lista-comprador": {},
+        "nx-btn": {
+            "attributes": {
+                "title": {},
+                "funcao": {},
+                "label": {},
+                "icone": {}
+            }
+        },
+        "nx-btn2": {
+            "attributes": {
+                "ng-disabled": {},
+                "title": {},
+                "data-dismiss": {},
+                "label": {},
+                "icone": {}
+            }
+        },
+        "div": {
+            "attributes": {
+                "id": {},
+                "aria-labelledby": {},
+                "style": {},
+                "ng-repeat-start": {},
+                "ng-class": {},
+                "tabindex": {},
+                "role": {},
+                "class": {},
+                "ng-if": {},
+                "ng-repeat": {},
+                "ng-show": {}
+            }
+        },
+        "lista-previsao-pendencia-recebimento": {},
+        "nx-pop-up": {
+            "attributes": {
+                "id": {},
+                "titulo": {}
+            }
+        },
+        "nx-auto-complete": {
+            "attributes": {
+                "ng-disabled": {},
+                "id": {},
+                "typeahead": {},
+                "ng-change": {},
+                "style": {},
+                "ng-required": {},
+                "ng-model": {},
+                "class": {},
+                "required": {},
+                "ng-if": {},
+                "typeahead-on-select": {}
+            }
+        },
+        "detalhe-status-rma": {},
+        "lista-documento-responsabilidade": {},
+        "nx-lista": {},
+        "nx-paginacao": {
+            "attributes": {
+                "num-paginas": {},
+                "qtde-paginas": {},
+                "pagina-atual": {},
+                "listar-pagina": {}
+            }
+        },
+        "filtro-rm-aprovacao": {},
+        "lista-materiais-sem-codigo-sap": {},
+        "nx-loading": {},
+        "lista-rm-aprovacao": {},
+        "nx-arquivo": {
+            "attributes": {
+                "nome": {},
+                "nx-click": {}
+            }
+        },
+        "lista-administrador": {},
+        "nx-tab": {
+            "attributes": {
+                "id": {}
+            }
+        },
+        "filtro-relatorio-desempenho-fornecedor": {},
+        "nx-btn-2": {
+            "attributes": {
+                "ng-disabled": {},
+                "title": {},
+                "label": {},
+                "ng-if": {},
+                "icone": {},
+                "ng-show": {}
+            }
+        },
+        "nx-modal": {
+            "attributes": {
+                "id": {},
+                "funcao": {},
+                "mensagem": {}
+            }
+        },
+        "nx-filtro": {},
+        "modal-retirar-material-painel-estoquista": {},
+        "filtro-painel-estoquista": {
+            "attributes": {
+                "ng-if": {}
+            }
+        },
+        "manut-cadastro-rma": {
+            "attributes": {
+                "btns-padrao-disable": {}
+            }
+        },
+        "filtro-materiais-sem-codigo-sap": {}
+    }
+}

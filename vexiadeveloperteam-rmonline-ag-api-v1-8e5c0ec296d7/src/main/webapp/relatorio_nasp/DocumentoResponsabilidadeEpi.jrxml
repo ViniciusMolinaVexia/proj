@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="DocumentoResponsabilidade" pageWidth="650" pageHeight="842" columnWidth="610" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b7fa2be3-8a01-471b-a165-d7224cbf0f5e">
+	<property name="ireport.scriptlethandling" value="0"/>
+	<property name="ireport.encoding" value="UTF-8"/>
+	<property name="ireport.zoom" value="1.3636363636363722"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<import value="net.sf.jasperreports.engine.*"/>
+	<import value="java.util.*"/>
+	<import value="net.sf.jasperreports.engine.data.*"/>
+	<parameter name="UNIDADE" class="java.lang.String"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String"/>
+	<parameter name="CENTRO" class="java.lang.String"/>
+	<parameter name="DATA_ENTREGA" class="java.lang.String"/>
+	<parameter name="EMPRESA" class="java.lang.String"/>
+	<parameter name="IMAGES_DIR" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="listaRmMaterial" class="java.util.List"/>
+	<field name="pessoa.referencia" class="java.lang.String"/>
+	<field name="pessoa.funcao" class="java.lang.String"/>
+	<field name="pessoa.nome" class="java.lang.String"/>
+	<field name="pessoa.setor.descricao" class="java.lang.String"/>
+	<field name="protocolo" class="java.lang.String"/>
+	<group name="pessoa" isStartNewPage="true" isReprintHeaderOnEachPage="true" keepTogether="true">
+		<groupExpression><![CDATA[$F{pessoa.referencia}]]></groupExpression>
+		<groupHeader>
+			<band height="103">
+				<staticText>
+					<reportElement key="staticText" x="144" y="0" width="386" height="94" uuid="aad2baac-65ab-4702-9351-8281f178d639"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="14" isBold="true"/>
+					</textElement>
+					<text><![CDATA[FICHA INDIVIDUAL DE CONTROLE DE EQUIPAMENTOS
+DE PROTEÇÃO INDIVIDUAL]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement key="textField" x="3" y="74" width="141" height="20" uuid="bc799c38-bb79-44e9-af84-3e29e47457b5"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="10" isBold="true" pdfFontName="Helvetica-Bold"/>
+					</textElement>
+					<textFieldExpression><![CDATA["UT: " + $P{CENTRO} + " " + $P{EMPRESA}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement x="0" y="0" width="1" height="95" uuid="887a85dc-7be9-4da1-ac5a-0a64d3da3b84"/>
+				</line>
+				<line>
+					<reportElement x="529" y="0" width="1" height="94" uuid="1f4d94d8-48a7-4ebb-bb33-8a2493ae995d"/>
+				</line>
+				<image>
+					<reportElement x="13" y="4" width="131" height="61" uuid="2d236761-db36-4021-b58e-4667abba38dd"/>
+					<imageExpression><![CDATA[$P{IMAGES_DIR} + "logo.png"]]></imageExpression>
+				</image>
+				<line>
+					<reportElement x="0" y="94" width="610" height="1" uuid="fda2e38f-67dc-415f-a4fb-7220a2d5f9fd"/>
+				</line>
+				<line>
+					<reportElement x="144" y="1" width="1" height="94" uuid="041ad693-5a98-4f03-901e-9df3dbb09df0"/>
+				</line>
+				<line>
+					<reportElement x="0" y="0" width="610" height="1" uuid="5a1bdf7c-06fa-465f-bb0a-d8f8e40b6d93"/>
+				</line>
+				<line>
+					<reportElement x="609" y="0" width="1" height="94" uuid="4125e04e-d6cc-497d-89b6-2b7c3c850283"/>
+				</line>
+				<staticText>
+					<reportElement x="530" y="35" width="78" height="14" uuid="db035956-fd7f-46e6-a8bb-5204c3b22d2e"/>
+					<textElement textAlignment="Center"/>
+					<text><![CDATA[Referência:]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="530" y="49" width="79" height="45" uuid="f115a38a-11b5-4f03-be3c-9f945c887e8c"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[$F{pessoa.referencia}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="529" y="0" width="80" height="18" uuid="44ca512f-3758-41c2-a9d5-8f6c90363d31"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[Protocolo:]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="530" y="16" width="82" height="19" uuid="6ccdbfdb-c326-41e8-a8c7-2da3324ab189"/>
+					<textElement textAlignment="Center" verticalAlignment="Top">
+						<font size="12" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{protocolo}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="50"/>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="48">
+			<printWhenExpression><![CDATA[$F{listaRmMaterial}.size() > 0]]></printWhenExpression>
+			<staticText>
+				<reportElement x="0" y="0" width="41" height="20" uuid="50e76468-e4f9-4c81-a32f-e84392f0d162"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[ Nome:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="41" y="0" width="330" height="20" uuid="b6bda2c3-5dbf-4e96-b26e-4c3ee9e88188"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{pessoa.nome}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="20" width="93" height="20" uuid="1cdd2bc7-6e8a-42f4-8122-e257a1877428"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[ Setor de trabalho: ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="93" y="20" width="517" height="20" uuid="354d2aa6-3334-4c10-8fc6-4e406059e6d6"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{pessoa.setor.descricao} != null ? $F{pessoa.setor.descricao} : " "]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="371" y="0" width="47" height="20" uuid="73f06ce5-c193-4785-8400-1f68b7525340"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[ Função:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="418" y="0" width="192" height="20" uuid="51cee9df-c776-4a47-af6e-df563c325999"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{pessoa.funcao} != null ? $F{pessoa.funcao} : " "]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="39" width="610" height="1" uuid="9b818be4-30d5-4802-84e2-7a22769e0453"/>
+			</line>
+			<line>
+				<reportElement x="0" y="0" width="1" height="40" uuid="b32a5c11-a70d-46c2-b953-6b3575f8575d"/>
+			</line>
+			<line>
+				<reportElement x="609" y="0" width="1" height="40" uuid="55d113fd-53a4-4608-9827-34d3b7f000ee"/>
+			</line>
+			<line>
+				<reportElement x="1" y="0" width="608" height="1" uuid="202a7a00-a04f-4744-b185-402f025fd5c0"/>
+			</line>
+		</band>
+		<band height="184">
+			<staticText>
+				<reportElement key="staticText" x="3" y="16" width="593" height="94" uuid="5ab2f1a1-301e-47c9-a8ba-98d2c04ac141"/>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font isBold="false" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[	Declaro que recebi orientação sobre o uso correto do EPI fornecido pela empresa e que estou ciente da Legislação
+abaixo discriminada, compromentendo-me a cumprí-la. Port. n° 3.214, de 08/06/78, do Mtb, NR-1, Item 1.8 e NR-6 ITEM 6.7 e
+CLT art. 462 e 482. NR-1, item 1.8 - Cabe ao Empregado: a) Cumprir as disposições legais e regulamentos sobre Segurança e
+Medicina do Trabalho, inclusive as ordens de serviço espedidas pelo empregador; b) Usar o EPI fornecido pelo empregador;
+c) Usar, utilizando-o apenas para finalidade a que se destina; d) Submeter-se ao exames médicos previstos nas Normas Regulamentadoras - NR; e) Colaborar com a empresa na aplicação das Normas Regulamentadoras - NR. NR.01, sub item 1.8.1
+"Constitui ato faltose a recusa injustificadas do empregado ao cumprimento do dispositivo no artigo anterior".]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="2" width="1" height="162" uuid="b24ee0bc-a8bd-4155-b281-134683c64f8e"/>
+			</line>
+			<staticText>
+				<reportElement x="171" y="124" width="130" height="20" uuid="267a6809-5b0e-4361-988d-b42ec3bb43ad"/>
+				<text><![CDATA[DATA ____/____/________]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="164" width="611" height="1" uuid="52581b74-ca08-4edf-a8a7-0de087d4f4f2"/>
+			</line>
+			<line>
+				<reportElement x="0" y="1" width="611" height="1" uuid="f029a726-aab5-46d6-a03d-ea281eb0f520"/>
+			</line>
+			<line>
+				<reportElement x="315" y="135" width="250" height="1" uuid="8360035d-f6f9-46ad-a5bb-0a0e850c349f"/>
+			</line>
+			<staticText>
+				<reportElement key="staticText" x="315" y="135" width="250" height="20" uuid="00eed7ff-dfe9-488d-8e77-59dc0634cdc1"/>
+				<textElement textAlignment="Center" verticalAlignment="Top"/>
+				<text><![CDATA[Assinatura]]></text>
+			</staticText>
+			<line>
+				<reportElement x="610" y="2" width="1" height="162" uuid="eb4a2355-dbf7-4ba1-b3a4-38423c8af4da"/>
+			</line>
+		</band>
+		<band height="50">
+			<subreport>
+				<reportElement x="0" y="0" width="610" height="32" uuid="5372d082-9363-461f-a13a-59442bb31e12"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="DATA_ENTREGA">
+					<subreportParameterExpression><![CDATA[$P{DATA_ENTREGA}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{listaRmMaterial})]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "DocumentoResponsabilidadeEpiLista.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+</jasperReport>

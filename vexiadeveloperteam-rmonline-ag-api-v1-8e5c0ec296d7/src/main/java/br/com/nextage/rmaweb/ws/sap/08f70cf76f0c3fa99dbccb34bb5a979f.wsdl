@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions name="SI_SolicitaRequisicaoSyncOut" targetNamespace="urn:cccc.rmaweb.requisicao" xmlns:p3="urn:cccc.rmaweb.objetoscomuns" xmlns:p2="urn:cccc.reeweb.objetoscomuns" xmlns:p1="urn:cccc.rmaweb.requisicao" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+    <wsdl:documentation/>
+    <wsp:UsingPolicy wsdl:required="true"/>
+    <wsp:Policy wsu:Id="OP_SI_SolicitaRequisicaoSyncOut"/>
+    <wsdl:types>
+        <xsd:schema targetNamespace="urn:cccc.rmaweb.requisicao" xmlns="urn:cccc.rmaweb.requisicao" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+            <xsd:element name="MT_SolicitaRequisicao" type="DT_SolicitaRequisicao"/>
+            <xsd:element name="MT_SolicitaRequisicao_response" type="DT_SolicitaRequisicao_response"/>
+            <xsd:complexType name="DT_SolicitaRequisicao">
+                <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/VersionID">22a3c59483bd11e5c159000000788fde</xsd:appinfo>
+                </xsd:annotation>
+                <xsd:sequence>
+                    <xsd:element name="Itens" minOccurs="0" maxOccurs="unbounded">
+                        <xsd:annotation>
+                            <xsd:appinfo source="http://sap.com/xi/TextID">cf39ca10825111e592cea41f72fa9069</xsd:appinfo>
+                        </xsd:annotation>
+                        <xsd:complexType>
+                            <xsd:sequence>
+                                <xsd:element name="Item" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">859423d97be311e59721a41f72fa9069</xsd:appinfo>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="CodRma" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">cf39ca0f825111e5833ba41f72fa9069</xsd:appinfo>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="Material" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">6e692c78780211e59c08a41f72fa9069</xsd:appinfo>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="Solicitante" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">6e6960ed780211e5a2dda41f72fa9069</xsd:appinfo>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="Centro" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">6e6960ee780211e5a007a41f72fa9069</xsd:appinfo>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="Quantidade" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">6e6960ef780211e58503a41f72fa9069</xsd:appinfo>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="UnidMedida" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">6e6960f0780211e5a975a41f72fa9069</xsd:appinfo>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="Coletor" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">6e6960f1780211e58a0aa41f72fa9069</xsd:appinfo>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="DiagRede" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">3db116f283bc11e5b3dea41f72fa9069</xsd:appinfo>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="Operacao" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">3db116f383bc11e5b091a41f72fa9069</xsd:appinfo>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="Deposito" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">6e6960f2780211e5b1c5a41f72fa9069</xsd:appinfo>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="DtNecessidade" type="xsd:date" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">6e6960f3780211e59acba41f72fa9069</xsd:appinfo>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="LocalEntrega" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">6e6960f4780211e5846aa41f72fa9069</xsd:appinfo>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="Fornecedor" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">6e6960f5780211e5cb39a41f72fa9069</xsd:appinfo>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="Aprovador" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">0a242622782211e5cfeba41f72fa9069</xsd:appinfo>
+                                    </xsd:annotation>
+                                </xsd:element>
+                            </xsd:sequence>
+                        </xsd:complexType>
+                    </xsd:element>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="DT_SolicitaRequisicao_response">
+                <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/VersionID">5ecf36f1782211e5cbd4000000788fde</xsd:appinfo>
+                </xsd:annotation>
+                <xsd:sequence>
+                    <xsd:element name="Item" type="xsd:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:appinfo source="http://sap.com/xi/TextID">888a8f93782211e58a4aa41f72fa9069</xsd:appinfo>
+                        </xsd:annotation>
+                    </xsd:element>
+                    <xsd:element name="TipoMensagem" type="xsd:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:appinfo source="http://sap.com/xi/TextID">888ab341782211e58033a41f72fa9069</xsd:appinfo>
+                        </xsd:annotation>
+                    </xsd:element>
+                    <xsd:element name="Mensagem" type="xsd:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:appinfo source="http://sap.com/xi/TextID">888ab342782211e5bd7da41f72fa9069</xsd:appinfo>
+                        </xsd:annotation>
+                    </xsd:element>
+                    <xsd:element name="Requisicao" type="xsd:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:appinfo source="http://sap.com/xi/TextID">888ab343782211e599f1a41f72fa9069</xsd:appinfo>
+                        </xsd:annotation>
+                    </xsd:element>
+                </xsd:sequence>
+            </xsd:complexType>
+        </xsd:schema>
+        <xsd:schema targetNamespace="urn:cccc.reeweb.objetoscomuns" xmlns="urn:cccc.reeweb.objetoscomuns" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:p4="urn:cccc.rmaweb.objetoscomuns">
+            <xsd:import namespace="urn:cccc.rmaweb.objetoscomuns"/>
+            <xsd:element name="MT_Erro">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="standard" type="p4:ExchangeFaultData"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+        </xsd:schema>
+        <xsd:schema targetNamespace="urn:cccc.rmaweb.objetoscomuns" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:cccc.rmaweb.objetoscomuns">
+            <xsd:complexType name="ExchangeLogData">
+                <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/VersionID">66331529676811e5bae8000000788fde</xsd:appinfo>
+                </xsd:annotation>
+                <xsd:sequence>
+                    <xsd:element name="severity" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="text" type="xsd:string"/>
+                    <xsd:element name="url" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="id" type="xsd:string" minOccurs="0"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="ExchangeFaultData">
+                <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/VersionID">6623ad4b676811e5b743000000788fde</xsd:appinfo>
+                </xsd:annotation>
+                <xsd:sequence>
+                    <xsd:element name="faultText" type="xsd:string">
+                        <xsd:annotation>
+                            <xsd:appinfo source="http://sap.com/xi/TextID">ccfc9431c01a11e39c27fcf8aee30cc8</xsd:appinfo>
+                        </xsd:annotation>
+                    </xsd:element>
+                    <xsd:element name="faultUrl" type="xsd:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:appinfo source="http://sap.com/xi/TextID">ccfcaaf2c01a11e3a773fcf8aee30cc8</xsd:appinfo>
+                        </xsd:annotation>
+                    </xsd:element>
+                    <xsd:element name="faultDetail" type="ExchangeLogData" minOccurs="0" maxOccurs="unbounded">
+                        <xsd:annotation>
+                            <xsd:appinfo source="http://sap.com/xi/TextID">ccfcaaf3c01a11e3a64efcf8aee30cc8</xsd:appinfo>
+                        </xsd:annotation>
+                    </xsd:element>
+                </xsd:sequence>
+            </xsd:complexType>
+        </xsd:schema>
+    </wsdl:types>
+    <wsdl:message name="MT_SolicitaRequisicao">
+        <wsdl:documentation/>
+        <wsdl:part name="MT_SolicitaRequisicao" element="p1:MT_SolicitaRequisicao"/>
+    </wsdl:message>
+    <wsdl:message name="MT_SolicitaRequisicao_response">
+        <wsdl:documentation/>
+        <wsdl:part name="MT_SolicitaRequisicao_response" element="p1:MT_SolicitaRequisicao_response"/>
+    </wsdl:message>
+    <wsdl:message name="p3.MT_Erro">
+        <wsdl:documentation/>
+        <wsdl:part name="MT_Erro" element="p2:MT_Erro"/>
+    </wsdl:message>
+    <wsdl:portType name="SI_SolicitaRequisicaoSyncOut">
+        <wsdl:documentation/>
+        <wsdl:operation name="SI_SolicitaRequisicaoSyncOut">
+            <wsdl:documentation/>
+            <wsp:Policy>
+                <wsp:PolicyReference URI="#OP_SI_SolicitaRequisicaoSyncOut"/>
+            </wsp:Policy>
+            <wsdl:input message="p1:MT_SolicitaRequisicao"/>
+            <wsdl:output message="p1:MT_SolicitaRequisicao_response"/>
+            <wsdl:fault name="p3.MT_Erro" message="p1:p3.MT_Erro"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="SI_SolicitaRequisicaoSyncOutBinding" type="p1:SI_SolicitaRequisicaoSyncOut">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+        <wsdl:operation name="SI_SolicitaRequisicaoSyncOut">
+            <soap:operation soapAction="http://sap.com/xi/WebService/soap1.1" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+            <wsdl:input>
+                <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+            </wsdl:output>
+            <wsdl:fault name="p3.MT_Erro">
+                <soap:fault use="literal" name="p3.MT_Erro" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+            </wsdl:fault>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="BS_RMAWEB_SI_SolicitaRequisicaoSyncOut_x_x">
+        <wsdl:port name="HTTP_Port" binding="p1:SI_SolicitaRequisicaoSyncOutBinding">
+            <soap:address location="https://sepd.camargocorrea.com.br/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BS_RMAWEB&amp;receiverParty=&amp;receiverService=&amp;interface=SI_SolicitaRequisicaoSyncOut&amp;interfaceNamespace=urn%3Acccc.rmaweb.requisicao" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+        </wsdl:port>
+        <wsdl:port name="HTTPS_Port" binding="p1:SI_SolicitaRequisicaoSyncOutBinding">
+            <soap:address location="https://sepd.camargocorrea.com.br/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BS_RMAWEB&amp;receiverParty=&amp;receiverService=&amp;interface=SI_SolicitaRequisicaoSyncOut&amp;interfaceNamespace=urn%3Acccc.rmaweb.requisicao" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>

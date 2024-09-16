@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="DocumentoResponsabilidade" pageWidth="650" pageHeight="842" columnWidth="610" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b7fa2be3-8a01-471b-a165-d7224cbf0f5e">
+	<property name="ireport.scriptlethandling" value="0"/>
+	<property name="ireport.encoding" value="UTF-8"/>
+	<property name="ireport.zoom" value="1.3636363636363722"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<import value="net.sf.jasperreports.engine.*"/>
+	<import value="java.util.*"/>
+	<import value="net.sf.jasperreports.engine.data.*"/>
+	<parameter name="UNIDADE" class="java.lang.String"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String"/>
+	<parameter name="CENTRO" class="java.lang.String"/>
+	<parameter name="DATA_ENTREGA" class="java.lang.String"/>
+	<parameter name="EMPRESA" class="java.lang.String"/>
+	<parameter name="IMAGES_DIR" class="java.lang.String"/>
+	<parameter name="requisitanteNome" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="listaVwDocumentoResponsabilidade" class="java.util.List"/>
+	<field name="requisitanteNome" class="java.lang.String"/>
+	<field name="requisitanteReferencia" class="java.lang.String"/>
+	<field name="requisitanteFuncao" class="java.lang.String"/>
+	<field name="requisitanteSetor" class="java.lang.String"/>
+	<group name="pessoa" isStartNewPage="true" isReprintHeaderOnEachPage="true" keepTogether="true">
+		<groupExpression><![CDATA[]]></groupExpression>
+		<groupHeader>
+			<band height="95">
+				<staticText>
+					<reportElement key="staticText" x="144" y="0" width="464" height="94" uuid="aad2baac-65ab-4702-9351-8281f178d639"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="14" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Materiais Indisponíveis]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement key="textField" x="3" y="74" width="141" height="20" uuid="bc799c38-bb79-44e9-af84-3e29e47457b5"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="10" isBold="true" pdfFontName="Helvetica-Bold"/>
+					</textElement>
+					<textFieldExpression><![CDATA["UT: " + $P{CENTRO} + " " + $P{EMPRESA}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement x="0" y="0" width="1" height="95" uuid="887a85dc-7be9-4da1-ac5a-0a64d3da3b84"/>
+				</line>
+				<image>
+					<reportElement x="13" y="4" width="131" height="61" uuid="2d236761-db36-4021-b58e-4667abba38dd"/>
+					<imageExpression><![CDATA[$P{IMAGES_DIR} + "logo.png"]]></imageExpression>
+				</image>
+				<line>
+					<reportElement x="0" y="94" width="610" height="1" uuid="fda2e38f-67dc-415f-a4fb-7220a2d5f9fd"/>
+				</line>
+				<line>
+					<reportElement x="144" y="1" width="1" height="94" uuid="041ad693-5a98-4f03-901e-9df3dbb09df0"/>
+				</line>
+				<line>
+					<reportElement x="0" y="0" width="610" height="1" uuid="5a1bdf7c-06fa-465f-bb0a-d8f8e40b6d93"/>
+				</line>
+				<line>
+					<reportElement x="609" y="0" width="1" height="94" uuid="4125e04e-d6cc-497d-89b6-2b7c3c850283"/>
+				</line>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band/>
+		</groupFooter>
+	</group>
+	<detail>
+		<band height="100" splitType="Prevent">
+			<subreport>
+				<reportElement x="0" y="48" width="608" height="50" isPrintWhenDetailOverflows="true" uuid="5372d082-9363-461f-a13a-59442bb31e12"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{listaVwDocumentoResponsabilidade})]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "DocumentoResponsabilidadeIndisRecLista.jasper"]]></subreportExpression>
+			</subreport>
+			<textField>
+				<reportElement x="141" y="8" width="359" height="18" uuid="92542e9f-6736-45cb-8ca7-18a956ea29d8"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+					<topPen lineWidth="1.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["  " + $F{requisitanteNome}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="8" width="141" height="18" uuid="50e76468-e4f9-4c81-a32f-e84392f0d162"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+					<topPen lineWidth="1.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[  Requisitante/Encarregado:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="500" y="8" width="67" height="18" uuid="60a1f98c-16df-4804-837a-ebb9619240d9"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+					<topPen lineWidth="1.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[  Referencia:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="567" y="8" width="43" height="18" uuid="087686a7-18d0-48cc-a50c-08e3bf257a46"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+					<topPen lineWidth="1.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["  " + $F{requisitanteReferencia}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="401" y="26" width="209" height="18" uuid="856d18cb-9d83-4ec2-819e-9a90d91e33f5"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+					<topPen lineWidth="1.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["  " + $F{requisitanteFuncao}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="351" y="26" width="50" height="18" uuid="3a926d91-c5a0-42df-9c17-aec95c87265d"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+					<topPen lineWidth="1.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[  Função:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="39" y="26" width="312" height="18" uuid="20c48864-4540-4686-8ee4-ded18d4d94a6"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+					<topPen lineWidth="1.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["  " + $F{requisitanteSetor}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="26" width="39" height="18" uuid="e4a23221-fe51-4854-92a4-5f3914c9038f"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+					<topPen lineWidth="1.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[  Setor:]]></text>
+			</staticText>
+		</band>
+	</detail>
+</jasperReport>

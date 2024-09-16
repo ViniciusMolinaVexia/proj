@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service id="remoting-service"
+    class="flex.messaging.services.RemotingService">
+
+    <adapters>
+        <adapter-definition id="java-object"
+        class="br.com.nextage.rmaweb.util.CustomJavaAdapter"
+        default="true"/>
+
+    </adapters>
+
+    <default-channels>
+        <channel ref="my-amf"/>
+    </default-channels>
+
+    <destination id="usuarioServices">
+        <properties>
+            <source>br.com.nextage.rmaweb.service.UsuarioService</source>
+        </properties>
+    </destination>
+
+    <destination id="tipoMaterialServices">
+        <properties>
+            <source>br.com.nextage.rmaweb.service.TipoMaterialService</source>
+        </properties>
+    </destination>
+
+     <destination id="ufServices">
+        <properties>
+            <source>br.com.nextage.rmaweb.service.UfService</source>
+        </properties>
+    </destination>
+
+    <destination id="cidadeServices">
+        <properties>
+            <source>br.com.nextage.rmaweb.service.CidadeService</source>
+        </properties>
+    </destination>
+
+    <destination id="fornecedorServices">
+        <properties>
+            <source>br.com.nextage.rmaweb.service.FornecedorService</source>
+        </properties>
+    </destination>
+
+    <destination id="unidadeMedidaServices">
+        <properties>
+            <source>br.com.nextage.rmaweb.service.UnidadeMedidaService</source>
+        </properties>
+    </destination>
+
+    <destination id="materialServices">
+        <properties>
+            <source>br.com.nextage.rmaweb.service.MaterialService</source>
+        </properties>
+    </destination>
+
+    <destination id="GerenciadorArquivos">
+        <properties>
+            <source>br.com.nextage.rmaweb.download.GerenciadorArquivos</source>
+        </properties>
+    </destination>
+
+    <destination id="prioridadeServices">
+        <properties>
+            <source>br.com.nextage.rmaweb.service.PrioridadeService</source>
+        </properties>
+    </destination>
+
+    <destination id="tipoRequisicaoServices">
+        <properties>
+            <source>br.com.nextage.rmaweb.service.TipoRequisicaoService</source>
+        </properties>
+    </destination>
+
+    <destination id="rmServices">
+        <properties>
+            <source>br.com.nextage.rmaweb.service.RmService</source>
+        </properties>
+    </destination>
+
+    <destination id="rmMaterialServices">
+        <properties>
+            <source>br.com.nextage.rmaweb.service.RmMaterialService</source>
+        </properties>
+    </destination>
+
+    <destination id="pessoaServices">
+        <properties>
+            <source>br.com.nextage.rmaweb.service.PessoaService</source>
+        </properties>
+    </destination>
+
+    <destination id="compradorServices">
+        <properties>
+            <source>br.com.nextage.rmaweb.service.CompradorService</source>
+        </properties>
+    </destination>
+
+    <destination id="usuarioTelaService">
+        <properties>
+            <source>br.com.nextage.rmaweb.service.UsuarioTelaService</source>
+        </properties>
+    </destination>
+
+    <destination id="setorServices">
+        <properties>
+            <source>br.com.nextage.rmaweb.service.SetorService</source>
+        </properties>
+    </destination>
+
+    <destination id="depositoServices">
+        <properties>
+            <source>br.com.nextage.rmaweb.service.DepositoService</source>
+        </properties>
+    </destination >
+
+    <destination id="rmMaterialRecebimentoServices">
+        <properties>
+            <source>br.com.nextage.rmaweb.service.RmMaterialRecebimentoService</source>
+        </properties>
+    </destination >
+
+    <destination id="materialDepositoServices">
+        <properties>
+            <source>br.com.nextage.rmaweb.service.MaterialDepositoService</source>
+        </properties>
+    </destination >
+
+    <destination id="materialDepositoEntradaServices">
+        <properties>
+            <source>br.com.nextage.rmaweb.service.MaterialDepositoEntradaService</source>
+        </properties>
+    </destination >
+
+        <destination id="materialDepositoSaidaServices">
+        <properties>
+            <source>br.com.nextage.rmaweb.service.MaterialDepositoSaidaService</source>
+        </properties>
+    </destination >
+
+    <destination id="rmMaterialRetiradaServices">
+        <properties>
+            <source>br.com.nextage.rmaweb.service.RmMaterialRetiradaService</source>
+        </properties>
+    </destination >
+
+    <destination id="rmGraficoAcompanhamentoRequisicaoServices">
+        <properties>
+            <source>br.com.nextage.rmaweb.service.GraficoAcompanhamentoRequisicaoService</source>
+        </properties>
+    </destination>
+    <destination id="graficoResumoCompradoresService">
+        <properties>
+            <source>br.com.nextage.rmaweb.service.GraficoResumoCompradoresService</source>
+        </properties>
+    </destination>
+    <destination id="graficoPrazoItensService">
+        <properties>
+            <source>br.com.nextage.rmaweb.service.GraficoPrazoItensService</source>
+        </properties>
+    </destination>
+
+    <destination id="graficoFluxoService">
+        <properties>
+            <source>br.com.nextage.rmaweb.service.GraficoFluxoService</source>
+        </properties>
+    </destination>
+
+    <destination id="pedidoSapService">
+        <properties>
+            <source>br.com.nextage.rmaweb.service.PedidoSapService</source>
+        </properties>
+    </destination>
+
+    <destination id="alterarDatasRmService">
+        <properties>
+            <source>br.com.nextage.rmaweb.service.AlterarDatasRmService</source>
+        </properties>
+    </destination>
+    
+    <destination id="pessoaDigitalService">
+        <properties>
+            <source>br.com.nextage.rmaweb.service.integracao.PessoaDigitalService</source>
+            <scope>session</scope>
+        </properties>
+    </destination>
+</service>

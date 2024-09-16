@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="DocumentoResponsabilidade" pageWidth="650" pageHeight="842" columnWidth="610" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b7fa2be3-8a01-471b-a165-d7224cbf0f5e">
+	<property name="ireport.scriptlethandling" value="0"/>
+	<property name="ireport.encoding" value="UTF-8"/>
+	<property name="ireport.zoom" value="1.8150000000000104"/>
+	<property name="ireport.x" value="148"/>
+	<property name="ireport.y" value="0"/>
+	<import value="net.sf.jasperreports.engine.*"/>
+	<import value="java.util.*"/>
+	<import value="net.sf.jasperreports.engine.data.*"/>
+	<parameter name="UNIDADE" class="java.lang.String"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String"/>
+	<parameter name="CENTRO" class="java.lang.String"/>
+	<parameter name="DATA_ENTREGA" class="java.lang.String"/>
+	<parameter name="IMAGES_DIR" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="listaRmMaterial" class="java.util.List"/>
+	<field name="pessoa.referencia" class="java.lang.String"/>
+	<field name="pessoa.funcao" class="java.lang.String"/>
+	<field name="pessoa.nome" class="java.lang.String"/>
+	<field name="pessoa.setor.descricao" class="java.lang.String"/>
+	<field name="protocolo" class="java.lang.String"/>
+	<group name="pessoa" isStartNewPage="true" isReprintHeaderOnEachPage="true" footerPosition="ForceAtBottom" keepTogether="true">
+		<groupExpression><![CDATA[$F{pessoa.nome}]]></groupExpression>
+		<groupHeader>
+			<band height="64">
+				<staticText>
+					<reportElement key="staticText" x="1" y="12" width="75" height="20" uuid="7e9ec999-907d-48dc-a39c-36e20bd62a6d"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle"/>
+					<text><![CDATA[ Referência:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="staticText" x="1" y="32" width="75" height="20" uuid="4165041b-b4fb-4dbe-b0f1-4ea790f98241"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle"/>
+					<text><![CDATA[ Função:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="staticText" x="336" y="32" width="54" height="20" uuid="f7b788c3-f33b-4d92-bbe6-a36568a1229e"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<text><![CDATA[Setor:]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="76" y="32" width="260" height="20" uuid="54846fd4-f4fe-45a5-92d5-2c7ec95c1789"/>
+					<textElement verticalAlignment="Middle">
+						<font isBold="true" pdfFontName="Helvetica-Bold"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{pessoa.funcao} != null ? $F{pessoa.funcao} : " "]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="390" y="32" width="219" height="20" uuid="cd53b7f1-fd6f-46ef-96bd-f570e334b83a"/>
+					<textElement verticalAlignment="Middle">
+						<font isBold="true" pdfFontName="Helvetica-Bold"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{pessoa.setor.descricao} != null ? $F{pessoa.setor.descricao} : " "]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="390" y="12" width="220" height="20" uuid="01e6136c-1287-4c6d-8fa5-6fe00e5f36dd"/>
+					<textElement verticalAlignment="Middle">
+						<font isBold="true" pdfFontName="Helvetica-Bold"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{pessoa.nome}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement x="0" y="52" width="610" height="1" uuid="7df8b6dc-e170-4336-bcd3-045a44a3ba26"/>
+				</line>
+				<line>
+					<reportElement x="0" y="12" width="1" height="40" uuid="a8003749-755d-4a2e-856f-a4f70f6b6f7f"/>
+				</line>
+				<line>
+					<reportElement x="609" y="12" width="1" height="41" uuid="57ca9bf6-ef0c-4d52-9ef0-814ae3d6159c"/>
+				</line>
+				<staticText>
+					<reportElement x="336" y="12" width="54" height="20" uuid="94c7232a-2f64-4482-beab-a904acd3ea5e"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<text><![CDATA[Nome:]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="76" y="12" width="260" height="20" uuid="9a7ee228-3377-43ae-bf6e-f144e908057b"/>
+					<textElement verticalAlignment="Middle">
+						<font isBold="true" pdfFontName="Helvetica-Bold"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{pessoa.referencia}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement x="0" y="12" width="609" height="1" uuid="ef2d626f-f406-47ab-b748-8c6a4ff4e5f6"/>
+				</line>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="96">
+				<line>
+					<reportElement x="0" y="11" width="1" height="83" uuid="82f78d78-dd56-4a58-9950-f600b6afac95"/>
+				</line>
+				<staticText>
+					<reportElement x="3" y="59" width="100" height="20" uuid="b4a9cfae-c460-4bd5-a637-3845b82c19e7"/>
+					<text><![CDATA[DATA __/__/____]]></text>
+				</staticText>
+				<line>
+					<reportElement x="0" y="93" width="611" height="1" uuid="3b1210b3-0b26-4aba-8b60-00657d9fd395"/>
+				</line>
+				<line>
+					<reportElement x="0" y="10" width="611" height="1" uuid="96ac92bf-8fc6-419e-a460-b34c607fe8c2"/>
+				</line>
+				<line>
+					<reportElement x="315" y="71" width="250" height="1" uuid="4bda73d6-7f59-4a70-91bc-d8b02b267714"/>
+				</line>
+				<staticText>
+					<reportElement key="staticText" x="315" y="71" width="250" height="20" uuid="253977dd-850e-429e-a0a3-a973784500cd"/>
+					<textElement textAlignment="Center" verticalAlignment="Top"/>
+					<text><![CDATA[Assinatura do responsável]]></text>
+				</staticText>
+				<line>
+					<reportElement x="610" y="11" width="1" height="82" uuid="0d561e80-9127-48e1-92bc-512c27e1abe8"/>
+				</line>
+			</band>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="100" splitType="Stretch">
+			<staticText>
+				<reportElement key="staticText" x="1" y="80" width="56" height="20" uuid="4f342d54-10d3-425c-8632-ba1b9e9603fd"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[ Unidade:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText" x="10" y="10" width="521" height="64" uuid="aad2baac-65ab-4702-9351-8281f178d639"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[                      REQUISIÇÃO DE INTERNA DE MATERIAIS]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" x="57" y="79" width="280" height="20" uuid="bc799c38-bb79-44e9-af84-3e29e47457b5"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="10" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{UNIDADE}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText" x="337" y="79" width="54" height="20" uuid="27b248b3-109e-4f76-bb6b-92c8f7990b2a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Centro:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="391" y="79" width="219" height="20" uuid="98b8f31f-bf46-4db6-90be-58e1f7cc49a9"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{CENTRO}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="79" width="610" height="1" uuid="dfd9df1c-45b8-4a78-b1af-a76004f2959f"/>
+			</line>
+			<line>
+				<reportElement x="0" y="79" width="1" height="20" uuid="887a85dc-7be9-4da1-ac5a-0a64d3da3b84"/>
+			</line>
+			<line>
+				<reportElement x="609" y="79" width="1" height="20" uuid="1f4d94d8-48a7-4ebb-bb33-8a2493ae995d"/>
+			</line>
+			<line>
+				<reportElement x="0" y="99" width="610" height="1" uuid="098f91fc-3b38-46ee-af74-e9090456f87c"/>
+			</line>
+			<image>
+				<reportElement x="13" y="13" width="131" height="61" uuid="2d236761-db36-4021-b58e-4667abba38dd"/>
+				<imageExpression><![CDATA[$P{IMAGES_DIR} + "logo.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="531" y="10" width="78" height="28" uuid="46f43f05-e6cd-428f-b68d-198bff2ee0bd"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Protocolo:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="531" y="38" width="78" height="36" uuid="a4432fff-8010-4167-b3bc-762b4dc97e43"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{protocolo}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="32">
+			<printWhenExpression><![CDATA[$F{listaRmMaterial}.size() > 0]]></printWhenExpression>
+			<subreport>
+				<reportElement stretchType="RelativeToBandHeight" x="0" y="0" width="607" height="32" uuid="5372d082-9363-461f-a13a-59442bb31e12"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="DATA_ENTREGA">
+					<subreportParameterExpression><![CDATA[$P{DATA_ENTREGA}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{listaRmMaterial})]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "DocumentoResponsabilidadeMaterialConsumoLista.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+</jasperReport>

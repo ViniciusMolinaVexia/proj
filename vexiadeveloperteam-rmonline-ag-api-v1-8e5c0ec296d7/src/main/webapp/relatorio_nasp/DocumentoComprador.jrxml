@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="DocumentoComprador" pageWidth="650" pageHeight="842" columnWidth="610" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="7b0f7eb9-f50d-4680-87bf-5341edd9609e">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<import value="net.sf.jasperreports.engine.*"/>
+	<import value="java.util.*"/>
+	<import value="net.sf.jasperreports.engine.data.*"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String"/>
+	<parameter name="IMAGES_DIR" class="java.lang.String"/>
+	<parameter name="PROJETO" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="rmMateriais" class="java.util.List"/>
+	<field name="field1" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="65" splitType="Stretch">
+			<image isUsingCache="false">
+				<reportElement x="0" y="4" width="131" height="61" uuid="f375034d-a5d1-461d-b6e9-025fc0500e5c"/>
+				<imageExpression><![CDATA[$P{IMAGES_DIR} + "logo.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement key="staticText" x="0" y="0" width="610" height="64" uuid="2a4bc49c-3c49-4544-965d-6b023f6d1824"/>
+				<box leftPadding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[RELATÓRIO DE REQUISIÇÃO - COMPRADOR]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" pattern="###0.00;-###0.00" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="484" y="0" width="126" height="64" isPrintWhenDetailOverflows="true" uuid="93e11907-9c60-472c-be98-8ec20396f18d"/>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{PROJETO}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="45">
+			<subreport>
+				<reportElement x="0" y="0" width="610" height="41" uuid="639009e8-fea9-4f44-8aad-3ce2ab90320e"/>
+				<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{rmMateriais})]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "DocumentoCompradorLista.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+</jasperReport>
